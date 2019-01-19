@@ -13,11 +13,12 @@ shopt -s histappend
 
 # PATHS
 export USER_LOCAL_BIN_PATH='/usr/local/bin'
+export USER_LOCAL_SBIN_PATH='/usr/local/sbin'
 export USER_BIN_PATH='/usr/bin'
 export USER_SBIN_PATH='/usr/sbin'
 export BIN_PATH='/bin'
 export SBIN_PATH='/sbin'
-export PATH=$USER_LOCAL_BIN_PATH:$USER_BIN_PATH:$USER_SBIN_PATH:$BIN_PATH:$SBIN_PATH:$NPM_PACKAGES_PATH
+export PATH=$USER_LOCAL_BIN_PATH:$USER_LOCAL_SBIN_PATH:$USER_BIN_PATH:$USER_SBIN_PATH:$BIN_PATH:$SBIN_PATH:$NPM_PACKAGES_PATH
 
 # Generic aliases
 alias cp='cp -iv'
@@ -46,7 +47,10 @@ alias python3='python3 -B'
 alias activate='source .venv/bin/activate'
 
 # Homebrew specific
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+# Update all the things
+alias allup="brewup; tldr -u"
 
 # NPM
 # alias npm-exec='PATH=$(npm bin):$PATH'
