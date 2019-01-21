@@ -36,10 +36,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 echo -e "\n\033[1;31mEnabling python support for nvim\033[0m"
 pip2 install pynvim
-pip2 install neovim
 pip3 install pynvim
-pip3 install neovim
-
 
 echo -e "\n\033[1;31mTapping fonts\033[0m"
 brew tap caskroom/fonts
@@ -54,7 +51,8 @@ echo -e "\n\033[1;31mCreating directories\033[0m"
 mkdir -p ~/.config ~/.config/nvim
 
 echo -e "\n\033[1;31mSymlinking configurations\033[0m"
-ln -s ~/dotfiles/vimrc ~/.config/nvim/init.vim
-ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/bash_profile ~/.bash_profile
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+ln -s $DIR/vimrc ~/.config/nvim/init.vim
+ln -s $DIR/vimrc ~/.vimrc
+ln -s $DIR/bash_profile ~/.bash_profile
 
