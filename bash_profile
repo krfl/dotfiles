@@ -50,7 +50,7 @@ alias activate='source .venv/bin/activate'
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
 # Update all the things
-alias allup="brewup; tldr -u"
+alias update_all_the_things="tldr --update; brewup"
 
 # NPM
 # alias npm-exec='PATH=$(npm bin):$PATH'
@@ -94,13 +94,13 @@ reset='\e[0m'    # Text Reset
 # Prompt function for PROMPT_COMMAND
 set_prompt() {
     local space=" "
-    path="$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
+    path="\[$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")\]"
     # Python venv
     venv=""
-    if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${VIRTUAL_ENV##*/}"; fi
+    if [[ $VIRTUAL_ENV != "" ]]; then venv="\[${space}${VIRTUAL_ENV##*/}\]"; fi
     # Git branch
     branch=""
-    ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
+    ref="\[$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')\]"
     # ref=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
     # ref=$(git branch 2>/dev/null | grep '^*' | colrm 1 2)
     if [[ "$ref" != "" ]]; then branch="${space}$ref"; fi
@@ -108,9 +108,9 @@ set_prompt() {
     dirty=""
     if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="*"; fi
     # Sign
-    sign="${space}\$${space}"
+    sign="\[${space}\$${space}\]"
     # Set prompt
-    export PS1="${txtcyn}${path}${txtpur}${venv}${txtred}${branch}${dirty}${reset}${sign}"
+    export PS1="\[${txtcyn}${path}${txtpur}${venv}${txtred}${branch}${dirty}${reset}${sign}\]"
 }
 
 export PROMPT_COMMAND=set_prompt
