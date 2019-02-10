@@ -34,16 +34,6 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 language en_US
 
-" nnoremap <Left> :vertical resize -1<CR>
-" nnoremap <Right> :vertical resize +1<CR>
-" nnoremap <Up> :resize -1<CR>
-" nnoremap <Down> :resize +1<CR>
-" " Disable arrow keys completely in Insert Mode
-" imap <up> <nop>
-" imap <down> <nop>
-" imap <left> <nop>
-" imap <right> <nop>
-
 call plug#begin('~/.local/share/nvim/plugged')
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -52,7 +42,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'nvie/vim-flake8'
 Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -61,10 +50,11 @@ Plug 'sickill/vim-pasta'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
 Plug 'keith/swift.vim'
 Plug 'TheCodedSelf/syntastic-swift'
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
 Plug 'yuttie/inkstained-vim'
 Plug 'yuttie/hydrangea-vim'
 Plug 'kamwitsta/flatwhite-vim'
@@ -78,7 +68,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let g:python_highlight_all = 1
 autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 autocmd FileType python setlocal completeopt-=preview
-autocmd BufWritePost *.py call Flake8()
+" autocmd BufWritePost *.py call Flake8()
+let g:syntastic_python_checkers = ['flake8'] " pyflakes', 'pylint', 'pep8'] 
 
 " === Jedi
 let g:jedi#show_call_signatures = "1"
@@ -105,18 +96,18 @@ let g:syntastic_swift_checkers = ['swiftlint', 'swiftpm']
 let g:deoplete#enable_at_startup = 1
 
 " === Indentation guide
-let g:indentLine_enabled = 1
+let g:indentLine_enabled = 0
 let g:indentLine_char = "⟩"
 
 " === Lightline
-let g:lightline = {
-      \ 'colorscheme': 'inkstained',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'separator':    { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' },
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'hydrangea',
+"       \ 'component': {
+"       \   'readonly': '%{&readonly?"":""}',
+"       \ },
+"       \ 'separator':    { 'left': '', 'right': '' },
+"       \ 'subseparator': { 'left': '', 'right': '' },
+"       \ }
 
 " === Colors
 set t_Co=256
@@ -128,6 +119,5 @@ if has('termguicolors') && (has('mac') || has('win32'))
     set termguicolors
 endif
 
-set background=light
-colorscheme inkstained
-
+set background=dark
+colorscheme hydrangea

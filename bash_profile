@@ -3,7 +3,6 @@
 export TERM=xterm-256color
 export EDITOR=vim
 export CLICOLOR=1
-#export LSCOLORS=ExFxBxDxCxegedabagacad
 
 bind '\C-TAB:menu-complete'
 
@@ -94,6 +93,7 @@ reset='\e[0m'    # Text Reset
 # Prompt function for PROMPT_COMMAND
 set_prompt() {
     local space=" "
+    # path
     path="\[$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")\]"
     # Python venv
     venv=""
@@ -101,16 +101,12 @@ set_prompt() {
     # Git branch
     branch=""
     ref="\[$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')\]"
-    # ref=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
-    # ref=$(git branch 2>/dev/null | grep '^*' | colrm 1 2)
     if [[ "$ref" != "" ]]; then branch="${space}$ref"; fi
     # Git dirtyness
     dirty=""
     if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="*"; fi
-    # Sign
-    sign="\[${space}\$${space}\]"
     # Set prompt
-    export PS1="\[${txtcyn}${path}${txtpur}${venv}${txtred}${branch}${dirty}${reset}${sign}\]"
+    export PS1="\[${txtpur}${path}${txtblu}${venv}${txtred}${branch}${dirty}${reset}${space}\$${space}\]"
 }
 
 export PROMPT_COMMAND=set_prompt
