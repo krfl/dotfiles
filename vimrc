@@ -19,7 +19,6 @@ set incsearch
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-"set conceallevel=1
 set wildmenu
 set hlsearch
 set complete-=i
@@ -45,7 +44,6 @@ endif
 Plug 'zchee/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Yggdroot/indentLine'
 Plug 'sickill/vim-pasta'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
@@ -54,10 +52,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
 Plug 'keith/swift.vim'
 Plug 'TheCodedSelf/syntastic-swift'
-" Plug 'itchyny/lightline.vim'
-Plug 'yuttie/inkstained-vim'
-Plug 'yuttie/hydrangea-vim'
-Plug 'kamwitsta/flatwhite-vim'
+"Plug 'yuttie/inkstained-vim'
+"Plug 'yuttie/hydrangea-vim'
+"Plug 'kamwitsta/flatwhite-vim'
+Plug 'KeitaNakamura/neodark.vim'
 call plug#end()
 
 filetype plugin indent on
@@ -99,20 +97,11 @@ let g:deoplete#enable_at_startup = 1
 let g:indentLine_enabled = 0
 let g:indentLine_char = "⟩"
 
-" === Lightline
-" let g:lightline = {
-"       \ 'colorscheme': 'hydrangea',
-"       \ 'component': {
-"       \   'readonly': '%{&readonly?"":""}',
-"       \ },
-"       \ 'separator':    { 'left': '', 'right': '' },
-"       \ 'subseparator': { 'left': '', 'right': '' },
-"       \ }
-
 " === Colors
 set t_Co=256
 set t_ut=
 syntax enable
+let g:neodark#background = '#343d45'
 
 " Linux has termguicolors but it ruins the colors...
 if has('termguicolors') && (has('mac') || has('win32'))
@@ -120,4 +109,4 @@ if has('termguicolors') && (has('mac') || has('win32'))
 endif
 
 set background=dark
-colorscheme hydrangea
+colorscheme neodark
