@@ -56,6 +56,7 @@ Plug 'TheCodedSelf/syntastic-swift'
 "Plug 'yuttie/hydrangea-vim'
 "Plug 'kamwitsta/flatwhite-vim'
 Plug 'KeitaNakamura/neodark.vim'
+Plug 'rezadril/test.vim'
 call plug#end()
 
 filetype plugin indent on
