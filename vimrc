@@ -54,7 +54,7 @@ Plug 'keith/swift.vim'
 Plug 'TheCodedSelf/syntastic-swift'
 "Plug 'yuttie/inkstained-vim'
 "Plug 'yuttie/hydrangea-vim'
-"Plug 'kamwitsta/flatwhite-vim'
+Plug 'kamwitsta/flatwhite-vim'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'rezadril/test.vim'
 call plug#end()
@@ -72,15 +72,10 @@ let g:syntastic_python_checkers = ['flake8'] " pyflakes', 'pylint', 'pep8']
 
 " === Jedi
 let g:jedi#show_call_signatures = "1"
-let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#use_tabs_not_buffers = 0
 
 " === Supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-" === Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -97,6 +92,38 @@ let g:deoplete#enable_at_startup = 1
 " === Indentation guide
 let g:indentLine_enabled = 0
 let g:indentLine_char = "⟩"
+
+"" === STATUSLINE
+function! ModifiedColor()
+    if &mod == 1
+        hi statusline guibg=White ctermfg=8 guifg=OrangeRed4 ctermbg=15
+    else
+        hi statusline guibg=White ctermfg=8 guifg=DarkSlateGray ctermbg=15
+    endif
+endfunction
+
+au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
+" default the statusline when entering Vim
+hi statusline guibg=White ctermfg=8 guifg=DarkSlateGray ctermbg=15
+
+" Formats the statusline
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+set statusline=%f                           " file name
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}] "file format
+set statusline+=%y      "filetype
+set statusline+=%h      "help file flag
+set statusline+=[%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}]      
+"modified flag
+set statusline+=%r      "read only flag
+set statusline+=\ %=                        " align left
+set statusline+=Line:%l/%L[%p%%]            " line X of Y [percent of file]
+set statusline+=\ Col:%c                    " current column
+set statusline+=\ Buf:%n                    " Buffer number
+set statusline+=\ [%b][0x%B]\               " ASCII and byte code under cursor
 
 " === Colors
 set t_Co=256
