@@ -42,10 +42,10 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'zchee/deoplete-jedi'
-Plug 'davidhalter/jedi-vim'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sickill/vim-pasta'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
@@ -55,6 +55,7 @@ Plug 'TheCodedSelf/syntastic-swift'
 "Plug 'yuttie/inkstained-vim'
 "Plug 'yuttie/hydrangea-vim'
 Plug 'kamwitsta/flatwhite-vim'
+Plug 'reedes/vim-colors-pencil'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'rezadril/test.vim'
 call plug#end()
@@ -81,6 +82,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_w = 1
 let g:syntastic_swift_swiftlint_use_defaults = 1 
 
 " === Swift
@@ -92,24 +94,6 @@ let g:deoplete#enable_at_startup = 1
 " === Indentation guide
 let g:indentLine_enabled = 0
 let g:indentLine_char = "⟩"
-
-"" === STATUSLINE
-function! ModifiedColor()
-    if &mod == 1
-        hi statusline guibg=White ctermfg=8 guifg=OrangeRed4 ctermbg=15
-    else
-        hi statusline guibg=White ctermfg=8 guifg=DarkSlateGray ctermbg=15
-    endif
-endfunction
-
-au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
-" default the statusline when entering Vim
-hi statusline guibg=White ctermfg=8 guifg=DarkSlateGray ctermbg=15
-
-" Formats the statusline
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
 
 set statusline=%f                           " file name
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
@@ -136,5 +120,5 @@ if has('termguicolors') && (has('mac') || has('win32'))
     set termguicolors
 endif
 
-set background=dark
-colorscheme neodark
+set background=light
+colorscheme pencil
