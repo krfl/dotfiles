@@ -52,6 +52,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
 Plug 'keith/swift.vim'
 Plug 'TheCodedSelf/syntastic-swift'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'yuttie/inkstained-vim'
 "Plug 'yuttie/hydrangea-vim'
 Plug 'kamwitsta/flatwhite-vim'
@@ -77,6 +79,9 @@ let g:jedi#use_tabs_not_buffers = 0
 
 " === Supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" === Nerdtree
+map <C-n> :NERDTreeToggle<CR>
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
