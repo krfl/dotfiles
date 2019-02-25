@@ -82,7 +82,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " === Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeQuitOnOpen = 1
 
+" === Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
