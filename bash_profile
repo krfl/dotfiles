@@ -104,9 +104,9 @@ set_prompt() {
     if [[ "$ref" != "" ]]; then branch="${space}$ref"; fi
     # Git dirtyness
     dirty=""
-    if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="*"; fi
+    if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="* "; fi
     # Set prompt
-    export PS1="\[${txtcyn}${path}${txtgrn}${venv}${txtred}${branch}${dirty}${reset}${space}\$${space}\]"
+    export PS1="\[${txtcyn}${path}${txtgrn}${venv}${txtred}${branch}${dirty}${reset}\$${space}\]"
 }
 
 export PROMPT_COMMAND=set_prompt
