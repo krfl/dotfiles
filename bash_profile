@@ -103,7 +103,7 @@ set_prompt() {
     ref="\[$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')\]"
     if [[ "$ref" != "" ]]; then branch="${space}$ref"; fi
     # Git dirtyness
-    dirty=""
+    dirty=" "
     if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="* "; fi
     # Set prompt
     export PS1="\[${txtcyn}${path}${txtgrn}${venv}${txtred}${branch}${dirty}${reset}\$${space}\]"
