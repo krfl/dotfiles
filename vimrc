@@ -29,7 +29,7 @@ set scrolloff=1
 set sidescrolloff=5
 
 set mouse=r
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+" let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 language en_US
 
