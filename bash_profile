@@ -112,3 +112,4 @@ set_prompt() {
 export PROMPT_COMMAND=set_prompt
 eval "$(thefuck --alias)"
 clear
+fortune | cowsay | lolcat

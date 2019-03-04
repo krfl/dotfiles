@@ -15,6 +15,15 @@ brew install the_silver_searcher
 echo -e "\n\033[1;31mInstalling thefuck\033[0m"
 brew install thefuck
 
+echo -e "\n\033[1;31mInstalling lolcat\033[0m"
+brew install lolcat
+
+echo -e "\n\033[1;31mInstalling fortune\033[0m"
+brew install fortune
+
+echo -e "\n\033[1;31mInstalling cowsay\033[0m"
+brew install cowsay
+
 echo -e "\n\033[1;31mInstalling swiftlint\033[0m"
 brew install swiftlint
 
