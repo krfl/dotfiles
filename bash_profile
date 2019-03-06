@@ -106,10 +106,9 @@ set_prompt() {
     dirty=" "
     if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="* "; fi
     # Set prompt
-    export PS1="\[${txtcyn}${path}${txtgrn}${venv}${txtred}${branch}${dirty}${reset}\$${space}\]"
+    PS1="\[${txtcyn}${path}${txtgrn}${venv}${txtred}${branch}${dirty}${reset}\$ \]"
 }
 
 export PROMPT_COMMAND=set_prompt
 eval "$(thefuck --alias)"
 clear
-fortune | cowsay | lolcat

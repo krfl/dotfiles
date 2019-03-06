@@ -107,8 +107,7 @@ set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}] "file format
 set statusline+=%y      "filetype
 set statusline+=%h      "help file flag
-set statusline+=[%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}]      
-"modified flag
+set statusline+=[%{getbufvar(bufnr('%'),'&mod')?'modified':'saved'}] "modified flag
 set statusline+=%r      "read only flag
 set statusline+=\ %=                        " align left
 set statusline+=Line:%l/%L[%p%%]            " line X of Y [percent of file]
@@ -127,5 +126,5 @@ if has('termguicolors') && (has('mac') || has('win32'))
     set termguicolors
 endif
 
-set background=light
-colorscheme pencil
+set background=dark
+colorscheme test
