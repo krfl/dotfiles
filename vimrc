@@ -55,7 +55,6 @@ Plug 'yuttie/hydrangea-vim'
 Plug 'kamwitsta/flatwhite-vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'pacha/vem-statusline'
-Plug 'pacha/vem-tabline'
 call plug#end()
 
 filetype plugin indent on
@@ -107,5 +106,5 @@ if has('termguicolors') && (has('mac') || has('win32'))
     set termguicolors
 endif
 
-set background=light
-colorscheme inkstained
+set background=dark
+colorscheme default
