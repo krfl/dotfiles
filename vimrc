@@ -54,6 +54,8 @@ Plug 'yuttie/inkstained-vim'
 Plug 'yuttie/hydrangea-vim'
 Plug 'kamwitsta/flatwhite-vim'
 Plug 'reedes/vim-colors-pencil'
+Plug 'icymind/NeoSolarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'pacha/vem-statusline'
 call plug#end()
 
@@ -107,4 +109,4 @@ if has('termguicolors') && (has('mac') || has('win32'))
 endif
 
 set background=light
-colorscheme inkstained
+colorscheme NeoSolarized
