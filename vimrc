@@ -106,5 +106,5 @@ if has('termguicolors') && (has('mac') || has('win32'))
     set termguicolors
 endif
 
-set background=dark
-colorscheme default
+set background=light
+colorscheme inkstained
