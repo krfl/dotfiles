@@ -53,13 +53,13 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yuttie/inkstained-vim'
 Plug 'yuttie/hydrangea-vim'
 Plug 'kamwitsta/flatwhite-vim'
-Plug 'reedes/vim-colors-pencil'
 Plug 'icymind/NeoSolarized'
-Plug 'altercation/vim-colors-solarized'
+Plug 'noahfrederick/vim-noctu'
 Plug 'pacha/vem-statusline'
 call plug#end()
 
 filetype plugin indent on
+syntax enable
 
 " Python
 let g:python2_host_prog = '/usr/local/bin/python'
@@ -102,11 +102,8 @@ let g:indentLine_char = "⟩"
 " Colors
 set t_Co=256
 set t_ut=
-syntax enable
-
-if has('termguicolors') && (has('mac') || has('win32'))
-    set termguicolors
-endif
-
-set background=light
-colorscheme NeoSolarized
+" if has('termguicolors') && (has('mac') || has('win32'))
+"     set termguicolors
+" endif
+set background=dark
+colorscheme noctu
