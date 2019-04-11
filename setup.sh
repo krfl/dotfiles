@@ -67,6 +67,12 @@ brew cask install font-ia-writer-duo
 echo -e "\n\033[1;31mInstalling ia writer quattro\033[0m"
 brew cask install font-ia-writer-quattro
 
+
+echo -e "\n\033[1;31mInstalling sf mono\033[0m"
+cd /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/
+cp *.otf ~/Library/Fonts/
+cd -
+
 echo -e "\n\033[1;31mCleaning up existing configurations\033[0m"
 rm -rf ~/.vim ~/.vimrc ~/.config/nvim ~/.bash_profile 2> /dev/null
 
