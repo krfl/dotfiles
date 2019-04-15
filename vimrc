@@ -56,6 +56,7 @@ Plug 'kamwitsta/flatwhite-vim'
 Plug 'icymind/NeoSolarized'
 Plug 'noahfrederick/vim-noctu'
 Plug 'pacha/vem-statusline'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 filetype plugin indent on
