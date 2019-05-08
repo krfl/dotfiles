@@ -103,8 +103,8 @@ let g:indentLine_char = "⟩"
 " Colors
 set t_Co=256
 set t_ut=
-" if has('termguicolors') && (has('mac') || has('win32'))
-"     set termguicolors
-" endif
+if has('termguicolors') && (has('mac') || has('win32'))
+    set termguicolors
+endif
 set background=dark
-colorscheme noctu
+colorscheme hydrangea
