@@ -1,7 +1,7 @@
 # github.com/krfl/dotfiles
 
 export TERM=xterm-256color
-export EDITOR=vim
+export EDITOR=nvim
 export CLICOLOR=1
 
 bind '\C-TAB:menu-complete'
