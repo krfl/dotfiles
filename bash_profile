@@ -56,54 +56,28 @@ alias update_all_the_things="tldr --update; brewup"
 # NPM
 # alias npm-exec='PATH=$(npm bin):$PATH'
 
-# PROMPT
-txtblk='\[\e[0;30m\]' # Black - Regular
-txtred='\[\e[0;31m\]' # Red
-txtgrn='\[\e[0;32m\]' # Green
-txtylw='\[\e[0;33m\]' # Yellow
-txtblu='\[\e[0;34m\]' # Blue
-txtpur='\[\e[0;35m\]' # Purple
-txtcyn='\[\e[0;36m\]' # Cyan
-txtwht='\[\e[0;37m\]' # White
-bldblk='\[\e[1;30m\]' # Black - Bold
-bldred='\[\e[1;31m\]' # Red
-bldgrn='\[\e[1;32m\]' # Green
-bldylw='\[\e[1;33m\]' # Yellow
-bldblu='\[\e[1;34m\]' # Blue
-bldpur='\[\e[1;35m\]' # Purple
-bldcyn='\[\e[1;36m\]' # Cyan
-bldwht='\[\e[1;37m\]' # White
-unkblk='\[\e[4;30m\]' # Black - Underline
-undred='\[\e[4;31m\]' # Red
-undgrn='\[\e[4;32m\]' # Green
-undylw='\[\e[4;33m\]' # Yellow
-undblu='\[\e[4;34m\]' # Blue
-undpur='\[\e[4;35m\]' # Purple
-undcyn='\[\e[4;36m\]' # Cyan
-undwht='\[\e[4;37m\]' # White
-bakblk='\[\e[40m\]'   # Black - Background
-bakred='\[\e[41m\]'   # Red
-bakgrn='\[\e[42m\]'   # Green
-bakylw='\[\e[43m\]'   # Yellow
-bakblu='\[\e[44m\]'   # Blue
-bakpur='\[\e[45m\]'   # Purple
-bakcyn='\[\e[46m\]'   # Cyan
-bakwht='\[\e[47m\]'   # White
-reset='\[\e[0m\]'    # Text Reset
-
-
 # Prompt function for PROMPT_COMMAND
 set_prompt() {
+    # colors
+    local txtblk='\[\e[0;30m\]' # black
+    local txtred='\[\e[0;31m\]' # red
+    local txtgrn='\[\e[0;32m\]' # green
+    local txtylw='\[\e[0;33m\]' # yellow
+    local txtblu='\[\e[0;34m\]' # blue
+    local txtpur='\[\e[0;35m\]' # purple
+    local txtcyn='\[\e[0;36m\]' # cyan
+    local txtwht='\[\e[0;37m\]' # white
+    local reset='\[\e[0m\]'     # reset
     local space=" "
     # path
-    path="\[$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")\]"
+    path="$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
     # Python venv
     venv=""
-    if [[ $VIRTUAL_ENV != "" ]]; then venv="\[${space}${VIRTUAL_ENV##*/}\]"; fi
+    if [[ $VIRTUAL_ENV != "" ]]; then venv=" ${VIRTUAL_ENV##*/}"; fi
     # Git branch
     branch=""
-    ref="\[$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')\]"
-    if [[ "$ref" != "" ]]; then branch="${space}$ref"; fi
+    ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
+    if [[ "$ref" != "" ]]; then branch=" $ref"; fi
     # Git dirtyness
     dirty=" "
     if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="* "; fi
