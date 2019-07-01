@@ -3,6 +3,7 @@
 export TERM=xterm-256color
 export EDITOR=nvim
 export CLICOLOR=1
+export LC_ALL=en_US.UTF-8
 
 bind '\C-TAB:menu-complete'
 
