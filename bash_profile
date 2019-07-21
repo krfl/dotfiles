@@ -69,21 +69,21 @@ set_prompt() {
     local txtcyn='\[\e[0;36m\]' # cyan
     local txtwht='\[\e[0;37m\]' # white
     local reset='\[\e[0m\]'     # reset
-    local space=" "
+    local space="${reset} "
     # path
-    path="$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
+    path="${txtgrn}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
     # Python venv
     venv=""
-    if [[ $VIRTUAL_ENV != "" ]]; then venv=" ${VIRTUAL_ENV##*/}"; fi
+    if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${txtpur}${VIRTUAL_ENV##*/}"; fi
     # Git branch
     branch=""
     ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
-    if [[ "$ref" != "" ]]; then branch=" $ref"; fi
+    if [[ "$ref" != "" ]]; then branch="${space}${txtred}$ref"; fi
     # Git dirtyness
-    dirty=" "
-    if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="* "; fi
+    dirty=""
+    if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="*"; fi
     # Set prompt
-    PS1="\[${txtcyn}${path}${txtgrn}${venv}${txtred}${branch}${dirty}${reset}\$ \]"
+    PS1="\[${path}${venv}${branch}${dirty}${space}\$ \]"
 }
 
 export PROMPT_COMMAND=set_prompt

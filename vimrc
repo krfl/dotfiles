@@ -46,8 +46,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
-Plug 'keith/swift.vim'
-Plug 'TheCodedSelf/syntastic-swift'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yuttie/inkstained-vim'
@@ -88,10 +86,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
-let g:syntastic_swift_swiftlint_use_defaults = 1 
-
-" Swift
-let g:syntastic_swift_checkers = ['swiftlint', 'swiftpm'] 
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
