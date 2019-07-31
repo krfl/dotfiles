@@ -100,5 +100,5 @@ set t_ut=
 if has('termguicolors') && (has('mac') || has('win32'))
     set termguicolors
 endif
-set background=light
-colorscheme inkstained
+set background=dark
+colorscheme hydrangea
