@@ -83,7 +83,7 @@ set_prompt() {
     dirty=""
     if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="*"; fi
     # Set prompt
-    PS1="\[${path}${venv}${branch}${dirty}${space}\$ \]"
+    PS1="${path}${venv}${branch}${dirty}${space}\$ "
 }
 
 export PROMPT_COMMAND=set_prompt
