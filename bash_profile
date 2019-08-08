@@ -64,14 +64,14 @@ set_prompt() {
     local txtred='\[\e[0;31m\]' # red
     local txtgrn='\[\e[0;32m\]' # green
     local txtylw='\[\e[0;33m\]' # yellow
-    local txtblu='\[\e[0;34m\]' # blue
+    local txtblu='\[\e[1;34m\]' # blue
     local txtpur='\[\e[0;35m\]' # purple
     local txtcyn='\[\e[0;36m\]' # cyan
     local txtwht='\[\e[0;37m\]' # white
     local reset='\[\e[0m\]'     # reset
     local space="${reset} "
     # path
-    path="${txtgrn}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
+    path="${txtblu}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
     # Python venv
     venv=""
     if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${txtpur}${VIRTUAL_ENV##*/}"; fi
