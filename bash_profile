@@ -60,18 +60,18 @@ alias update_all_the_things="tldr --update; brewup"
 # Prompt function for PROMPT_COMMAND
 set_prompt() {
     # colors
-    local txtblk='\[\e[0;30m\]' # black
-    local txtred='\[\e[0;31m\]' # red
-    local txtgrn='\[\e[0;32m\]' # green
-    local txtylw='\[\e[0;33m\]' # yellow
+    local txtblk='\[\e[1;30m\]' # black
+    local txtred='\[\e[1;31m\]' # red
+    local txtgrn='\[\e[1;32m\]' # green
+    local txtylw='\[\e[1;33m\]' # yellow
     local txtblu='\[\e[1;34m\]' # blue
-    local txtpur='\[\e[0;35m\]' # purple
-    local txtcyn='\[\e[0;36m\]' # cyan
-    local txtwht='\[\e[0;37m\]' # white
+    local txtpur='\[\e[1;35m\]' # purple
+    local txtcyn='\[\e[1;36m\]' # cyan
+    local txtwht='\[\e[1;37m\]' # white
     local reset='\[\e[0m\]'     # reset
     local space="${reset} "
     # path
-    path="${txtblu}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
+    path="${txtylw}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
     # Python venv
     venv=""
     if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${txtpur}${VIRTUAL_ENV##*/}"; fi
