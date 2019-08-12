@@ -50,10 +50,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yuttie/inkstained-vim'
 Plug 'yuttie/hydrangea-vim'
+Plug 'yuttie/snowy-vim'
 Plug 'kamwitsta/flatwhite-vim'
-Plug 'icymind/NeoSolarized'
 Plug 'noahfrederick/vim-noctu'
-Plug 'pacha/vem-statusline'
+"Plug 'pacha/vem-statusline'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 call plug#end()
 
@@ -100,5 +101,8 @@ set t_ut=
 if has('termguicolors') && (has('mac') || has('win32'))
     set termguicolors
 endif
+
+" Lightline
+let g:lightline = {'colorscheme': 'hydrangea'}
 set background=dark
 colorscheme hydrangea
