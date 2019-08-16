@@ -2,9 +2,9 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-tools=(python3 neovim the_silver_searcher thefuck swiftlint tree)
-casks=(iterm2 karabiner-elements postman brave-browser visual-studio-code slack spotify 1password)
-fonts=(font-fira-code font-ia-writer-mono font-ia-writer-duo font-ia-writer-quattro)
+tools=(python3 neovim the_silver_searcher thefuck tree mpv tldr)
+casks=(iterm2 karabiner-elements brave-browser slack spotify 1password sublime-text)
+fonts=(font-fira-code)
 
 brew tap caskroom/cask
 
