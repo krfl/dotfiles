@@ -2,13 +2,13 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-tools=(python3 neovim the_silver_searcher thefuck tree mpv tldr)
+formulas=(python3 neovim the_silver_searcher thefuck tree mpv tldr tig)
 casks=(iterm2 karabiner-elements brave-browser slack spotify 1password sublime-text)
 fonts=(font-fira-code)
 
 brew tap caskroom/cask
 
-for var in "${tools[@]}"
+for var in "${formulas[@]}"
 do
     echo -e "\n\033[1:31mInstalling ${var}\033[0m"
     brew install ${var}
