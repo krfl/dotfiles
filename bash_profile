@@ -18,7 +18,7 @@ export USER_BIN_PATH='/usr/bin'
 export USER_SBIN_PATH='/usr/sbin'
 export BIN_PATH='/bin'
 export SBIN_PATH='/sbin'
-export PYDO='/Users/krfl/.pydo/tasks.pydo'
+export PYDO=${HOME}'/.pydo/tasks.pydo'
 export PATH=$USER_LOCAL_BIN_PATH:$USER_LOCAL_SBIN_PATH:$USER_BIN_PATH:$USER_SBIN_PATH:$BIN_PATH:$SBIN_PATH:$NPM_PACKAGES_PATH
 
 # Generic aliases
