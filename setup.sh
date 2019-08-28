@@ -3,7 +3,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 formulas=(python3 neovim the_silver_searcher thefuck tree mpv tldr tig)
-casks=(iterm2 karabiner-elements slack spotify 1password visual-studio-code)
+casks=(iterm2 slack spotify 1password)
 fonts=(font-fira-code)
 
 brew tap caskroom/cask
@@ -16,7 +16,7 @@ done
 
 for var in "${casks[@]}"
 do
-    echo -e "\n\033[1:31mInstalling ${var}\033[0m"
+    echo -e "\n\033[1:31mInstalling cask ${var}\033[0m"
     brew cask install ${var}
 done
 
