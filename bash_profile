@@ -22,7 +22,7 @@ export PATH=$USER_LOCAL_BIN_PATH:$USER_LOCAL_SBIN_PATH:$USER_BIN_PATH:$USER_SBIN
 
 # Pydo
 export PYDO=${HOME}'/.pydo/tasks.pydo'
-alias pydo='python3 /Users/krfl/dev/pydo/pydo.py'
+alias pydo='python3 '${HOME}'/dev/pydo/pydo.py'
 
 # Generic aliases
 alias cp='cp -iv'
