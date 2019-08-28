@@ -51,8 +51,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yuttie/inkstained-vim'
 Plug 'yuttie/hydrangea-vim'
 Plug 'kamwitsta/flatwhite-vim'
-Plug 'noahfrederick/vim-noctu'
-"Plug 'pacha/vem-statusline'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 call plug#end()
