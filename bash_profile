@@ -73,14 +73,14 @@ set_prompt() {
     local reset='\[\e[0m\]'     # reset
     local space="${reset} "
     # path
-    path="${txtylw}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
+    path="${txtgrn}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
     # Python venv
     venv=""
-    if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${txtpur}${VIRTUAL_ENV##*/}"; fi
+    if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${txtcyn}${VIRTUAL_ENV##*/}"; fi
     # Git branch
     branch=""
     ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
-    if [[ "$ref" != "" ]]; then branch="${space}${txtred}$ref"; fi
+    if [[ "$ref" != "" ]]; then branch="${space}${txtylw}$ref"; fi
     # Git dirtyness
     dirty=""
     if [[ -n "$(git status --porcelain 2> /dev/null)" ]]; then dirty="*"; fi
