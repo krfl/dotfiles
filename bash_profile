@@ -76,7 +76,7 @@ set_prompt() {
     path="${txtgrn}$(p="${PWD#${HOME}}"; [ "${PWD}" != "${p}" ] && printf "~";IFS=/; for q in ${p:1}; do printf /${q:0:1}; done; printf "${q:1}")"
     # Python venv
     venv=""
-    if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${txtcyn}${VIRTUAL_ENV##*/}"; fi
+    if [[ $VIRTUAL_ENV != "" ]]; then venv="${space}${txtpur}${VIRTUAL_ENV##*/}"; fi
     # Git branch
     branch=""
     ref="$(git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///')"
