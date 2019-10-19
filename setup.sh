@@ -3,7 +3,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 formulas=(python3 neovim the_silver_searcher thefuck tree mpv tldr tig)
-casks=(iterm2 slack spotify 1password)
+casks=(iterm2 slack spotify drawio)
 fonts=(font-fira-code)
 
 brew tap caskroom/cask
