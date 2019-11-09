@@ -42,9 +42,6 @@ if [[ $TERM_PROGRAM == "iTerm.app" || $TERM_PROGRAM == "Apple_Terminal" ]]; then
     alias gotoicloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 fi
 
-# NVIM
-if [[ $TERM_PROGRAM == "iTerm.app" || $TERM_PROGRAM == "Hyper" ]]; then alias vim='nvim'; fi
-
 # Python specific
 alias python='python -B'
 alias python3='python3 -B'
