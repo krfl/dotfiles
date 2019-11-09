@@ -28,11 +28,10 @@ set scrolloff=1
 set sidescrolloff=5
 
 set mouse=r
-" let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 language en_US
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 Plug 'sickill/vim-pasta'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
@@ -40,7 +39,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go'
 Plug 'davidcelis/vim-ariake-dark'
 call plug#end()
