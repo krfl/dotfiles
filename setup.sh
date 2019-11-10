@@ -6,7 +6,7 @@ formulas=(python3 thefuck tree mpv tldr tig)
 casks=(iterm2 slack spotify drawio visual-studio-code)
 fonts=(font-fira-code)
 
-brew tap caskroom/cask
+brew tap homebrew/cask-cask
 
 for var in "${formulas[@]}"
 do
