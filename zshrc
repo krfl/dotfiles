@@ -1,5 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export USER_LOCAL_BIN_PATH='/usr/local/bin'
+export USER_LOCAL_SBIN_PATH='/usr/local/sbin'
+export USER_BIN_PATH='/usr/bin'
+export USER_SBIN_PATH='/usr/sbin'
+export BIN_PATH='/bin'
+export SBIN_PATH='/sbin'
+export PATH=$USER_LOCAL_BIN_PATH:$USER_LOCAL_SBIN_PATH:$USER_BIN_PATH:$USER_SBIN_PATH:$BIN_PATH:$SBIN_PATH:$NPM_PACKAGES_PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/krfl/.oh-my-zsh"
@@ -68,11 +75,15 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git brew extract golang thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+
+# Colorize plugin
+ZSH_COLORIZE_STYLE="colorful"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -99,3 +110,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear && ls"
 alias cll="cls -1"
+
+# Homebrew
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+# Pydo
+export PYDO=${HOME}'/.pydo/tasks.pydo'
+alias pydo='python3 '${HOME}'/dev/pydo/pydo.py'
+
+# Mac specific
+if [[ $TERM_PROGRAM == "iTerm.app" || $TERM_PROGRAM == "Apple_Terminal" ]]; then
+    alias gotoicloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
+fi
