@@ -32,15 +32,15 @@ set mouse=r
 language en_US
 
 call plug#begin('~/.vim/plugged')
+" Plug 'itchyny/lightline.vim'
 Plug 'sickill/vim-pasta'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
-Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'fatih/vim-go'
-Plug 'davidcelis/vim-ariake-dark'
+Plug 'yuttie/inkstained-vim'
+Plug 'yuttie/hydrangea-vim'
 call plug#end()
 
 filetype plugin indent on
@@ -57,6 +57,9 @@ let g:syntastic_python_checkers = ['flake8'] " pyflakes', 'pylint', 'pep8']
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Nerdtree
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
 map <C-n> :NERDTreeToggle<CR>
 
 " Syntastic
@@ -67,18 +70,15 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_w = 1
 
 " Indentation guide
-let g:indentLine_enabled = 0
-let g:indentLine_char = "⟩"
+"let g:indentLine_enabled = 0
+"let g:indentLine_char = "|"
 
 " Colors
 set t_Co=256
 set t_ut=
-" if has('termguicolors')
-"     set termguicolors
-" endif
+set background=light
+if has('termguicolors')
+     set termguicolors
+endif
 
-" Lightline
-" let g:lightline = {'colorscheme': 'hydrangea'}
-set background=dark
-colorscheme default
-" :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+colorscheme inkstained

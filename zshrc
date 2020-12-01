@@ -15,7 +15,7 @@ export ZSH="/Users/krfl/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
+ZSH_THEME="minimal"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,7 +75,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew extract golang thefuck)
+plugins=(git brew extract thefuck virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,17 +108,19 @@ ZSH_COLORIZE_STYLE="colorful"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cls="clear && ls"
+alias cls="clear && ls -LF"
 alias cll="cls -1"
 
 # Homebrew
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
-# Pydo
-export PYDO=${HOME}'/.pydo/tasks.pydo'
-alias pydo='python3 '${HOME}'/dev/pydo/pydo.py'
+# Python
+alias python='python -B'
+alias activate='source .venv/bin/activate'
 
 # Mac specific
 if [[ $TERM_PROGRAM == "iTerm.app" || $TERM_PROGRAM == "Apple_Terminal" ]]; then
     alias gotoicloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 fi
+
+export VIRTUAL_ENV_DISABLE_PROMPT=
