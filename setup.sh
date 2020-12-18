@@ -2,9 +2,9 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-formulas=(python3 thefuck tree mpv tldr tig)
-casks=(iterm2 slack drawio visual-studio-code)
-fonts=(font-fira-code)
+formulas=(python3 thefuck tree mpv tldr vim fish starship)
+casks=(iterm2 slack drawio)
+fonts=(font-fira-code font-agave-nerd-font)
 
 for var in "${formulas[@]}"
 do
@@ -24,16 +24,14 @@ do
     brew cask install ${var}
 done
 
-echo -e "\n\033[1:31mInstalling oh-my-zsh-\033[0m"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 echo -e "\n\033[1:31mInstalling SF Mono\033[0m"
 cd /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/
 cp *.otf ~/Library/Fonts/
 cd -
 
 echo -e "\n\033[1:31mCleaning up existing configurations\033[0m"
-rm -rf ~/.vim ~/.vimrc ~/.bash_profile ~/.zshrc 2> /dev/null
+rm -rf ~/.vim ~/.vimrc 2> /dev/null
+rm -rf ~/.config/fish/config.fish 2> /dev/null
 
 echo -e "\n\033[1:31mCreating directories\033[0m"
 mkdir -p ~/.vim
@@ -45,5 +43,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo -e "\n\033[1:31mSymlinking configurations\033[0m"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ln -s $DIR/vimrc ~/.vimrc
-ln -s $DIR/bash_profile ~/.bash_profile
-ln -s $DIR/zshrc ~/.zshrc
+ln -s $DIR/config.fish ~/.config/fish/config.fish
