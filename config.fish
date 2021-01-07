@@ -1,6 +1,3 @@
-# Alias
-alias python="python -B"
-
 # Functions
 function ls
     command ls -hGF $argv
@@ -16,13 +13,8 @@ function cll
     command ls -hGFl1 $argv
 end
 
-function venv
-    source .venv/bin/activate.fish
-end
-
-# Python
 function python
-    command python -B
+    command python -B $argv
 end
 
 # Mac specific
@@ -51,7 +43,7 @@ set -U EDITOR vim
 set -U fish_user_paths /usr/local/sbin/
 
 # Environment variables
-set -x BAT_THEME Nord
+set -x BAT_THEME ansi-dark
 
 # Pew pew!
 starship init fish | source

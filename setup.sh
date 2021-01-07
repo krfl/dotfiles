@@ -3,7 +3,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 formulas=(python3 thefuck tree mpv tldr vim fish starship)
-casks=(iterm2 slack drawio)
+casks=(kitty slack drawio)
 fonts=(font-fira-code font-agave-nerd-font)
 
 for var in "${formulas[@]}"
@@ -44,3 +44,4 @@ echo -e "\n\033[1:31mSymlinking configurations\033[0m"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ln -s $DIR/vimrc ~/.vimrc
 ln -s $DIR/config.fish ~/.config/fish/config.fish
+ln -s $DIR/kitty.conf ~/.config/kitty/kitty.conf
