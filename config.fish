@@ -1,16 +1,24 @@
 # Functions
 function ls
-    command ls -hGF $argv
+    command exa -bF $argv
 end
 
 function cls
     command clear
-    command ls -hGF $argv
+    command exa -bF $argv
 end
 
 function cll
     command clear
-    command ls -hGFl1 $argv
+    command exa -bFl $argv
+end
+
+function tree
+    command exa --tree $argv
+end
+
+function mon
+    command top -o cpu -O time $argv
 end
 
 function python

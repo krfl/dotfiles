@@ -2,7 +2,7 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-formulas=(python3 thefuck tree mpv tldr vim fish starship)
+formulas=(python3 thefuck tree mpv tldr vim fish starship osx-cpu-temp)
 casks=(kitty slack drawio)
 fonts=(font-fira-code font-agave-nerd-font)
 

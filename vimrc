@@ -12,6 +12,9 @@ Plug 'lotabout/skim.vim'
 " Git
 Plug 'mhinz/vim-signify'
 
+" Goldfish mode
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
 " Syntax and completion
 Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-pasta'
@@ -24,9 +27,6 @@ Plug 'prabirshrestha/asyncomplete-file.vim'
 
 " Color schemes
 Plug 'itchyny/lightline.vim'
-Plug 'yuttie/inkstained-vim'
-Plug 'yuttie/hydrangea-vim'
-Plug 'kamwitsta/flatwhite-vim'
 Plug 'tyrannicaltoucan/vim-deep-space'
 call plug#end()
 
@@ -47,6 +47,7 @@ set cmdheight=2
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
+set timeoutlen=500
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -208,6 +209,9 @@ vmap > >gv
 xnoremap <C-k> :move '<-2<CR>gv-gv
 xnoremap <C-j> :move '>+1<CR>gv-gv
 xnoremap <C-c> <Esc>
+
+" Goldfish mode
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " Lightline
 let g:lightline = {'colorscheme': 'deepspace' }
