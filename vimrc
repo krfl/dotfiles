@@ -46,8 +46,8 @@ set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
-set timeoutlen=500
+set updatetime=1000
+" set timeoutlen=500
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -125,14 +125,15 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
-    nmap <buffer> K <plug>(lsp-hover)
+    nnoremap <buffer> <leader>ld :LspDefinition<cr>
+    nnoremap <buffer> <leader>lr :LspReferences<cr>
+    nnoremap <buffer> <leader>li :LspImplementation<cr>
+    nnoremap <buffer> <leader>lt :LspTypeDefinition<cr>
+    nnoremap <buffer> <leader>ln :LspRename<cr>
+    nnoremap <buffer> <leader>lh :LspHover<cr>
+    nnoremap <buffer> <leader>le :LspDocumentDiagnostic<cr>
+    nnoremap <buffer> <leader>lf :LspDocumentFormat<cr>
+    nnoremap <buffer> <leader>lc :LspCodeAction<cr>
 
     inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -141,7 +142,7 @@ function! s:on_lsp_buffer_enabled() abort
     imap <c-space> <Plug>(asyncomplete_force_refresh)
 
     let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+    autocmd! BufWritePre * call execute('LspDocumentFormatSync')
     
     call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
     \ 'name': 'buffer',
@@ -156,7 +157,6 @@ function! s:on_lsp_buffer_enabled() abort
     \ 'priority': 10,
     \ 'completor': function('asyncomplete#sources#file#completor')
     \ }))
-
 endfunction
 
 augroup lsp_install
@@ -165,12 +165,24 @@ augroup lsp_install
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+let g:lsp_diagnostics_signs_error = {'text': '█'}
+let g:lsp_diagnostics_signs_warning = {'text': '▓'}
+let g:lsp_diagnostics_signs_information = {'text' : '▒'}
+let g:lsp_diagnostics_signs_hint = {'text': '░'}
+
 " Netrw
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_liststyle = 3
 
+" Signify
+let g:signify_sign_add               = '▌'
+let g:signify_sign_delete            = '▌'
+let g:signify_sign_delete_first_line = '▌'
+let g:signify_sign_change            = '▌'
+let g:signify_sign_change_delete     = g:signify_sign_change . g:signify_sign_delete_first_line
+let g:signify_priority               = 5
+
 " Fzf
-" --height 40% --layout=reverse --border
 let g:fzf_preview_window = 'right:65%'
 let g:fzf_layout = {'up':'40%'}
 let g:fzf_buffers_jump = 1
@@ -195,13 +207,11 @@ nnoremap <S-Left> :vertical resize -2<CR>
 
 nnoremap Q <nop>
 
-nnoremap <leader>f Files .<CR>
-nnoremap <C-p> :Files .<CR>
+nnoremap <leader>f :Files .<CR>
+nnoremap <leader>r :Rg .<CR>
 nnoremap <leader>b :Buffers<CR>
+nnoremap <C-p> :Files .<CR>
 
-nnoremap <leader>ld :LspDocumentDiagnostics <cr>
-nnoremap <leader>lf :LspDocumentFormat <cr>
-nnoremap <leader>la :LspCodeAction <cr>
 
 vmap < <gv
 vmap > >gv
@@ -217,8 +227,6 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 let g:lightline = {'colorscheme': 'deepspace' }
 
 " Colors
-"set t_Co=256
-"set t_ut=
 set background=dark
 set termguicolors
 colorscheme deep-space
