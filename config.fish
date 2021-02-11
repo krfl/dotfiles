@@ -1,3 +1,9 @@
+# Greeting
+function fish_greeting
+    command clear && gcal --starting-day=1 --with-week-number --iso-week-number=yes --highlight=no | grep --color -EC6 "\b"(date +%e | sed "s/ //g")
+    # command date +"%H:%M:%S"
+end
+
 # Functions
 function ls
     command exa -bF $argv
@@ -56,3 +62,4 @@ set -x BAT_THEME ansi-dark
 # Pew pew!
 starship init fish | source
 thefuck --alias | source
+
