@@ -69,16 +69,6 @@ function autoonefetch --on-variable PWD
     end
 end
 
-# Universal variables
-set -U EDITOR vim
-set -U fish_user_paths /usr/local/sbin/ $fish_user_paths
-set -U fish_user_paths /usr/local/bin $fish_user_paths
-set -U fish_user_paths /usr/local/opt/openjdk@11/bin $fish_user_paths
-set -U ANDROID_SDK_ROOT ~/Library/Android/sdk/
-
-# Environment variables
-set -x BAT_THEME ansi
-
 # Pew pew!
 starship init fish | source
 thefuck --alias | source
