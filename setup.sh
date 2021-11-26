@@ -43,7 +43,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 echo -e "\n\033[1:31mSymlinking configurations\033[0m"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+# vim
 ln -sf $DIR/vim/vimrc ~/.vimrc
+# fish
 ln -sf $DIR/fish/config.fish ~/.config/fish/config.fish
+#kitty
 ln -sf $DIR/kitty/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf $DIR/kitty/themes ~/.config/kitty/themes
+#bat
+ln -sf $DIR/bat/config ~/.config/bat/config
