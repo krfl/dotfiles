@@ -1,7 +1,13 @@
 # Greeting
 function fish_greeting
-    command clear && gcal --starting-day=1 --with-week-number --iso-week-number=yes --highlight=no | grep --color -EC6 "\b"(date +%e | sed "s/ //g")
-    # command date +"%H:%M:%S"
+    command clear
+    command date +"%d/%m/%Y"
+    command date +"%H:%M:%S"
+    command task next
+end
+
+function gotoicloud
+    cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/
 end
 
 # Functions
@@ -31,12 +37,17 @@ function python
     command python -B $argv
 end
 
-# Mac specific
+function python3
+    command python3 -B $argv
+end
+
+# Homebrew specific
 function brewup
     command brew update
     command brew upgrade
     command brew cleanup
     command brew doctor
+    command echo "Done!"
 end
 
 # Auto envs
@@ -52,14 +63,23 @@ function autoenv --on-variable PWD
     end
 end
 
+function autoonefetch --on-variable PWD
+    if test -d $PWD/.git
+        command onefetch
+    end
+end
+
 # Universal variables
 set -U EDITOR vim
-set -U fish_user_paths /usr/local/sbin/
+set -U fish_user_paths /usr/local/sbin/ $fish_user_paths
+set -U fish_user_paths /usr/local/bin $fish_user_paths
+set -U fish_user_paths /usr/local/opt/openjdk@11/bin $fish_user_paths
+set -U ANDROID_SDK_ROOT ~/Library/Android/sdk/
 
 # Environment variables
-set -x BAT_THEME ansi-dark
+set -x BAT_THEME ansi
 
 # Pew pew!
 starship init fish | source
 thefuck --alias | source
-
+rvm default

@@ -2,21 +2,14 @@ set nocompatible
 
 " Load plugins
 call plug#begin('~/.vim/plugged')
-" Startup
-Plug 'mhinz/vim-startify'
-
-" File/search/picker
-Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
-Plug 'lotabout/skim.vim'
+" Finder/dispatcher
+Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
 
 " Git
 Plug 'mhinz/vim-signify'
 
-" Goldfish mode
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-
 " Syntax and completion
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'sickill/vim-pasta'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
@@ -25,10 +18,17 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 
-" Color schemes
+" Status
 Plug 'itchyny/lightline.vim'
+
+" Color schemes
 Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'vv9k/vim-github-dark'
+Plug 'romgrk/github-light.vim'
 call plug#end()
+
+" Leader
+let mapleader=" "
 
 " force utf-8 by default
 set encoding=utf8
@@ -57,7 +57,6 @@ set backspace=indent,eol,start
 
 " No wrapping
 set nowrap
-  autocmd FileType markdown setlocal wrap
 
 " Prevent bad stuff
 set confirm
@@ -182,15 +181,15 @@ let g:signify_sign_change            = '▌'
 let g:signify_sign_change_delete     = g:signify_sign_change . g:signify_sign_delete_first_line
 let g:signify_priority               = 5
 
-" Fzf
-let g:fzf_preview_window = 'right:65%'
-let g:fzf_layout = {'up':'40%'}
-let g:fzf_buffers_jump = 1
-let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
-let $FZF_DEFAULT_OPTS = '--reverse'
+" Clap
+let g:clap_layout = { 'relative': 'editor' }
+
+nnoremap <C-p> :Clap files<CR>
+nnoremap <leader>f :Clap files<CR>
+nnoremap <leader>g :Clap grep<CR>
+nnoremap <leader>b :Clap buffers<CR>
 
 " Key remaps
-let mapleader=" "
 map <C-s> :source ~/.vimrc<CR>
 
 nnoremap <C-c> <Esc>
@@ -207,12 +206,6 @@ nnoremap <S-Left> :vertical resize -2<CR>
 
 nnoremap Q <nop>
 
-nnoremap <leader>f :Files .<CR>
-nnoremap <leader>r :Rg .<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <C-p> :Files .<CR>
-
-
 vmap < <gv
 vmap > >gv
 
@@ -220,13 +213,21 @@ xnoremap <C-k> :move '<-2<CR>gv-gv
 xnoremap <C-j> :move '>+1<CR>gv-gv
 xnoremap <C-c> <Esc>
 
-" Goldfish mode
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
-" Lightline
-let g:lightline = {'colorscheme': 'deepspace' }
-
 " Colors
+if has('termguicolors')
+  set termguicolors
+endif
+
+" if strftime('%H') >= 7 && strftime('%H') < 19
+"   set background=light
+" else
+"   set background=dark
+"  endif
 set background=dark
-set termguicolors
-colorscheme deep-space
+let g:lightline = {'colorscheme': 'ghdark'}
+colorscheme ghdark
+
+" github theme signify hack
+highlight SignifySignAdd    guifg=#3fb950 cterm=NONE gui=NONE
+highlight SignifySignDelete guifg=#f85149 cterm=NONE gui=NONE
+highlight SignifySignChange guifg=#d29922 cterm=NONE gui=NONE
