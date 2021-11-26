@@ -33,6 +33,10 @@ function mon
     command top -o cpu -O time $argv
 end
 
+function cat
+    command bat $argv
+end
+
 function python
     command python -B $argv
 end
