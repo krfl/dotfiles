@@ -12,17 +12,13 @@ end
 
 # Functions
 function ls
-    command exa -bF $argv
+    command clear
+    command exa --sort=type --icons $argv
 end
 
-function cls
+function ll
     command clear
-    command exa -bF $argv
-end
-
-function cll
-    command clear
-    command exa -bFl $argv
+    command exa --sort=type --icons --long $argv
 end
 
 function tree
@@ -31,10 +27,6 @@ end
 
 function mon
     command top -o cpu -O time $argv
-end
-
-function cat
-    command bat $argv
 end
 
 function python
@@ -76,4 +68,3 @@ end
 # Pew pew!
 starship init fish | source
 thefuck --alias | source
-rvm default
