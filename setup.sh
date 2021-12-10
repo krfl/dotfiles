@@ -1,10 +1,10 @@
 #!/bin/bash
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-formulas=(python3 thefuck tree mpv tldr fish starship)
-casks=(kitty slack drawio)
-fonts=(font-fira-code font-agave-nerd-font)
+formulas=(git fish starship exa tldr python3 tokei onefetch)
+casks=(kitty slack drawio rectangle)
+fonts=(font-jetbrains-mono font-jetbrains-mono-nerd-font font-sf-mono)
 
 for var in "${formulas[@]}"
 do
@@ -18,16 +18,12 @@ do
     brew install --cask ${var}
 done
 
+brew tap homebrew/cask-fonts
 for var in "${fonts[@]}"
 do
     echo -e "\n\033[1:31mInstalling ${var}\033[0m"
     brew install --cask ${var}
 done
-
-echo -e "\n\033[1:31mInstalling SF Mono\033[0m"
-cd /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/
-cp *.otf ~/Library/Fonts/
-cd -
 
 echo -e "\n\033[1:31mCleaning up existing configurations\033[0m"
 rm -rf ~/.vim ~/.vimrc 2> /dev/null
@@ -38,6 +34,9 @@ rm -rf ~/.config/bat/config 2> /dev/null
 
 echo -e "\n\033[1:31mCreating directories\033[0m"
 mkdir -p ~/.vim
+mkdir -p ~/.config/fish
+mkdir -p ~/.config/kitty
+mkdir -p ~/.config/bat
 
 echo -e "\n\033[1:31mInstalling vim-plug\033[0m"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

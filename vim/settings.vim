@@ -72,10 +72,10 @@ set sidescrolloff=5
 language en_US
 
 " Lsp
-let g:lsp_diagnostics_signs_error = {'text': '█'}
-let g:lsp_diagnostics_signs_warning = {'text': '▓'}
-let g:lsp_diagnostics_signs_information = {'text' : '▒'}
-let g:lsp_diagnostics_signs_hint = {'text': '░'}
+" let g:lsp_diagnostics_signs_error = {'text': '█'}
+" let g:lsp_diagnostics_signs_warning = {'text': '▓'}
+" let g:lsp_diagnostics_signs_information = {'text' : '▒'}
+" let g:lsp_diagnostics_signs_hint = {'text': '░'}
 
 " Netrw
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'

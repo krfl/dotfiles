@@ -68,3 +68,6 @@ end
 # Pew pew!
 starship init fish | source
 thefuck --alias | source
+
+export LC_CTYPE="en_US.UTF-8"
+export PYDO_DIR="~/.config/pydo"
