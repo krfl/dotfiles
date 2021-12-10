@@ -8,11 +8,12 @@ endif
 "   set background=dark
 "  endif
 
-let g:lightline = {'colorscheme': 'ghdark'}
 
 set background=dark
-colorscheme ghdark
+colorscheme deep-space
 
-highlight SignifySignAdd    guifg=#3fb950 cterm=NONE gui=NONE
-highlight SignifySignDelete guifg=#f85149 cterm=NONE gui=NONE
-highlight SignifySignChange guifg=#d29922 cterm=NONE gui=NONE
+let g:lightline = {'colorscheme': 'deep-space'}
+
+" highlight SignifySignAdd    guifg=#3fb950 cterm=NONE gui=NONE
+" highlight SignifySignDelete guifg=#f85149 cterm=NONE gui=NONE
+" highlight SignifySignChange guifg=#d29922 cterm=NONE gui=NONE
