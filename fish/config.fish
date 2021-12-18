@@ -66,7 +66,6 @@ function autoonefetch --on-variable PWD
 end
 
 # Pew pew!
-source ./themes/fleetish.fish
 starship init fish | source
 
 export LC_CTYPE="en_US.UTF-8"
