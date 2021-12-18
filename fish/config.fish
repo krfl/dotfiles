@@ -66,8 +66,9 @@ function autoonefetch --on-variable PWD
 end
 
 # Pew pew!
+source ./themes/fleetish.fish
 starship init fish | source
-thefuck --alias | source
 
 export LC_CTYPE="en_US.UTF-8"
 export PYDO_DIR="~/.config/pydo"
+export GOPATH="~/go"

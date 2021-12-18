@@ -2,8 +2,8 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-formulas=(git fish starship exa tldr python3 tokei onefetch)
-casks=(kitty slack drawio rectangle)
+formulas=(git fish starship exa ripgrep peco bat tldr tokei onefetch go python3)
+casks=(kitty slack drawio rectangle posman visual-studio-code)
 fonts=(font-jetbrains-mono font-jetbrains-mono-nerd-font font-sf-mono)
 
 for var in "${formulas[@]}"
@@ -30,7 +30,6 @@ rm -rf ~/.vim ~/.vimrc 2> /dev/null
 rm -rf ~/.config/fish/config.fish 2> /dev/null
 rm -rf ~/.config/kitty/kitty.conf 2> /dev/null
 rm -rf ~/.config/bat/config 2> /dev/null
-
 
 echo -e "\n\033[1:31mCreating directories\033[0m"
 mkdir -p ~/.vim

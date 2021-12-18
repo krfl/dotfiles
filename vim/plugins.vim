@@ -20,9 +20,9 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'yuttie/hydrangea-vim'
-Plug 'yuttie/inkstained-vim'
+Plug 'vv9k/vim-github-dark'
 Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'krfl/fleetish-vim'
 call plug#end()
 
 " Run PlugInstall if there are missing plugins

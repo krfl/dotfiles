@@ -12,6 +12,7 @@ ln -s $DIR/vim/settings.vim ~/.vim/settings.vim
 
 # fish
 ln -s $DIR/fish/config.fish ~/.config/fish/config.fish
+ln -s $DIR/fish/themes ~/.config/fish/themes
 
 #kitty
 ln -s $DIR/kitty/kitty.conf ~/.config/kitty/kitty.conf
