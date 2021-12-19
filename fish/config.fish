@@ -65,9 +65,9 @@ function autoonefetch --on-variable PWD
     end
 end
 
+# Env
+export LC_CTYPE="en_US.UTF-8"
+
 # Pew pew!
 starship init fish | source
 
-export LC_CTYPE="en_US.UTF-8"
-export PYDO_DIR="~/.config/pydo"
-export GOPATH="~/go"

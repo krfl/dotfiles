@@ -2,8 +2,8 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-formulas=(git fish starship exa ripgrep peco bat tldr tokei onefetch go python3)
-casks=(kitty slack drawio rectangle posman visual-studio-code)
+formulas=(git fish starship vim exa ripgrep peco bat tldr task tokei onefetch rust go node python3 docker)
+casks=(kitty slack drawio rectangle insomnia visual-studio-code)
 fonts=(font-jetbrains-mono font-jetbrains-mono-nerd-font font-sf-mono)
 
 for var in "${formulas[@]}"
