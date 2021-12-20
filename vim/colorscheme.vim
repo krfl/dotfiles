@@ -12,4 +12,19 @@ endif
 set background=dark
 colorscheme fleetish
 
-let g:lightline = {'colorscheme': 'fleetish'}
+" let g:lightline = {'colorscheme': 'fleetish'}
+
+function! SyntaxItem()
+  return synIDattr(synID(line("."),col("."),1),"name")
+endfunction
+
+let g:lightline = {
+      \ 'colorscheme': 'fleetish',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'hlgroup', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'hlgroup': 'SyntaxItem'
+      \ },
+      \ }
