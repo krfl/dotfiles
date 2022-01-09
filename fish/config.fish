@@ -56,12 +56,6 @@ function autoenv --on-variable PWD
     end
 end
 
-function autoonefetch --on-variable PWD
-    if test -d $PWD/.git
-        command onefetch
-    end
-end
-
 # Env
 export LC_CTYPE="en_US.UTF-8"
 
