@@ -21,6 +21,10 @@ function ll
     command exa --sort=type --icons --long $argv
 end
 
+function vim
+    command nvim $argv
+end
+
 function tree
     command exa --tree $argv
 end
@@ -29,13 +33,6 @@ function mon
     command top -o cpu -O time $argv
 end
 
-function python
-    command python -B $argv
-end
-
-function python3
-    command python3 -B $argv
-end
 
 # Homebrew specific
 function brewup
