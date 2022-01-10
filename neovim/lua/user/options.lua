@@ -33,10 +33,10 @@ local options = {
   sidescrolloff = 8,
   autoindent = true,
   softtabstop = 4,
+  path = "**"
 }
 
 vim.opt.shortmess:append "c"
-vim.opt.path:append "**"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
