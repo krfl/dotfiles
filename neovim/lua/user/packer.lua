@@ -48,10 +48,8 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
-  use "folke/trouble.nvim"
-  use "akinsho/bufferline.nvim"
-  use "jose-elias-alvarez/buftabline.nvim"
-  use "moll/vim-bbye"
+  -- use "akinsho/bufferline.nvim"
+  -- use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -59,9 +57,11 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
 
   -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "krfl/fleetish-vim"
-  use "tyrannicaltoucan/vim-deep-space"
+  use "kamwitsta/flatwhite-vim"
+  use "yuttie/hydrangea-vim"
+  use "wadackel/vim-dogrun"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "folke/trouble.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -93,7 +94,6 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
