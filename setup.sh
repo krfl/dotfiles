@@ -3,7 +3,7 @@
 echo -e "\n\033[1:31mInstalling Homebrew\033[0m"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-formulas=(git fish starship neovim exa ripgrep bat tldr task tokei rust go node python3 docker gitleaks apktool)
+formulas=(mas git fish starship neovim exa ripgrep bat tldr task tokei rust go node python3 docker gitleaks apktool)
 casks=(kitty slack drawio rectangle insomnia visual-studio-code)
 fonts=(font-jetbrains-mono font-jetbrains-mono-nerd-font font-sf-mono)
 
@@ -37,3 +37,6 @@ mkdir -p ~/.config/nvim
 mkdir -p ~/.config/fish
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/bat
+
+echo -e "\n\033[1:31mInstalling applications from the App Store\033[0m"
+mas install 1320666476 1289583905 1147396723 462062816 462058435 985367838 462054704
