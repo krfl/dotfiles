@@ -2,6 +2,8 @@ echo -e "\n\033[1:31mSymlinking configurations\033[0m"
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+# ln -s(ymbolic) /path/to/file/or/dir path/to/symlink
+
 # neovim
 ln -s $DIR/neovim/init.lua ~/.config/nvim/init.lua
 ln -s $DIR/neovim/lua ~/.config/nvim/lua
