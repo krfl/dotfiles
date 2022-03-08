@@ -1,8 +1,9 @@
 vim.cmd [[
 try
-  colorscheme fleetish
+    set background=dark
+    colorscheme fleetish
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
+    set background=dark
+    colorsheme blue
 endtry
 ]]
