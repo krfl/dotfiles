@@ -42,24 +42,19 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
-  -- use "akinsho/bufferline.nvim"
-  -- use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
-  -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "krfl/fleetish-vim"
-  use "kamwitsta/flatwhite-vim"
-  use "yuttie/hydrangea-vim"
-  use "wadackel/vim-dogrun"
-  use "tyrannicaltoucan/vim-deep-space"
-  use "morhetz/gruvbox"
+  use "tpope/vim-surround"
 
-  -- cmp plugins
+  -- Colorschemes
+  use "krfl/fleetish-vim"
+  use "tyrannicaltoucan/vim-deep-space"
+
+  -- CMP
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
@@ -67,7 +62,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
-  -- snippets
+  -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
@@ -91,8 +86,7 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
+  -- Automatically set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end

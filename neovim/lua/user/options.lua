@@ -33,7 +33,7 @@ local options = {
   sidescrolloff = 8,
   autoindent = true,
   softtabstop = 4,
-  path = "**"
+  path = "**",
 }
 
 vim.opt.shortmess:append "c"
@@ -43,4 +43,4 @@ for k, v in pairs(options) do
 end
 
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+-- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
