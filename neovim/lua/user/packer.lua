@@ -52,8 +52,6 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "krfl/fleetish-vim"
-  use "tyrannicaltoucan/vim-deep-space"
-  use "NTBBloodbath/doom-one.nvim"
   use({
 	"catppuccin/nvim",
 	as = "catppuccin"
