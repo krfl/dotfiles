@@ -120,11 +120,8 @@ cmp.setup {
     select = false,
   },
   window = {
-        documentation = "native"
+        documentation = cmp.config.window.bordered()
   },
-  -- documentation = {
-  --   border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  -- },
   experimental = {
     ghost_text = false,
     native_menu = false,
