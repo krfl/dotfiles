@@ -1,5 +1,5 @@
 function peco_history
-  history|peco|read foo
+  history|peco $peco_flags|read foo
 
   if [ $foo ]
     commandline $foo

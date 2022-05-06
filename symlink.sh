@@ -27,6 +27,7 @@ ln -s $DIR/neovim/lua ~/.config/nvim/lua
 # fish
 ln -s $DIR/fish/config.fish ~/.config/fish/config.fish
 ln -s $DIR/fish/functions ~/.config/fish/functions
+ln -s $DIR/fish/conf.d ~/.config/fish/conf.d
 ln -s $DIR/fish/themes ~/.config/fish/themes
 
 # kitty
