@@ -3,10 +3,10 @@
 echo -e "\n\033[1:31mInstalling Homebrew\033[0m"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-tools=(git fish starship neovim task ripgrep rust go node python3 docker)
+tools=(git fish starship neovim peco task ripgrep rust go node python3 docker)
 sugar=(exa bat tldr task tokei gitleaks apktool mas)
-casks=(kitty slack drawio rectangle insomnia visual-studio-code)
-fonts=(font-jetbrains-mono font-jetbrains-mono-nerd-font font-sf-mono)
+casks=(kitty slack drawio rectangle insomnia)
+fonts=(font-cascadia-code font-sf-mono)
 
 for var in "${tools[@]}"
 do

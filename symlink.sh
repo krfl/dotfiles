@@ -17,6 +17,7 @@ mkdir -p ~/.config/nvim
 mkdir -p ~/.config/fish
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/bat
+mkdir -p ~/.config/peco
 
 
 # ln -s(ymbolic) /path/to/file/or/dir path/to/symlink
