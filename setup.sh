@@ -5,8 +5,8 @@ echo -e "\n\033[1:31mInstalling Homebrew\033[0m"
 
 tools=(git fish starship neovim peco task ripgrep rust go node python3 docker)
 sugar=(exa bat tldr task tokei gitleaks apktool mas)
-casks=(kitty slack drawio rectangle insomnia)
-fonts=(font-cascadia-code font-sf-mono)
+casks=(kitty slack drawio rectangle)
+fonts=(font-cascadia-code)
 
 for var in "${tools[@]}"
 do

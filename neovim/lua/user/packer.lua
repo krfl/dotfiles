@@ -38,24 +38,23 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the popup api from vim in neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
+  -- use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
+  -- use "kyazdani42/nvim-tree.lua"
   use "nvim-lualine/lualine.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
-  use "tpope/vim-surround"
+  -- use "tpope/vim-surround"
 
   -- Colorschemes
-  use "krfl/fleetish-vim"
-  use({
-	"catppuccin/nvim",
-	as = "catppuccin"
-  })
+  -- -- use "krfl/fleetish-vim"
+  use {
+    "catppuccin/nvim",
+    as = "catppuccin"
+  }
 
   -- CMP
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -64,6 +63,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 
   -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -82,6 +82,7 @@ return packer.startup(function(use)
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
+    commit = "8ada8faf2fd5a74cc73090ec856fa88f34cd364b",
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"

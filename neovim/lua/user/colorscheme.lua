@@ -1,5 +1,6 @@
 local status_ok, catp = pcall(require, "catppuccin")
 if not status_ok then
+    vim.cmd 'colorscheme blue'
     return
 end
 
