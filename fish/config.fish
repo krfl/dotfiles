@@ -22,7 +22,8 @@ function ll
 end
 
 function vim
-    command nvim $argv
+    command hx $argv
+    #command nvim $argv
 end
 
 function tree

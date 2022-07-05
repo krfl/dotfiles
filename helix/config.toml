@@ -1,0 +1,7 @@
+theme = "catpuccin"
+
+[editor]
+line-number = "relative"
+
+[editor.file-picker]
+hidden = false
