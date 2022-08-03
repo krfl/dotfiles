@@ -21,11 +21,6 @@ function ll
     command exa --sort=type --icons --long $argv
 end
 
-function vim
-    command hx $argv
-    #command nvim $argv
-end
-
 function tree
     command exa --tree $argv
 end
