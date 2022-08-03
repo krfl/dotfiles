@@ -1,0 +1,70 @@
+# Setup
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_TO_HOME
+setopt BEEP
+
+# Completion
+autoload -Uz compinit; compinit; _comp_options+=(globdots;)
+
+# Peco
+# History
+function peco-history() {
+  history -n | peco | read foo
+  if [ -n "$foo" ]
+  then
+    zle kill-whole-line
+    zle -U "$foo"
+    zle -R
+  fi
+}
+zle -N peco-history
+bindkey '^R' peco-history
+
+
+# Directories history
+function peco-directories-history() {
+  history -n | peco --query "cd " | read foo
+  if [ -n "$foo" ]
+  then
+    zle kill-whole-line  # optional
+    zle -U "$foo"
+    zle -R
+  fi
+}
+zle -N peco-directories-history
+bindkey '^K' peco-directories-history
+
+
+# Recent directories
+function peco-dirs() {
+  dirs | sed 's/ /\n/g' | peco | read foo
+  foo="${foo##* }"
+  if [ -n "$foo" ]
+  then
+    zle kill-whole-line
+    zle -U "cd $foo"
+    zle -R
+  fi
+}
+zle -N peco-dirs
+bindkey '^L' peco-dirs
+
+# Alias
+alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
+alias ls="clear && exa --sort=type --icons" 
+alias ll="clear && exa --sort=type --icons --long"
+alias tree="exa --tree"
+alias mon="top -o cpu -O time"
+alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
+
+# Rust
+source "$HOME/.cargo/env"
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Prompt
+eval "$(starship init zsh)"
+
+elvish
