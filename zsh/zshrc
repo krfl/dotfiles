@@ -64,5 +64,8 @@ source "$HOME/.cargo/env"
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Completion
+source <(carapace _carapace)
+
 # Prompt
 eval "$(starship init zsh)"

@@ -1,4 +1,4 @@
-theme = "catppuccin_macchiato"
+theme = "fleetish"
 
 [editor]
 mouse = false
@@ -7,6 +7,7 @@ scrolloff = 5
 idle-timeout = 0
 auto-pairs = false
 color-modes = true
+cursorline = false
 
 [editor.cursor-shape]
 insert = "bar"
