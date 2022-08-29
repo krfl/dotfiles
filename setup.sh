@@ -8,7 +8,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 tools=(git starship elvish helix peco task ripgrep rustup go node python3 docker)
-sugar=(exa bat tldr task tokei gitleaks apktool mas)
+sugar=(exa bat tldr task tokei gitleaks apktool mas imagemagick lazygit)
 casks=(kitty slack drawio rectangle)
 fonts=(font-caskaydia-cove-nerd-font font-jetbrains-mono-nerd-font)
 
@@ -41,3 +41,6 @@ done
 
 echo -e "\n\033[1:31mInstalling applications from the App Store\033[0m"
 mas install 1320666476 1289583905 1147396723 462062816 462058435 985367838 462054704
+
+echo -e "\n\033[1:31mSetting DNS to Warp Speed\033[0m"
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
