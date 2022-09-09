@@ -54,12 +54,12 @@ zle -N peco-dirs
 bindkey '^L' peco-dirs
 
 # Alias
-alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
 alias ls="clear && exa --sort=type --icons" 
 alias ll="clear && exa --sort=type --icons --long"
 alias tree="exa --tree"
 alias mon="top -o cpu -O time"
 alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
+alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
 
 # Rust
 source "$HOME/.cargo/env"
@@ -72,3 +72,7 @@ source <(carapace _carapace)
 
 # Prompt
 eval "$(starship init zsh)"
+
+clear
+date +"%H:%M:%S"
+date +"%d/%m/%Y"
