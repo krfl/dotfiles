@@ -7,9 +7,9 @@ echo -e "\n\033[1:31mAdding Homebrew to default shellenv\033[0m"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-tools=(git starship elvish peco task ripgrep rustup go node python3 docker carapace)
+tools=(git starship elvish peco task ripgrep rustup go node python3 carapace)
 sugar=(exa bat tldr task tokei gitleaks apktool mas imagemagick lazygit)
-casks=(kitty slack drawio rectangle)
+casks=(kitty slack drawio rectangle docker)
 fonts=(font-caskaydia-cove-nerd-font font-jetbrains-mono-nerd-font)
 
 brew tap homebrew/cask-fonts
