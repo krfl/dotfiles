@@ -7,6 +7,9 @@ setopt BEEP
 # Completion
 autoload -Uz compinit; compinit; _comp_options+=(globdots;)
 
+# Python
+export PYTHONDONTWRITEBYTECODE=1
+
 # Peco
 # History
 function peco-history() {
