@@ -5,17 +5,22 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt APPENDHISTORY
 
-# export PATH=$PATH:/usr/local/go/
-# export PATH=$PATH:~/.cargo/bin
-# export PATH=$PATH:$(go env GOPATH)/bin
-# export PATH=$PATH:~/.local/bin
-# export PATH="$HOME/github.com/neovim/build/bin:$PATH"
+# Z
+source /opt/homebrew/etc/profile.d/z.sh
 
 # Completion
 autoload -Uz compinit; compinit; _comp_options+=(globdots;)
 
 # Python
 export PYTHONDONTWRITEBYTECODE=1
+
+# Alias
+alias ls="exa --sort=type"
+alias ll="exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time"
+alias tree="exa --tree"
+alias mon="top -o cpu -O time"
+alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
+alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
 
 # Peco
 # History
@@ -29,37 +34,24 @@ function peco-history() {
   fi
 }
 zle -N peco-history
-bindkey '^R' peco-history
+bindkey "^R" peco-history
 
 # Recent directories
-# https://github.com/AlexanderBrevig/dotfiles/blob/main/zsh/.zshrc
+# Inspired by https://github.com/AlexanderBrevig/dotfiles/blob/main/zsh/.zshrc
 function peco-dirs() {
   z | tail -r | awk '{print $2}' | peco | read foo
-  foo="${foo##* }"
   if [ -n "$foo" ]
   then
-    cd "$foo"
+    zle kill-whole-line
+    zle -U "cd $foo"
     zle -R
   fi
 }
 zle -N peco-dirs
-bindkey '^L' peco-dirs
-
-
-# Alias
-alias ls='exa --sort=type'
-alias ll='exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time'
-alias tree="exa --tree"
-alias mon="top -o cpu -O time"
-alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
-alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
-
+bindkey "^L" peco-dirs
 
 # Rust
 #source "$HOME/.cargo/env"
-
-# Z
-source /opt/homebrew/etc/profile.d/z.sh
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"

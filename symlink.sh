@@ -13,7 +13,6 @@ rm -rf ~/.config/kitty/ 2> /dev/null
 rm -rf ~/.config/bat/ 2> /dev/null
 rm -rf ~/.config/peco/ 2> /dev/null
 rm -rf ~/.config/helix/ 2> /dev/null
-rm -rf ~/.config/.starship.toml 2> /dev/null
 rm -f ~/.zshrc 2> /dev/null
 
 echo -e "${PUR}Creating directories${NC}"
@@ -52,7 +51,3 @@ fi
 # zsh
 echo -e "${YLW}Zsh${NC}"
 ln -s $DIR/zsh/zshrc ~/.zshrc
-
-# starship
-echo -e "${YLW}Starship${NC}"
-ln -s $DIR/starship/starship.toml ~/.config/.starship.toml
