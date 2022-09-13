@@ -56,18 +56,12 @@ function peco-dirs() {
 zle -N peco-dirs
 bindkey "^L" peco-dirs
 
-# Rust
-#source "$HOME/.cargo/env"
-
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # Carapace
-source <(carapace _carapace)
+# source <(carapace _carapace)
 
 # Prompt
 eval "$(starship init zsh)"
 
-clear
-date +"%H:%M:%S"
-date +"%d/%m/%Y"
+# clear
+# date +"%H:%M:%S"
+# date +"%d/%m/%Y"
