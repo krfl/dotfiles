@@ -1,124 +1,189 @@
 format = """
-[](#9A348E)\
-$username\
-[](bg:#DA627D fg:#9A348E)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
-$git_branch\
-$git_status\
-[](fg:#FCA17D bg:#86BBD8)\
-$c\
-$elixir\
-$elm\
-$golang\
-$haskell\
-$java\
-$julia\
-$nodejs\
-$nim\
-$rust\
-[](fg:#86BBD8 bg:#06969A)\
+$git_branch$git_status\
+$c$dart$elixir$elm$golang$haskell$java$julia$nim$nodejs$python$rust\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
-$time\
-[ ](fg:#33658A)\
+$battery\
+$character
 """
 
-# Disable the blank line at the start of the prompt
-# add_newline = false
+#[ ](fg:#f7f3ee bg:#f7f3ee)\
+# [aws]
+# symbol = " "
 
-# You can also replace your username with a neat symbol like  to save some space
-[username]
-show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
-format = '[$user ]($style)'
+# [azure]
+# symbol = " "
 
-[directory]
-style = "bg:#DA627D"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
-
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
-[directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-# Keep in mind that the order matters. For example:
-# "Important Documents" = "  "
-# will not be replaced, because "Documents" was already substituted before.
-# So either put "Important Documents" before "Documents" or use the substituted version:
-# "Important  " = "  "
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+unknown_symbol = " "
+empty_symbol = " "
+format = "[ $symbol$percentage ](fg:#5b5143 bg:#f7e0c3) "
 
 [c]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+symbol = ""
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
+
+[character]
+error_symbol = "✕"
+success_symbol = "✓"
+format = '[ $symbol ](fg:#5b5143 bg:#f7e0c3) '
+
+[conda]
+symbol = " "
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
+
+[dart]
+symbol = " "
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
+
+[directory]
+read_only = " "
+style = "fg:#614c61 bg:#f1ddf1"
+format = "[ $path ]($style) "
+truncation_length = 2
+truncation_symbol = "…/"
 
 [docker_context]
 symbol = " "
 style = "bg:#06969A"
-format = '[ $symbol $context ]($style) $path'
+format = '[ $symbol$context ]($style) $path'
 
 [elixir]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
 
 [elm]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
 
 [git_branch]
-symbol = ""
-style = "bg:#FCA17D"
-format = '[ $symbol $branch ]($style)'
+symbol = " "
+style = "fg:#4c5361 bg:#dde4f2"
+format = '[ $symbol$branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
-format = '[$all_status$ahead_behind ]($style)'
+style = "fg:#4c5361 bg:#dde4f2"
+format = '[$all_status$ahead_behind ]($style) '
 
 [golang]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
 
 [haskell]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
 
 [java]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
 
 [julia]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
 
-[nodejs]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+[line_break]
+disabled = false
+
+# [memory_usage]
+# symbol = " "
 
 [nim]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
+
+# [nix_shell]
+# symbol = " "
+
+[nodejs]
+symbol = " "
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
+
+# [package]
+# symbol = " "
+
+[python]
+symbol = " "
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ ${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+
+# [spack]
+# symbol = "🅢 "
 
 [rust]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+symbol = " "
+style = "fg:#525643 bg:#e2e9c1"
+format = '[ $symbol($version) ]($style) '
 
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
-format = '[ ♥ $time ]($style)'
+# Not implemented
+
+# aws
+# azure
+# buf
+# bun
+# cmake
+# cobol / gnucobol
+# command duration
+# container
+# crystal
+# daml
+# deno
+# dotnet
+# environment variable
+# erlang
+# fill
+# gcloud
+# git commit
+# git state
+# git metrics
+# helm
+# hostname
+# jobs
+# kotlin
+# kubernetes
+# line break
+# local ip
+# lua
+# memory usage
+# mercurial branch
+# nix shell
+# ocaml
+# openstack
+# package version
+# perl
+# php
+# pulumi
+# purescript
+# r
+# raku
+# red
+# ruby
+# scala
+# shell
+# shlvl
+# singularity
+# spack
+# status
+# sudo
+# swift
+# terraform
+# time
+# username
+# vagrant
+# v
+# vcsh
+# zig
+# custom commands
