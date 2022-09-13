@@ -1,9 +1,14 @@
 # Zsh
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt APPENDHISTORY
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
+setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
+setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
+setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 
 # Z
 source /opt/homebrew/etc/profile.d/z.sh
@@ -16,7 +21,9 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # Alias
 alias ls="exa --sort=type"
+alias cls="clear && ls"
 alias ll="exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time"
+alias cll="clear && ll"
 alias tree="exa --tree"
 alias mon="top -o cpu -O time"
 alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
@@ -25,7 +32,7 @@ alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
 # Peco
 # History
 function peco-history() {
-  history -n | peco | read foo
+  fc -ln 1| peco | read foo
   if [ -n "$foo" ]
   then
     zle kill-whole-line
