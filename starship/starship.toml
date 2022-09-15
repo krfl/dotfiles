@@ -3,8 +3,8 @@ $directory\
 $git_branch$git_status\
 $c$dart$elixir$elm$golang$haskell$java$julia$nim$nodejs$python$rust\
 $docker_context\
-$battery\
-$character
+$battery$character
+[ > ]()
 """
 
 #[ ](fg:#f7f3ee bg:#f7f3ee)\

@@ -23,4 +23,9 @@ center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 
 [editor.file-picker]
-hidden = false
+git-ignore = true
+hidden = true
+
+# [editor.indent-guides]
+# render = true
+# character = "╎"

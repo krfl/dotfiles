@@ -14,7 +14,7 @@ if [[ $(command -v brew) == "" ]]; then
     echo "eval "$(/opt/homebrew/bin/brew shellenv)"" >> ~/.zprofile
 fi
 
-formulas=(git starship z peco task ripgrep rustup node python3 carapace tokei exa bat tldr gitleaks imagemagick)
+formulas=(fish git starship z peco task ripgrep rustup node python3 carapace tokei exa bat tldr gitleaks imagemagick)
 casks=(kitty slack drawio rectangle docker raycast font-jetbrains-mono-nerd-font)
 
 brew tap homebrew/cask-fonts

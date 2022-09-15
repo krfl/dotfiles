@@ -11,7 +11,7 @@ setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
 setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 
 # Z
-source /opt/homebrew/etc/profile.d/z.sh
+# source /opt/homebrew/etc/profile.d/z.sh
 
 # Completion
 autoload -Uz compinit; compinit; _comp_options+=(globdots;)
@@ -26,7 +26,7 @@ alias ll="exa --sort=type --long --git --no-icons --no-permissions --no-user --n
 alias cll="clear && ll"
 alias tree="exa --tree"
 alias mon="top -o cpu -O time"
-alias brewup="brew update && brew upgrade && brew cleanup && brew doctor"
+alias brewup="brew update && brew upgrade && brew cleanup && brew autoremove && brew doctor"
 alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
 
 # Peco
@@ -57,7 +57,7 @@ zle -N peco-dirs
 bindkey "^L" peco-dirs
 
 # Carapace
-# source <(carapace _carapace)
+source <(carapace _carapace)
 
 # Prompt
 eval "$(starship init zsh)"

@@ -14,9 +14,11 @@ rm -rf ~/.config/bat/ 2> /dev/null
 rm -rf ~/.config/peco/ 2> /dev/null
 rm -rf ~/.config/helix/ 2> /dev/null
 rm -f ~/.config/starship.toml 2> /dev/null
+rm -rf ~/.config/fish/ 2> /dev/null
 rm -f ~/.zshrc 2> /dev/null
 
 echo -e "${PUR}Creating directories${NC}"
+mkdir -p ~/.config/fish
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/bat
 mkdir -p ~/.config/peco
@@ -24,7 +26,15 @@ mkdir -p ~/.config/helix
 
 
 # ln -s(ymbolic) /path/to/file/or/dir path/to/symlink
-echo -e "${PUR}Symlinking configurations{NC}"
+echo -e "${PUR}Symlinking configurations${NC}"
+
+# fish
+echo -e "${YLW}Fish shell${NC}"
+ln -s $DIR/fish/config.fish ~/.config/fish/config.fish
+ln -s $DIR/fish/functions ~/.config/fish/functions
+ln -s $DIR/fish/conf.d ~/.config/fish/conf.d
+ln -s $DIR/fish/scripts ~/.config/fish/scripts
+ln -s $DIR/fish/themes ~/.config/fish/themes
 
 # kitty
 echo -e "${YLW}Kitty${NC}"
