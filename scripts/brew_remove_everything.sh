@@ -1,3 +1,3 @@
-brew remove --force $(brew list) --ignore-eeeeeeeeeeee
+brew remove --force $(brew list --formulae) --ignore-dependencies
 brew cleanup
-brew cask remove --force $(brew cask list)
+brew remove --cask --force $(brew list --cask)
