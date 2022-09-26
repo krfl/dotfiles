@@ -1,4 +1,4 @@
-theme = "flatwhite"
+theme = "dracula"
 
 [editor]
 mouse = false
