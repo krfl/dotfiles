@@ -1,5 +1,5 @@
 function peco_dirs
-  z -l | tail -r | awk '{print $2}' | peco | read foo
+  z -l | awk '{print $2}' | peco | read foo
   if [ $foo ]
     cd $foo
     commandline -f repaint
