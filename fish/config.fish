@@ -39,12 +39,8 @@ function mon
     command top -o cpu -O time $argv
 end
 
-function brewup
-    command brew update
-    command brew upgrade
-    command brew cleanup
-    command brew autoremove
-    command brew doctor
+function brewmas
+    command bash ~/github.com/dotfiles/scripts/brewmas_update.sh
 end
 
 # # Auto envs
@@ -68,6 +64,9 @@ export CLICOLOR=1
 
 # Editor
 export EDITOR="hx"
+
+# Completion
+procs --completion-out fish | source
 
 # Pew pew!
 starship init fish | source

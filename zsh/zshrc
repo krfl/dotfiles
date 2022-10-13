@@ -10,9 +10,6 @@ setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
 setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
 setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 
-# Z
-# source /opt/homebrew/etc/profile.d/z.sh
-
 # Completion
 autoload -Uz compinit; compinit; _comp_options+=(globdots;)
 
@@ -55,9 +52,6 @@ function peco-dirs() {
 }
 zle -N peco-dirs
 bindkey "^L" peco-dirs
-
-# Carapace
-source <(carapace _carapace)
 
 # Prompt
 eval "$(starship init zsh)"
