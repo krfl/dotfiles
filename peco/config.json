@@ -2,8 +2,8 @@
     "Layout": "bottom-up",
     "Style": {
         "Basic": ["on_default", "default"],
-        "SavedSelection": ["bold", "on_cyan", "white"],
-        "Selected": ["underline", "on_cyan", "black"],
-        "Matched": ["white", "on_cyan"]
+        "SavedSelection": ["underline", "on_blue", "white"],
+        "Selected": ["underline", "on_blue", "black"],
+        "Matched": ["white", "on_blue"]
     }
 }

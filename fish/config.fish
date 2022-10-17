@@ -21,18 +21,18 @@ end
 
 # Functions
 function ls
-    command lsd --sort extension --classify --icon never $argv
+    command lsd --sort extension --icon never $argv
     # command exa --sort=type $argv
 end
 
 function ll
-    command lsd --blocks size,name --sort extension --classify --icon never --human-readable $argv
-    #command exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time
+    command lsd --blocks size,name --sort extension --icon never --human-readable $argv
+    # command exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time
 end
 
 function tree
     command lsd --tree $argv
-    #command exa --tree $argv
+    # command exa --tree $argv
 end
 
 function mon
@@ -64,9 +64,6 @@ export CLICOLOR=1
 
 # Editor
 export EDITOR="hx"
-
-# Completion
-procs --completion-out fish | source
 
 # Pew pew!
 starship init fish | source
