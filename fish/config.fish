@@ -21,26 +21,23 @@ end
 
 # Functions
 function ls
-    command lsd --sort extension --icon never $argv
-    # command exa --sort=type $argv
+    command exa --sort=type $argv
 end
 
 function ll
-    command lsd --blocks size,name --sort extension --icon never --human-readable $argv
-    # command exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time
+    command exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time
 end
 
 function tree
-    command lsd --tree $argv
-    # command exa --tree $argv
+    command exa --tree $argv
 end
 
 function mon
     command top -o cpu -O time $argv
 end
 
-function brewmas
-    command bash ~/github.com/dotfiles/scripts/brewmas_update.sh
+function upgradestuff
+    command bash ~/github.com/dotfiles/scripts/update_brew_and_app_store.sh
 end
 
 # # Auto envs
