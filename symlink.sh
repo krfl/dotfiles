@@ -11,20 +11,16 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 echo -e "${PUR}Cleaning up existing configurations${NC}"
 rm -rf ~/.config/kitty/ 2> /dev/null
 rm -rf ~/.config/bat/ 2> /dev/null
-rm -rf ~/.config/peco/ 2> /dev/null
 rm -rf ~/.config/helix/ 2> /dev/null
 rm -f ~/.config/starship.toml 2> /dev/null
 rm -rf ~/.config/fish/ 2> /dev/null
-rm -rf ~/.config/ranger/ 2> /dev/null
 rm -f ~/.zshrc 2> /dev/null
 
 echo -e "${PUR}Creating directories${NC}"
 mkdir -p ~/.config/fish
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/bat
-mkdir -p ~/.config/peco
 mkdir -p ~/.config/helix
-mkdir -p ~/.config/ranger
 
 
 # ln -s(ymbolic) /path/to/file/or/dir path/to/symlink
@@ -46,15 +42,6 @@ ln -s $DIR/kitty/themes/ ~/.config/kitty/themes
 # bat
 echo -e "${YLW}Bat${NC}"
 ln -s $DIR/bat/config ~/.config/bat/config
-
-# peco
-echo -e "${YLW}Peco${NC}"
-ln -s $DIR/peco/config.json ~/.config/peco/config.json
-
-# ranger
-echo -e "${YLW}Ranger${NC}"
-ln -s $DIR/ranger/rc.config ~/.config/ranger/rc.config
-ln -s $DIR/ranger/colorschemes ~/.config/colorschemes
 
 # helix
 echo -e "${YLW}Helix${NC}"

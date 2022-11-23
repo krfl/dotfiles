@@ -7,7 +7,7 @@ scrolloff = 5
 idle-timeout = 0
 auto-pairs = false
 color-modes = true
-cursorline = false
+cursorline = true
 
 [editor.cursor-shape]
 insert = "bar"

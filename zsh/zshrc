@@ -18,9 +18,7 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # Alias
 alias ls="exa --sort=type"
-alias cls="clear && ls"
 alias ll="exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time"
-alias cll="clear && ll"
 alias tree="exa --tree"
 alias mon="top -o cpu -O time"
 alias brewup="brew update && brew upgrade && brew cleanup && brew autoremove && brew doctor"
@@ -28,8 +26,8 @@ alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
 
 # Peco
 # History
-function peco-history() {
-  fc -ln 1| peco | read foo
+function gum-history() {
+  fc -ln 1| gum filter --reverse --indicator="->" | read foo
   if [ -n "$foo" ]
   then
     zle kill-whole-line
@@ -37,8 +35,8 @@ function peco-history() {
     zle -R
   fi
 }
-zle -N peco-history
-bindkey "^R" peco-history
+zle -N gum-history
+bindkey "^R" gum-history
 
 # Recent directories
 # Inspired by https://github.com/AlexanderBrevig/dotfiles/blob/main/zsh/.zshrc
@@ -59,3 +57,7 @@ eval "$(starship init zsh)"
 # clear
 # date +"%H:%M:%S"
 # date +"%d/%m/%Y"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/krfl/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

@@ -64,3 +64,7 @@ export EDITOR="hx"
 
 # Pew pew!
 starship init fish | source
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/krfl/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

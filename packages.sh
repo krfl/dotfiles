@@ -12,10 +12,11 @@ if [[ $(command -v brew) == "" ]]; then
 
     echo -e "${PUR}Adding ${YELLOW}Homebrew${PUR} to default shellenv${NC}"
     echo "eval "$(/opt/homebrew/bin/brew shellenv)"" >> ~/.zprofile
+    exit 0
 fi
 
-formulas=(fish git starship peco ranger ripgrep rustup python3 exa bat tldr gitleaks imagemagick mas gum)
-casks=(kitty slack drawio rectangle raycast font-jetbrains-mono-nerd-font)
+formulas=(fish git starship ripgrep rustup python3 exa bat tldr gitleaks imagemagick mas gum llama)
+casks=(kitty slack rectangle raycast font-jetbrains-mono-nerd-font)
 
 brew tap homebrew/cask-fonts
 
