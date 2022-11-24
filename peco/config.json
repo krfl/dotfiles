@@ -1,9 +1,0 @@
-{
-    "Layout": "bottom-up",
-    "Style": {
-        "Basic": ["on_default", "default"],
-        "SavedSelection": ["underline", "on_blue", "white"],
-        "Selected": ["underline", "on_blue", "black"],
-        "Matched": ["white", "on_blue"]
-    }
-}

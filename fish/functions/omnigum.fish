@@ -30,4 +30,5 @@ function omnigum
         end
     end
     commandline -f kill-line
+    commandline ''
 end

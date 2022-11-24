@@ -57,7 +57,3 @@ eval "$(starship init zsh)"
 # clear
 # date +"%H:%M:%S"
 # date +"%d/%m/%Y"
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/krfl/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
