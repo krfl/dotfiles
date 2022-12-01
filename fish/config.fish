@@ -36,8 +36,9 @@ function mon
     command top -o cpu -O time $argv
 end
 
-function upgradestuff
-    command bash ~/github.com/dotfiles/scripts/update_brew_and_app_store.sh
+function brewup
+    command brew update
+    command gum confirm --affirmative="Upgrade" --negative="Cancel" --prompt.foreground 1 --selected.background 4 --selected.foreground 0 --unselected.foreground="" && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
 # # Auto envs

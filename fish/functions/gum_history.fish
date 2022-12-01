@@ -1,5 +1,5 @@
 function gum_history
-  history | gum filter --reverse --indicator="->" | read foo
+  history | gum filter --reverse --placeholder="Filter history..." --indicator="->" --match.foreground 1 --indicator.foreground 1 | read foo
   if [ $foo ]
     commandline $foo
   else
