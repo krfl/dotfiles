@@ -6,6 +6,7 @@ fish_add_path /sbin
 fish_add_path /Applications/Keybase.app/Contents/SharedSupport/bin
 fish_add_path /Library/Apple/usr/bin
 fish_add_path ~/.cargo/bin
+fish_add_path /opt/homebrew/opt/openjdk/bin
 
 # Greeting
 function fish_greeting
@@ -38,7 +39,11 @@ end
 
 function brewup
     command brew update
-    command gum confirm --affirmative="Upgrade" --negative="Cancel" --prompt.foreground 1 --selected.background 4 --selected.foreground 0 --unselected.foreground="" && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
+    command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 5 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
+end
+
+function page
+    cat $argv | gum format -t markdown | gum pager -border-foreground="5"
 end
 
 # # Auto envs

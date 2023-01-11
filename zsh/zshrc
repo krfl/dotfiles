@@ -1,59 +1,7 @@
 # Zsh
-
-
-export HISTFILE=~/.zsh_history
-export HISTSIZE=1000000
-export SAVEHIST=1000000
-
-setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
-setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
-setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
-setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
-
 # Completion
 autoload -Uz compinit; compinit; _comp_options+=(globdots;)
 
-# Python
-export PYTHONDONTWRITEBYTECODE=1
+#eval "$(starship init zsh)"
 
-# Alias
-alias ls="exa --sort=type"
-alias ll="exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time"
-alias tree="exa --tree"
-alias mon="top -o cpu -O time"
-alias brewup="brew update && brew upgrade && brew cleanup && brew autoremove && brew doctor"
-alias gotoicloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/"
-
-# Peco
-# History
-function gum-history() {
-  fc -ln 1| gum filter --reverse --indicator="->" | read foo
-  if [ -n "$foo" ]
-  then
-    zle kill-whole-line
-    zle -U "$foo"
-    zle -R
-  fi
-}
-zle -N gum-history
-bindkey "^R" gum-history
-
-# Recent directories
-# Inspired by https://github.com/AlexanderBrevig/dotfiles/blob/main/zsh/.zshrc
-function peco-dirs() {
-  z | tail -r | awk '{print $2}' | peco | read foo
-  if [ -n "$foo" ]
-  then
-    cd "$foo"
-    zle reset-prompt 
-  fi
-}
-zle -N peco-dirs
-bindkey "^L" peco-dirs
-
-# Prompt
-eval "$(starship init zsh)"
-
-# clear
-# date +"%H:%M:%S"
-# date +"%d/%m/%Y"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
