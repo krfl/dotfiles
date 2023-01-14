@@ -8,6 +8,9 @@ NC="\033[0m" # No Color
 # warp speed dns
 networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
 
+# No more .DS_Store files
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
 # show extensions in Finder
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
 
@@ -35,5 +38,3 @@ defaults write com.apple.dock show-recent-count -int 20
 
 # restart dock
 killall Dock
-
-echo -e "${PUR}Done${NC}"
