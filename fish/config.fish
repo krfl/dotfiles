@@ -10,10 +10,15 @@ fish_add_path /opt/homebrew/opt/openjdk/bin
 
 # Greeting
 function fish_greeting
-    # command clear
-    # command date +"%d/%m/%Y"
-    # command date +"%H:%M:%S"
-    # command task next
+    cal
+end
+
+function cal
+    command icalBuddy -f -sc -ss "" -npn -nc -iep "title,datetime" -ps "| : |" -po "datetime,title" -tf "" -df "%RD" -eed eventsToday+1
+end
+
+function tasks
+    command icalBuddy -f -sc -ss "" -npn -nc -iep "title,datetime" -ps "| : |" -po "datetime,title" -tf "" -df "%RD" -eed tasksDueBefore:today+1
 end
 
 function gotoicloud
