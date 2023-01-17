@@ -15,7 +15,7 @@ if [[ $(command -v brew) == "" ]]; then
     exit 0
 fi
 
-formulas=(fish git starship ripgrep rustup python3 exa bat tldr gitleaks imagemagick mas gum llama fd dive loc)
+formulas=(fish git starship ripgrep rustup python3 exa bat tldr gitleaks imagemagick mas gum llama fd dive loc ical-buddy)
 casks=(kitty slack rectangle raycast font-jetbrains-mono-nerd-font)
 
 brew tap homebrew/cask-fonts
