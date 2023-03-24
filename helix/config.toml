@@ -1,4 +1,4 @@
-theme = "rose_pine_moon"
+theme = "fleet_dark"
 
 [editor]
 mouse = false
@@ -8,7 +8,9 @@ idle-timeout = 0
 auto-pairs = false
 color-modes = true
 cursorline = true
-bufferline = "multiple"
+# bufferline = "multiple"
+true-color = true
+#rulers = [ 80 ]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -17,6 +19,7 @@ select = "underline"
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = true
 
 [editor.statusline]
 left = ["mode", "spinner"]
@@ -27,6 +30,6 @@ right = ["diagnostics", "selections", "position", "file-encoding", "file-line-en
 git-ignore = true
 hidden = true
 
-# [editor.indent-guides]
+[editor.indent-guides]
 # render = true
-# character = "╎"
+# character = "│"

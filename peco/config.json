@@ -1,0 +1,8 @@
+{
+    "Layout": "bottom-up",
+    "Style": {
+        "Basic": ["on_default", "default"],
+        "Selected": ["on_magenta", "black"],
+        "Matched": ["white", "bold"]
+    }
+}

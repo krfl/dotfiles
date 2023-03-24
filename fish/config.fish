@@ -31,7 +31,7 @@ function ls
 end
 
 function ll
-    command exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time
+    command exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time $argv
 end
 
 function tree
@@ -44,11 +44,11 @@ end
 
 function brewup
     command brew update
-    command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 5 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
+    command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 2 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
 function page
-    cat $argv | gum format -t markdown | gum pager -border-foreground="5"
+    cat $argv | gum format -t markdown | gum pager --border-foreground 5
 end
 
 # # Auto envs

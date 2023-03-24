@@ -12,6 +12,7 @@ echo -e "${PUR}Cleaning up existing configurations${NC}"
 rm -rf ~/.config/kitty/ 2> /dev/null
 rm -rf ~/.config/bat/ 2> /dev/null
 rm -rf ~/.config/helix/ 2> /dev/null
+rm -rf ~/.config/peco/ 2> /dev/null
 rm -f ~/.config/starship.toml 2> /dev/null
 rm -rf ~/.config/fish/ 2> /dev/null
 rm -f ~/.zshrc 2> /dev/null
@@ -21,6 +22,7 @@ mkdir -p ~/.config/fish
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/bat
 mkdir -p ~/.config/helix
+mkdir -p ~/.config/peco
 
 
 # ln -s(ymbolic) /path/to/file/or/dir path/to/symlink
@@ -43,6 +45,9 @@ ln -s $DIR/kitty/themes/ ~/.config/kitty/themes
 echo -e "${YLW}Bat${NC}"
 ln -s $DIR/bat/config ~/.config/bat/config
 
+# peco
+echo -e "${YLW}Peco${NC}"
+ln -s $DIR/peco/config.json ~/.config/peco/config.json
 # helix
 echo -e "${YLW}Helix${NC}"
 ln -s $DIR/helix/config.toml ~/.config/helix/config.toml

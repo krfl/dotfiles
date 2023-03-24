@@ -1,5 +1,5 @@
 function peco_history
-  history | peco | read foo
+  history | peco --prompt=" >" | read foo
   if [ $foo ]
     commandline $foo
   else
