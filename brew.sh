@@ -15,7 +15,8 @@ if [[ $(command -v brew) == "" ]]; then
     exit 0
 fi
 
-formulas=(fish git starship ripgrep rustup python3 exa bat tldr gitleaks imagemagick mas peco fd dive loc ical-buddy)
+formulas=(fish git starship exa zoxide fzf peco ripgrep ouch jq yq bat fd dive loc)
+formulas_extras=(rustup python3 imagemagick ffmpeg mas ical-buddy slides gitleaks ripsecrets tealdeer)
 casks=(kitty slack rectangle raycast font-jetbrains-mono-nerd-font)
 
 brew tap homebrew/cask-fonts
@@ -24,6 +25,12 @@ for formula in "${formulas[@]}"
 do
     echo -e "${PUR}Installing ${YLW}${formula}${NC}"
     brew install ${formula}
+done
+
+for extra in "${formulas_extras[@]}"
+do
+    echo -e "${PUR}Installing ${YLW}${extra}${NC}"
+    brew install ${extra}
 done
 
 for cask in "${casks[@]}"

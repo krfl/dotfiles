@@ -1,8 +1,8 @@
 # dotfiles
 
-`packages.sh` installs homebrew and packages
+`brew.sh` installs homebrew and formulas/casks
 
-`options.sh` adjusts various settings to make everything better
+`options.sh` adjusts various settings on new macs
 
 `symlink.sh` cleans up existing configurations and creates new fresh symlinks
 

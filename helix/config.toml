@@ -10,7 +10,7 @@ color-modes = true
 cursorline = true
 # bufferline = "multiple"
 true-color = true
-#rulers = [ 80 ]
+# rulers = [ 80 ]
 
 [editor.cursor-shape]
 insert = "bar"
