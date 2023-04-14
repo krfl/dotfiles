@@ -39,10 +39,6 @@ function tree
     command exa --tree $argv
 end
 
-function mon
-    command top -o cpu -O time $argv
-end
-
 function brewup
     command brew update
     command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 2 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
@@ -50,11 +46,6 @@ end
 
 function page
     cat $argv | gum format -t markdown | gum pager --border-foreground 5
-end
-
-function cred
-    echo "Turbo-cashew-rocket-913"
-    echo "Nectar-cookie-carrot-221"
 end
 
 # # Auto envs
