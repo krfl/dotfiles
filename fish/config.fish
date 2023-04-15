@@ -44,9 +44,27 @@ function brewup
     command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 2 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
-function page
-    cat $argv | gum format -t markdown | gum pager --border-foreground 5
+# Peco
+function peco_zoxide
+  zoxide query -ls | awk '{print $2}' | peco --prompt=" >" | read foo
+  if [ $foo ]
+    cd $foo
+    commandline -f repaint
+  else
+    commandline ''
+  end
 end
+
+function peco_history
+  history | peco --prompt=" >" | read foo
+  if [ $foo ]
+    commandline $foo
+  else
+    commandline ''
+  end
+end
+
+bind \co peco_zoxide
 
 # # Auto envs
 # function autovenv --on-variable PWD
@@ -69,9 +87,6 @@ export CLICOLOR=1
 
 # Editor
 export EDITOR="hx"
-
-# Fzf
-export FZF_DEFAULT_OPTS='--color=border:#cc7c8a --color=fg:#d1d1d1,bg:#181818,hl:#af9cff --color=fg+:#ffffff,bg+:#292929,hl+:#AF9CFF --color=info:#a8cc7c,prompt:#cc7c8a,pointer:#af9cff --color=marker:#87c3ff,spinner:#af9cff,header:#ebc88d'
 
 # Zoxide
 zoxide init fish | source
