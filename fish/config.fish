@@ -41,7 +41,7 @@ end
 
 function brewup
     command brew update
-    command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 2 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
+    command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 9 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
 # Peco
@@ -65,6 +65,7 @@ function peco_history
 end
 
 bind \co peco_zoxide
+bind \cr peco_history
 
 # # Auto envs
 # function autovenv --on-variable PWD
@@ -87,6 +88,9 @@ export CLICOLOR=1
 
 # Editor
 export EDITOR="hx"
+
+# Fuck
+thefuck --alias | source
 
 # Zoxide
 zoxide init fish | source
