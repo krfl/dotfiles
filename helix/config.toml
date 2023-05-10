@@ -1,30 +1,37 @@
-theme = "rose_pine_moon"
+theme = 'rose_pine_moon'
 
 [editor]
 mouse = false
-line-number = "relative"
+line-number = 'relative'
 scrolloff = 5
 idle-timeout = 0
 auto-pairs = false
 color-modes = true
 cursorline = true
-# bufferline = "multiple"
+# bufferline = 'multiple'
 true-color = true
 # rulers = [ 80 ]
 
 [editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+insert = 'bar'
+normal = 'block'
+select = 'underline'
 
 [editor.lsp]
 display-messages = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+left = ['mode', 'spinner']
+center = ['file-name']
+right = [
+  'diagnostics',
+  'selections',
+  'position',
+  'file-encoding',
+  'file-line-ending',
+  'file-type',
+]
 
 [editor.file-picker]
 git-ignore = true
@@ -32,4 +39,11 @@ hidden = true
 
 [editor.indent-guides]
 # render = true
-# character = "│"
+# character = '│'
+
+[keys.normal]
+esc = ['collapse_selection', 'keep_primary_selection']
+
+[keys.insert]
+esc = [':format', 'normal_mode']
+'C-c' = 'normal_mode'
