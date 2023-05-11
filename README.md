@@ -1,11 +1,8 @@
 # dotfiles
 
-`brew.sh` installs homebrew and formulas/casks
+`install.sh` installs homebrew and runs brew bundle
 
 `options.sh` adjusts various settings on new macs
-
-`symlink.sh` cleans up existing configurations and creates new fresh symlinks
-
 
 ## TODO
 
