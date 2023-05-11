@@ -8,7 +8,7 @@ idle-timeout = 0
 auto-pairs = true
 color-modes = true
 cursorline = true
-bufferline = 'multiple'
+# bufferline = 'multiple'
 true-color = true
 # rulers = [ 80 ]
 

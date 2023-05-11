@@ -7,5 +7,8 @@
 `symlink.sh` cleans up existing configurations and creates new fresh symlinks
 
 
-I love the smell of symlinks in the morning...
+## TODO
+
+- [x] Adopt brew bundle
+- [ ] Adopt gnu-stow
 

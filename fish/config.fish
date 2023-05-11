@@ -44,6 +44,10 @@ function brewup
     command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 9 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
+function htop
+    command htop --tree --sort-key PERCENT_CPU $argv
+end
+
 # Peco
 function peco_zoxide
   zoxide query -ls | awk '{print $2}' | peco --prompt=" >" | read foo

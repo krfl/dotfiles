@@ -15,7 +15,7 @@ if [[ $(command -v brew) == "" ]]; then
     exit 0
 fi
 
-formulas=(fish git starship exa zoxide fzf peco ripgrep ouch jq yq bat fd dive tokei)
+formulas=(fish git starship exa zoxide fzf peco ripgrep ouch jq yq bat fd dive tokei taplo marksman)
 extras=(rustup python3 imagemagick ffmpeg mas ical-buddy slides gitleaks ripsecrets tealdeer)
 casks=(kitty slack rectangle raycast font-jetbrains-mono-nerd-font)
 
