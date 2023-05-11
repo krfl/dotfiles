@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo xcodebuild -license # agree with license
 xcode-select --install # Install command line tool
