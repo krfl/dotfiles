@@ -7,5 +7,5 @@
 ## TODO
 
 - [x] Adopt brew bundle
-- [ ] Adopt gnu-stow
+- [x] Adopt gnu-stow
 

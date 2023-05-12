@@ -1,9 +1,0 @@
-{
-    "Layout": "bottom-up",
-    "Use256Color": true,
-    "Style": {
-        "Basic": ["default", "on_default"],
-        "Selected": ["0", "on_magenta"],
-        "Matched": ["bold", "231"]
-    }
-}

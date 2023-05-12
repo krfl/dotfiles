@@ -2,6 +2,7 @@
 cask_args appdir: '/Applications'
 
 # daily drivers
+brew 'stow'
 brew 'git'
 brew 'fish'
 brew 'starship'
@@ -15,6 +16,7 @@ brew 'tealdeer'
 brew 'ical-buddy'
 
 # extras
+brew 'gum'
 brew 'rustup'
 brew 'python3'
 brew 'imagemagick'
