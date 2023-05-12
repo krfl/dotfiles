@@ -13,6 +13,19 @@ set -x HELIX_RUNTIME ~/github.com/helix/runtime
 
 # Greeting
 function fish_greeting
+    switch (uname)
+        case Darwin
+            switch (defaults read -g AppleInterfaceStyle 2>/dev/null)
+                case Dark
+                    sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" /Users/krfl/.config/helix/config.toml
+                    command kitty +kitten themes --reload-in=all Rosé Pine Moon
+                case '*'
+                    sed -i '' "s/theme =.*/theme = 'rose_pine_dawn'/" /Users/krfl/.config/helix/config.toml
+                    command kitty +kitten themes --reload-in=all Rosé Pine Dawn
+                end
+        case '*'
+            echo "Only Darwin is supported"
+    end
     cal
 end
 
@@ -43,7 +56,7 @@ end
 
 function brewup
     command brew update
-    command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 9 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
+    command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 6 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
 function htop
@@ -65,6 +78,15 @@ function peco_history
   history | peco --prompt=" >" | read foo
   if [ $foo ]
     commandline $foo
+  else
+    commandline ''
+  end
+end
+
+function mdb
+  fd -E Library --extension md --full-path '/Users/krfl/' | peco --prompt=" >" | read foo
+  if [ $foo ]
+    command hx $foo
   else
     commandline ''
   end
