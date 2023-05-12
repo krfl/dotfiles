@@ -1,0 +1,14 @@
+\.git
+\.gitignore
+
+\.DS_Store
+
+Brewfile
+Brewfile.lockjson
+install.sh
+options.sh
+scripts
+
+^/README.*
+^/LICENSE.*
+^/COPYING

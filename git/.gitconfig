@@ -1,0 +1,8 @@
+[includeIf "gitdir:~/github.com/"]
+  path = ~/github.com/.gitconfig
+
+[includeIf "gitdir:~/gitlab.com/"]
+  path = ~/gitlab.com/.gitconfig
+
+[alias]
+  lg = log --oneline --abbrev-commit --all --graph --decorate --color

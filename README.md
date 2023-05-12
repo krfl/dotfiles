@@ -1,11 +1,5 @@
 # dotfiles
 
-`install.sh` installs homebrew and runs brew bundle
+`setup_macos.sh` installs homebrew and runs brew bundle on MacOS
 
-`options.sh` adjusts various settings on new macs
-
-## TODO
-
-- [x] Adopt brew bundle
-- [x] Adopt gnu-stow
-
+`stow.sh` creates symlinks for all managed dotfiles using gnu stow
