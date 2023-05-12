@@ -17,10 +17,10 @@ function fish_greeting
         case Darwin
             switch (defaults read -g AppleInterfaceStyle 2>/dev/null)
                 case Dark
-                    sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" /Users/krfl/.config/helix/config.toml
+                    sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" ~/.config/helix/config.toml
                     command kitty +kitten themes --reload-in=all Rosé Pine Moon
                 case '*'
-                    sed -i '' "s/theme =.*/theme = 'rose_pine_dawn'/" /Users/krfl/.config/helix/config.toml
+                    sed -i '' "s/theme =.*/theme = 'rose_pine_dawn'/" ~/.config/helix/config.toml
                     command kitty +kitten themes --reload-in=all Rosé Pine Dawn
                 end
         case '*'
