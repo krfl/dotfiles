@@ -9,6 +9,8 @@ fish_add_path ~/.cargo/bin
 fish_add_path /opt/homebrew/opt/openjdk/bin
 fish_add_path ~/.maestro/bin
 
+set -x HELIX_RUNTIME ~/github.com/helix/runtime
+
 # Greeting
 function fish_greeting
     cal
