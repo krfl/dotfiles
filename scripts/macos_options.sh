@@ -27,14 +27,14 @@ defaults write com.apple.dock "autohide" -bool "true"
 defaults write com.apple.dock "mineffect" -string "scale"
 
 # dock icon size
-defaults write com.apple.dock "tilesize" -int "48"
+defaults write com.apple.dock "tilesize" -int "64"
 
 # open app indicators
 defaults write com.apple.com show-process-indicators -bool true
 
 # show recents in dock
-defaults write com.apple.dock show-recents -bool true
-defaults write com.apple.dock show-recent-count -int 20
+# defaults write com.apple.dock show-recents -bool true
+# defaults write com.apple.dock show-recent-count -int 20
 
 # restart dock
 killall Dock
