@@ -1,2 +1,4 @@
 .DS_Store
 Brewfile.lock.json
+/kitty/.config/kitty/current-theme.conf
+/kitty/.config/kitty/kitty.conf.bak
