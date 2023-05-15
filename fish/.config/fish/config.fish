@@ -13,20 +13,24 @@ set -x HELIX_RUNTIME ~/github.com/helix/runtime
 
 # Greeting
 function fish_greeting
-    switch (uname)
-        case Darwin
-            switch (defaults read -g AppleInterfaceStyle 2>/dev/null)
-                case Dark
-                    sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" ~/.config/helix/config.toml
-                    command kitty +kitten themes --reload-in=all Rosé Pine Moon
-                case '*'
-                    sed -i '' "s/theme =.*/theme = 'rose_pine_dawn'/" ~/.config/helix/config.toml
-                    command kitty +kitten themes --reload-in=all Rosé Pine Dawn
-                end
-        case '*'
-            echo "Only Darwin is supported"
-    end
+    __check_and_change_theme
     cal
+end
+
+function __check_and_change_theme
+    # switch (uname)
+    #     case Darwin
+    switch (defaults read -g AppleInterfaceStyle 2>/dev/null)
+        case Dark
+            sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" ~/.config/helix/config.toml
+            command kitty +kitten themes --reload-in=parent Rosé Pine Moon
+        case '*'
+            sed -i '' "s/theme =.*/theme = 'rose_pine_dawn'/" ~/.config/helix/config.toml
+            command kitty +kitten themes --reload-in=parent Rosé Pine Dawn
+        end
+        # case '*'
+            # echo "Only Darwin is supported"
+    # end
 end
 
 function cal
