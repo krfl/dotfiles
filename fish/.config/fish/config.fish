@@ -72,6 +72,7 @@ end
 
 function brewup
     command brew update
+    # command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 0 --selected.foreground 6 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
     command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 6 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
