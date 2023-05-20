@@ -101,7 +101,7 @@ function peco_history
 end
 
 function mdb
-  fd -E Library --extension md --full-path '/Users/krfl/' | peco --prompt=" >" | read foo
+  fd . '/Users/krfl/' -E Library --extension md | peco --prompt=" >" | read foo
   if [ $foo ]
     command hx $foo
   else
