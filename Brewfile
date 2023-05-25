@@ -1,7 +1,7 @@
 # casks install directory
 cask_args appdir: '/Applications'
 
-# daily drivers
+# formulae
 brew 'stow'
 brew 'git'
 brew 'fish'
@@ -14,8 +14,6 @@ brew 'ouch'
 brew 'slides'
 brew 'tealdeer'
 brew 'ical-buddy'
-
-# extras
 brew 'gum'
 brew 'rustup'
 brew 'python3'
@@ -38,9 +36,15 @@ brew 'marksman'
 
 # casks
 cask 'kitty'
+cask 'google-chrome'
 cask 'slack'
 cask 'rectangle'
 cask 'raycast'
-cask 'xmind'
 cask 'font-jetbrains-mono-nerd-font'
 cask 'reminders-menubar'
+
+# app store
+mas 'Xcode', id: 497799835
+mas 'Hidden Bar', id: 1452453066
+mas 'Velja', id: 1607635845
+mas 'Wipr', id: 1320666476
