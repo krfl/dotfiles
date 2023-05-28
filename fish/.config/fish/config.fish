@@ -18,8 +18,6 @@ function fish_greeting
 end
 
 function __check_and_change_theme
-    # switch (uname)
-    #     case Darwin
     switch (defaults read -g AppleInterfaceStyle 2>/dev/null)
         case Dark
             sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" ~/.config/helix/config.toml
@@ -40,9 +38,6 @@ function __check_and_change_theme
             	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
             command kitty +kitten themes --reload-in=parent Rosé Pine Dawn
         end
-        # case '*'
-            # echo "Only Darwin is supported"
-    # end
 end
 
 function cal
@@ -72,7 +67,6 @@ end
 
 function brewup
     command brew update
-    # command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 0 --selected.foreground 6 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
     command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 6 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
@@ -82,31 +76,31 @@ end
 
 # Peco
 function peco_zoxide
-  zoxide query -ls | awk '{print $2}' | peco --prompt=" >" | read foo
-  if [ $foo ]
-    cd $foo
-    commandline -f repaint
-  else
-    commandline ''
-  end
+    zoxide query -ls | awk '{print $2}' | peco --prompt=" >" | read foo
+    if [ $foo ]
+        cd $foo
+        commandline -f repaint
+    else
+        commandline ''
+    end
 end
 
 function peco_history
-  history | peco --prompt=" >" | read foo
-  if [ $foo ]
-    commandline $foo
-  else
-    commandline ''
-  end
+    history | peco --prompt=" >" | read foo
+    if [ $foo ]
+        commandline $foo
+    else
+        commandline ''
+    end
 end
 
 function mdb
-  fd . '/Users/krfl/' -E Library --extension md | peco --prompt=" >" | read foo
-  if [ $foo ]
-    command hx $foo
-  else
-    commandline ''
-  end
+    fd . '/Users/krfl/' -E Library --extension md | peco --prompt=" >" | read foo
+    if [ $foo ]
+        command hx $foo
+    else
+        commandline ''
+    end
 end
 
 bind \co peco_zoxide
