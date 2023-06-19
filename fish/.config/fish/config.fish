@@ -13,11 +13,12 @@ set -x HELIX_RUNTIME ~/github.com/helix/runtime
 
 # Greeting
 function fish_greeting
-    __check_and_change_theme
-    cal
+    __theme_mode
+    __calendar
+    echo ""
 end
 
-function __check_and_change_theme
+function __theme_mode
     switch (defaults read -g AppleInterfaceStyle 2>/dev/null)
         case Dark
             sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" ~/.config/helix/config.toml
@@ -40,41 +41,50 @@ function __check_and_change_theme
         end
 end
 
-function cal
+# prints events from calendar
+# using icalbuddy and excluding a calendar I don't want to see
+function __calendar
     command icalBuddy -f -sc -ss "" -ec "0B859D0F-FDA1-4152-A59E-7AC012E4A433" -eed -eep "notes,attendees" eventsToday
 end
 
-function tasks
+# prints tasks from reminders
+# using icalbuddy
+function __reminders
     command icalBuddy -f -sc -ss "" -npn -nc -iep "title,datetime" -ps "| : |" -po "datetime,title" -tf "" -df "%RD" -eed tasksDueBefore:today+1
 end
 
-function gotoicloud
-    cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/
-end
-
-# Functions
+# ls alias using exa
+# sorted by type
 function ls
     command exa --sort=type $argv
 end
 
+# ll alias using exa
+# 'short form' ls -l sorted by type
 function ll
     command exa --sort=type --long --git --no-icons --no-permissions --no-user --no-time $argv
 end
 
+# tree alias using exa
 function tree
     command exa --tree $argv
 end
 
+# homebrew alias using gum
+# updates then optionally  upgrades and cleans up
 function brewup
     command brew update
     command gum confirm --affirmative="Upgrade" --negative="Cancel" --selected.background 6 --selected.foreground 0 && brew upgrade && brew cleanup && brew autoremove && brew doctor  || echo "Upgrade cancelled"
 end
 
-function htop
+# htop alias
+# tree view and sorted by cpu usage
+function htop --wraps htop --description 'alias htop=htop --tree --sort-key PERCENT_CPU'
     command htop --tree --sort-key PERCENT_CPU $argv
 end
 
-# Peco
+# peco zoxide
+# feeds zoxide directories into peco for filtering 
 function peco_zoxide
     zoxide query -ls | awk '{print $2}' | peco --prompt=" >" | read foo
     if [ $foo ]
@@ -85,6 +95,8 @@ function peco_zoxide
     end
 end
 
+# peco history
+# feeds history into peco for filtering and a better reverse search
 function peco_history
     history | peco --prompt=" >" | read foo
     if [ $foo ]
@@ -94,6 +106,8 @@ function peco_history
     end
 end
 
+# markdown brain
+# lets me easily find the markdown document I'm looking for through peco's filtering. 
 function mdb
     fd . '/Users/krfl/' -E Library --extension md | peco --prompt=" >" | read foo
     if [ $foo ]
@@ -103,6 +117,7 @@ function mdb
     end
 end
 
+# bind functions
 bind \co peco_zoxide
 bind \cr peco_history
 
