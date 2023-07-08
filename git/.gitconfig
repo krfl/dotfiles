@@ -6,3 +6,23 @@
 
 [alias]
   lg = log --oneline --abbrev-commit --all --graph --decorate --color
+  a = add
+  ap = add -p
+  b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+  c = commit --verbose
+  ca = commit -a --verbose
+  cm = commit -m
+  cam = commit -a -m
+  co = checkout
+  d = diff
+  ds = diff --stat
+  dc = diff --cached
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  m = commit --amend --verbose
+  new = switch -c
+  pu = push
+  pr = push -u upstream
+  s = status -s
+  sw = switch
+  la = "!git config -l | grep alias | cut -c 7-"
+  changes = -c pager.show=false show --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -q @@{1}..@@{0}
