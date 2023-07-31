@@ -47,4 +47,6 @@ cask 'reminders-menubar'
 mas 'Xcode', id: 497799835
 mas 'Hidden Bar', id: 1452453066
 mas 'Velja', id: 1607635845
-mas 'Wipr', id: 1320666476
+mas 'Today', id: 6443714928
+mas 'Color Picker', id: 1545870783
+mas 'Ghostery - Privacy Ad Blocker', id: 1436953057
