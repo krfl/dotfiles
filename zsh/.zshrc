@@ -6,4 +6,3 @@ autoload -Uz compinit; compinit; _comp_options+=(globdots;)
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH=$PATH:$HOME/.maestro/bin
-export PATH=$PATH:$HOME/.maestro/bin

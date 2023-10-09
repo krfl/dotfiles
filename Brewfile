@@ -6,7 +6,7 @@ brew 'stow'
 brew 'git'
 brew 'fish'
 brew 'starship'
-brew 'exa'
+brew 'eza' # exa fork
 brew 'zoxide'
 brew 'peco'
 brew 'ripgrep'
@@ -42,11 +42,11 @@ cask 'rectangle'
 cask 'raycast'
 cask 'font-jetbrains-mono-nerd-font'
 cask 'reminders-menubar'
+cask 'zed'
 
 # app store
 mas 'Xcode', id: 497799835
 mas 'Hidden Bar', id: 1452453066
 mas 'Velja', id: 1607635845
-mas 'Today', id: 6443714928
 mas 'Color Picker', id: 1545870783
 mas 'Ghostery - Privacy Ad Blocker', id: 1436953057

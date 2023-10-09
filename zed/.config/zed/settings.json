@@ -7,6 +7,19 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "theme": "Rosé Pine Moon",
-    "buffer_font_size": 12
+  "theme": "Rosé Pine Moon",
+  "buffer_font_family": "agave Nerd Font Mono",
+  "buffer_font_size": 16,
+  "buffer_line_height": "comfortable",
+  "terminal": {
+    "line_height": "standard"
+  },
+  "journal": {
+    "hour_format": "hour24"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim_mode": true
 }
