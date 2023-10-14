@@ -3,7 +3,6 @@ function __theme_mode -d 'Sets the theme to light or dark depending on interface
         case Dark
             sed -i '' "s/theme =.*/theme = 'rose_pine_moon'/" ~/.config/helix/config.toml
             set -Ux FZF_DEFAULT_OPTS "
-                --cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*"
             	--color=fg:#908caa,bg:#232136,hl:#ea9a97
             	--color=fg+:#e0def4,bg+:#393552,hl+:#ea9a97
             	--color=border:#44415a,header:#3e8fb0,gutter:#232136
@@ -13,7 +12,6 @@ function __theme_mode -d 'Sets the theme to light or dark depending on interface
         case '*'
             sed -i '' "s/theme =.*/theme = 'rose_pine_dawn'/" ~/.config/helix/config.toml
             set -Ux FZF_DEFAULT_OPTS "
-                --cycle --layout=reverse --border --height=90% --preview-window=wrap --marker="*"
             	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
             	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
             	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
