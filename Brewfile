@@ -2,51 +2,52 @@
 cask_args appdir: '/Applications'
 
 # formulae
-brew 'stow'
-brew 'git'
-brew 'fish'
-brew 'starship'
-brew 'eza' # exa fork
-brew 'zoxide'
-brew 'peco'
-brew 'ripgrep'
-brew 'ouch'
-brew 'slides'
-brew 'tealdeer'
-brew 'ical-buddy'
-brew 'gum'
-brew 'rustup'
-brew 'python3'
-brew 'imagemagick'
-brew 'ffmpeg'
-brew 'mas'
-brew 'gitleaks'
-brew 'ripsecrets'
-brew 'jq'
-brew 'yq'
 brew 'bat'
-brew 'fd'
 brew 'dive'
-brew 'tokei'
+brew 'eza' # exa fork
+brew 'fd'
+brew 'ffmpeg'
+brew 'fish'
+brew 'git'
+brew 'gitleaks'
+brew 'gum'
 brew 'htop'
+brew 'ical-buddy'
+brew 'imagemagick'
+brew 'jq'
+brew 'mas'
+brew 'ouch'
+brew 'peco'
+brew 'python3'
+brew 'ripgrep'
+brew 'ripsecrets'
+brew 'rustup'
+brew 'slides'
+brew 'starship'
+brew 'stow'
+brew 'tealdeer'
+brew 'tokei'
+brew 'yq'
+brew 'zoxide'
 
 # lsp
-brew 'taplo'
 brew 'marksman'
+brew 'taplo'
 
 # casks
-cask 'kitty'
-cask 'google-chrome'
-cask 'slack'
-cask 'rectangle'
-cask 'raycast'
+cask 'discord'
+cask 'font-agave-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
-cask 'reminders-menubar'
+cask 'google-chrome'
+cask 'kitty'
+cask 'rectangle'
+cask 'slack'
+cask 'xmind'
 cask 'zed'
 
 # app store
-mas 'Xcode', id: 497799835
-mas 'Hidden Bar', id: 1452453066
-mas 'Velja', id: 1607635845
 mas 'Color Picker', id: 1545870783
 mas 'Ghostery - Privacy Ad Blocker', id: 1436953057
+mas 'Hidden Bar', id: 1452453066
+mas 'Velja', id: 1607635845
+mas 'Xcode', id: 497799835
