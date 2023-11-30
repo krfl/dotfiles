@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo xcodebuild -license # agree with license
-xcode-select --install # Install command line tool
+xcode-select --install # Install command line tools
 
 if [[ $(command -v brew) == "" ]]; then
     echo 'Homebrew not found'

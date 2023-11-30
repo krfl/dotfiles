@@ -8,14 +8,20 @@ fish_add_path /Library/Apple/usr/bin
 fish_add_path ~/.cargo/bin
 fish_add_path /opt/homebrew/opt/openjdk/bin
 fish_add_path ~/.maestro/bin
+fish_add_path ~/go/bin
+fish_add_path ~/Library/Application\ Support/JetBrains/Toolbox/scripts
 
 set -x HELIX_RUNTIME ~/github.com/helix/runtime
+set -x XDG_CONFIG_HOME ~/.config
 
 # Greeting
 function fish_greeting
-    __theme_mode
-    __calendar
-    echo ""
+    # __calendar
+    # echo ""
+end
+
+function find_ds
+    command find . -name '*.DS_Store' -print
 end
 
 # bind functions to keys
