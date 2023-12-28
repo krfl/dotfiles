@@ -26,6 +26,7 @@ end
 
 # bind functions to keys
 # bind \co peco_zoxide
+# bind \cr peco_history
 bind \co fzf_zoxide
 bind \cr fzf_history
 

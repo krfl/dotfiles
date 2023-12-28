@@ -2,9 +2,13 @@
     "Layout": "bottom-up",
     "Use256Color": true,
     "Style": {
-        "Basic": ["8", "on_default"],
+        "Basic": ["default", "on_default"],
         "Selected": ["bold", "white", "on_0"],
         "Matched": ["cyan"],
         "Query": ["4"]
+    },
+    "Keymap": {
+        "Tab": "peco.SelectUp",
+        "M-[,Z": "peco.SelectDown"
     }
 }

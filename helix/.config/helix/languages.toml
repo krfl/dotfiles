@@ -2,6 +2,7 @@
 name = "markdown"
 roots = [".marksman.toml"]
 language-servers = ["marksman"]
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
 
 [language-server.marksman]
 command = "marksman"
