@@ -1,3 +1,9 @@
+# Fleet Dark
+
+~~~
+set -x FZF_DEFAULT_OPTS ' --color=fg:#d0d0d0,bg:#181818,hl:#5f87af --color=fg+:#ffffff,bg+:#1f3661,hl+:#7dbeff --color=info:#e5c995,prompt:#cc7c8a,pointer:#a390f0 --color=marker:#afcb85,spinner:#a390f0,header:#78d0bd'
+~~~
+
 # Flatwhite
 
 ~~~

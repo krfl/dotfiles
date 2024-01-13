@@ -23,77 +23,7 @@ return {
     window_close_confirmation = 'NeverPrompt',
 
     -- window and color
-    -- colors = {
-    --     ansi = {
-    --         '#605a52',
-    --         '#b57c09',
-    --         '#bdcd72',
-    --         '#eaad61',
-    --         '#89a1d1',
-    --         '#cf8bcf',
-    --         '#84c8b3',
-    --         '#4d1dd5',
-    --     },
-    --     brights = {
-    --         '#605a52',
-    --         '#b57c09',
-    --         '#bdcd72',
-    --         '#eaad61',
-    --         '#89a1d1',
-    --         '#cf8bcf',
-    --         '#84c8b3',
-    --         '#4d1dd5',
-    --     },
-        
-    --     foreground = '#605a52',
-    --     background = '#f7f3ee',
-
-    --     compose_cursor = '#990000',
-    --     cursor_bg = '#605a52',
-    --     cursor_border = '#605a52',
-    --     cursor_fg = '#f7f3ee',
-
-    --     selection_bg = '#dcd3c6',
-    --     selection_fg = '#605a52',
-
-    --     -- The color of the scrollbar "thumb"; the portion that represents the current viewport
-    --     scrollbar_thumb = '#ff0000',
-
-    --     -- The color of the split lines between panes
-    --     split = '#dcd3c6',
-
-    --     tab_bar = {
-    --         background = '#e4ddd2',
-
-    --         active_tab = {
-    --             fg_color = '#605a52',
-    --             bg_color = '#f7f3ee',
-    --         },
-
-    --         inactive_tab = {
-    --             fg_color = '#605a52',
-    --             bg_color = '#e4ddd2',
-    --         },
-
-    --         inactive_tab_hover = {
-    --             fg_color = '#f7f3ee',
-    --             bg_color = '#605a52',
-    --         },
-
-    --         new_tab = {
-    --             fg_color = '#605a52',
-    --             bg_color = '#f7f3ee',
-    --         },
-
-    --         new_tab_hover = {
-    --             fg_color = '#f7f3ee',
-    --             bg_color = '#605a52',
-    --         },
-    --     },
-    --     inactive_tab_edge = '#dcd3c6',
-    -- },
-
-    color_scheme = 'flatwhite',
+    color_scheme = 'fleet dark',
 
     window_frame = {
         font = wezterm.font_with_fallback({
@@ -101,11 +31,6 @@ return {
             { family = 'Symbols Nerd Font Mono', scale = 0.7 },
         }),
         font_size = 16,
-        active_titlebar_fg = '#605a52',
-        active_titlebar_bg = '#f7f3ee',
-        active_titlebar_border_bottom = '#f7f3ee',
-        inactive_titlebar_fg = '#605a52',
-        inactive_titlebar_bg = '#e4ddd2',
     },
 
     keys = {

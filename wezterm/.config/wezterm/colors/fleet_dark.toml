@@ -1,0 +1,63 @@
+[colors]
+ansi = [
+  '#383838',
+  '#CC7C8A',
+  '#afcb85',
+  '#e5c995',
+  '#7dbeff',
+  '#a390f0',
+  '#78d0bd',
+  '#ffffff',
+]
+brights = [
+  '#383838',
+  '#CC7C8A',
+  '#afcb85',
+  '#e5c995',
+  '#7dbeff',
+  '#a390f0',
+  '#78d0bd',
+  '#ffffff',
+]
+
+background = '#181818'
+foreground = '#FFFFFF'
+
+compose_cursor = '#990000'
+cursor_fg = '#313c4c'
+cursor_bg = '#FFFFFF'
+cursor_border = '#605a52'
+
+selection_fg = '#FFFFFF'
+selection_bg = '#1F3661'
+
+scrollbar_thumb = '#ff0000'
+split = '#dcd3c6'
+
+[colors.indexed]
+
+# [colors.tab_bar]
+# background = '#e4ddd2'
+
+# [colors.tab_bar.active_tab]
+# bg_color = '#f7f3ee'
+# fg_color = '#605a52'
+
+# [colors.tab_bar.inactive_tab]
+# bg_color = '#e4ddd2'
+# fg_color = '#605a52'
+
+# [colors.tab_bar.inactive_tab_hover]
+# bg_color = '#605a52'
+# fg_color = '#f7f3ee'
+
+# [colors.tab_bar.new_tab]
+# bg_color = '#f7f3ee'
+# fg_color = '#605a52'
+
+# [colors.tab_bar.new_tab_hover]
+# bg_color = '#605a52'
+# fg_color = '#f7f3ee'
+
+[metadata]
+name = 'fleet dark'
