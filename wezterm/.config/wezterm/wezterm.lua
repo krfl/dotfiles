@@ -23,6 +23,7 @@ return {
     window_close_confirmation = 'NeverPrompt',
 
     -- window and color
+    -- color_scheme = 'duskfox',
     color_scheme = 'fleet dark',
 
     window_frame = {

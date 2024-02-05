@@ -26,12 +26,18 @@
 
 set AJOURFILE ~/.ajour.json
 
+# seconds since epoch
+function epoch
+    command date +%s
+end
+
+
 # journal
 function ajour --description 'keep track of hours, tasks throughout the work day'
     test ! -e $AJOURFILE && echo '{"entries":[]}' | jq > $AJOURFILE
     set foo (echo $argv | string join " ")
     test ! -n "$foo" && read -P "  > " foo
-    test -n "$foo" && jq -c '.entries += [{"timestamp":"'$(date +%s)'","message":"'$foo'"}]' $AJOURFILE | read bar && echo $bar | jq > $AJOURFILE
+    test -n "$foo" && jq -c '.entries += [{"timestamp":"'$(epoch)'","message":"'$foo'"}]' $AJOURFILE | read bar && echo $bar | jq > $AJOURFILE
 end
 
 

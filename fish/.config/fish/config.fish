@@ -24,6 +24,10 @@ function find_ds
     command find . -name '*.DS_Store' -print
 end
 
+function day
+    command date +"%a %b %d"
+end
+
 # bind functions to keys
 # bind \co peco_zoxide
 # bind \cr peco_history
@@ -31,11 +35,11 @@ bind \co fzf_zoxide
 bind \cr fzf_history
 
 # # Auto envs
-# function autovenv --on-variable PWD
-#     if test -d $PWD/.venv
-#         source .venv/bin/activate.fish &
-#     end
-# end
+function autovenv --on-variable PWD
+    if test -d $PWD/.venv
+        source .venv/bin/activate.fish &
+    end
+end
 
 # function autoenv --on-variable PWD
 #     if test -d $PWD/.env
