@@ -20,26 +20,31 @@ function fish_greeting
     # echo ""
 end
 
-function find_ds
-    command find . -name '*.DS_Store' -print
+function clean-ds
+    if [ $argv ]
+        command find $argv -name '.DS_Store' -exec rm -i {} \;
+    else
+        command find . -name '.DS_Store' -exec rm -i {} \;
+    end
 end
 
 function day
     command date +"%a %b %d"
 end
 
-# bind functions to keys
-# bind \co peco_zoxide
-# bind \cr peco_history
+function bat
+    command bat -p $argv
+end
+
 bind \co fzf_zoxide
 bind \cr fzf_history
 
 # # Auto envs
-function autovenv --on-variable PWD
-    if test -d $PWD/.venv
-        source .venv/bin/activate.fish &
-    end
-end
+# function autovenv --on-variable PWD
+#     if test -d $PWD/.venv
+#         source .venv/bin/activate.fish &
+#     end
+# end
 
 # function autoenv --on-variable PWD
 #     if test -d $PWD/.env

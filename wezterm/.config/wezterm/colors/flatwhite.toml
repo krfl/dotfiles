@@ -21,6 +21,27 @@ brights = [
   '#4d1dd5',
 ]
 
+# ansi = [
+#   '#605a52',
+#   '#b57c09',
+#   '#bdcd72',
+#   '#eaad61',
+#   '#89a1d1',
+#   '#cf8bcf',
+#   '#84c8b3',
+#   '#4d1dd5',
+# ]
+# brights = [
+#   '#605a52',
+#   '#b57c09',
+#   '#bdcd72',
+#   '#eaad61',
+#   '#89a1d1',
+#   '#cf8bcf',
+#   '#84c8b3',
+#   '#4d1dd5',
+# ]
+
 background = '#f7f3ee'
 foreground = '#605a52'
 

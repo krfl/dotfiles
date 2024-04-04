@@ -1,14 +1,39 @@
+# Rust
+[[language]]
+name = "rust"
+auto-format = false
+
+[langauge-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+checkOnSave = { command = "clippy" }
+cargo = { allFeatures = true }
+procMacro = { enable = true }
+
+
+# Markdown
 [[language]]
 name = "markdown"
-roots = [".marksman.toml"]
-language-servers = ["marksman"]
-formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
+language-servers = ["github-lsp"]
+auto-format = false
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+[language-server.github-lsp]
+command = "github-lsp"
 
 [language-server.marksman]
 command = "marksman"
 args = ["server"]
 
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+
+# Yaml
 [[language]]
-name = "ruby"
-file-types = ["rb", "Fastfile", "Appfile"]
-language-servers = ["solargraph"]
+name = "yaml"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }

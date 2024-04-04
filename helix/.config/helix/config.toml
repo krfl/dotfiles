@@ -1,4 +1,5 @@
-theme = 'fleet_dark'
+# theme = 'fleet_dark'
+theme = 'everforest_dark'
 
 [editor]
 mouse = false
@@ -11,6 +12,7 @@ cursorline = true
 true-color = true
 # rulers = [ 80 ]
 bufferline = 'multiple'
+jump-label-alphabet = "hjkluioabcdefgmnpqrstvwxyz"
 
 [editor.cursor-shape]
 insert = 'bar'

@@ -1,189 +1,164 @@
-# format = """
-# $directory\
-# $git_branch$git_status\
-# $c$dart$elixir$elm$golang$haskell$java$julia$nim$nodejs$python$rust\
-# $docker_context\
-# $battery$character
-# [ > ]()
-# """
+[aws]
+symbol = "  "
 
-# #[ ](fg:#f7f3ee bg:#f7f3ee)\
-# # [aws]
-# # symbol = " "
+[buf]
+symbol = " "
 
-# # [azure]
-# # symbol = " "
+[c]
+symbol = " "
 
-# [battery]
-# full_symbol = " "
-# charging_symbol = " "
-# discharging_symbol = " "
-# unknown_symbol = " "
-# empty_symbol = " "
-# format = "[ $symbol$percentage ](fg:#5b5143 bg:#f7e0c3) "
+[conda]
+symbol = " "
 
-# [c]
-# symbol = ""
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[crystal]
+symbol = " "
 
-# [character]
-# error_symbol = "✕"
-# success_symbol = "✓"
-# format = '[ $symbol ](fg:#5b5143 bg:#f7e0c3) '
+[dart]
+symbol = " "
 
-# [conda]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[directory]
+read_only = " 󰌾"
 
-# [dart]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[docker_context]
+symbol = " "
 
-# [directory]
-# read_only = " "
-# style = "fg:#614c61 bg:#f1ddf1"
-# format = "[ $path ]($style) "
-# truncation_length = 2
-# truncation_symbol = "…/"
+[elixir]
+symbol = " "
 
-# [docker_context]
-# symbol = " "
-# style = "bg:#06969A"
-# format = '[ $symbol$context ]($style) $path'
+[elm]
+symbol = " "
 
-# [elixir]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[fennel]
+symbol = " "
 
-# [elm]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[fossil_branch]
+symbol = " "
 
-# [git_branch]
-# symbol = " "
-# style = "fg:#4c5361 bg:#dde4f2"
-# format = '[ $symbol$branch ]($style)'
+[git_branch]
+symbol = " "
 
-# [git_status]
-# style = "fg:#4c5361 bg:#dde4f2"
-# format = '[$all_status$ahead_behind ]($style) '
+[golang]
+symbol = " "
 
-# [golang]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[guix_shell]
+symbol = " "
 
-# [haskell]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[haskell]
+symbol = " "
 
-# [java]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[haxe]
+symbol = " "
 
-# [julia]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[hg_branch]
+symbol = " "
 
-# [line_break]
-# disabled = false
+[hostname]
+ssh_symbol = " "
 
-# # [memory_usage]
-# # symbol = " "
+[java]
+symbol = " "
 
-# [nim]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[julia]
+symbol = " "
 
-# # [nix_shell]
-# # symbol = " "
+[kotlin]
+symbol = " "
 
-# [nodejs]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[lua]
+symbol = " "
 
-# # [package]
-# # symbol = " "
+[memory_usage]
+symbol = "󰍛 "
 
-# [python]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ ${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+[meson]
+symbol = "󰔷 "
 
-# # [spack]
-# # symbol = "🅢 "
+[nim]
+symbol = "󰆥 "
 
-# [rust]
-# symbol = " "
-# style = "fg:#525643 bg:#e2e9c1"
-# format = '[ $symbol($version) ]($style) '
+[nix_shell]
+symbol = " "
 
-# # Not implemented
+[nodejs]
+symbol = " "
 
-# # aws
-# # azure
-# # buf
-# # bun
-# # cmake
-# # cobol / gnucobol
-# # command duration
-# # container
-# # crystal
-# # daml
-# # deno
-# # dotnet
-# # environment variable
-# # erlang
-# # fill
-# # gcloud
-# # git commit
-# # git state
-# # git metrics
-# # helm
-# # hostname
-# # jobs
-# # kotlin
-# # kubernetes
-# # line break
-# # local ip
-# # lua
-# # memory usage
-# # mercurial branch
-# # nix shell
-# # ocaml
-# # openstack
-# # package version
-# # perl
-# # php
-# # pulumi
-# # purescript
-# # r
-# # raku
-# # red
-# # ruby
-# # scala
-# # shell
-# # shlvl
-# # singularity
-# # spack
-# # status
-# # sudo
-# # swift
-# # terraform
-# # time
-# # username
-# # vagrant
-# # v
-# # vcsh
-# # zig
-# # custom commands
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "

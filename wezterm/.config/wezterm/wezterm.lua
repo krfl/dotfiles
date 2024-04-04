@@ -21,11 +21,13 @@ return {
     hide_tab_bar_if_only_one_tab = true,
     use_fancy_tab_bar = true,
     window_close_confirmation = 'NeverPrompt',
+    window_decorations = "RESIZE",
 
     -- window and color
-    -- color_scheme = 'duskfox',
-    color_scheme = 'fleet dark',
-
+    -- color_scheme = 'fleet dark',
+    color_scheme = 'Everforest Dark (Medium)',
+    -- window_background_opacity = 0.92,
+    
     window_frame = {
         font = wezterm.font_with_fallback({
             'Agave Nerd Font Mono',
@@ -39,6 +41,8 @@ return {
         { key = 'd', mods = 'CMD|SHIFT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
         { key = 'w', mods = 'CMD',       action = wezterm.action.CloseCurrentPane { confirm = true } },
         { key = 'r', mods = 'CMD',       action = wezterm.action.RotatePanes 'Clockwise' },
+        { key = 'j', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Next' },
+        { key = 'k', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Prev' },
         { key = 'r', mods = 'CMD|SHIFT', action = wezterm.action.ActivateKeyTable { name = 'resize_pane', one_shot = false } },
     },
 
