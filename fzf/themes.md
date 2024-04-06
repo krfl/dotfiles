@@ -4,6 +4,12 @@
 set -x FZF_DEFAULT_OPTS ' --color=fg:#d0d0d0,bg:#181818,hl:#5f87af --color=fg+:#ffffff,bg+:#1f3661,hl+:#7dbeff --color=info:#e5c995,prompt:#cc7c8a,pointer:#a390f0 --color=marker:#afcb85,spinner:#a390f0,header:#78d0bd'
 ```
 
+# Everforest Dark Medium
+
+```
+set -Ux FZF_DEFAULT_OPTS ' --color=fg:#d3c6aa,bg:#2d353b,hl:#7fbbb3 --color=fg+:#7fbbb3,bg+:#313f45,hl+:#7fbbb3 --color=info:#9da9a0,prompt:#e67e80,pointer:#dbbc7f --color=marker:#a7c080,spinner:#dbbc7f,header:#a7c080'
+```
+
 # Rosé Pine Moon / Duskfox
 
 ```
@@ -14,12 +20,6 @@ set -Ux FZF_DEFAULT_OPTS ' --color=fg:#908caa,bg:#232136,hl:#ea9a97 --color=fg+:
 
 ```
 set -Ux FZF_DEFAULT_OPTS ' --color=fg:#797593,bg:#faf4ed,hl:#d7827e --color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e --color=border:#dfdad9,header:#286983,gutter:#faf4ed --color=spinner:#ea9d34,info:#56949f,separator:#dfdad9 --color=pointer:#907aa9,marker:#b4637a,prompt:#797593'
-```
-
-# Everforest Dark Medium
-
-```
-set -Ux FZF_DEFAULT_OPTS ' --color=fg:#d3c6aa,bg:#2d353b,hl:#7fbbb3 --color=fg+:#7fbbb3,bg+:#313f45,hl+:#7fbbb3 --color=info:#9da9a0,prompt:#e67e80,pointer:#dbbc7f --color=marker:#a7c080,spinner:#dbbc7f,header:#a7c080'
 ```
 
 # Flatwhite

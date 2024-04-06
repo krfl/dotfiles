@@ -12,8 +12,8 @@ return {
     }),
 
     font_size = 18,
-    command_palette_font_size = 18,
-    char_select_font_size = 18,
+    command_palette_font_size = 22,
+    char_select_font_size = 22,
     line_height = 1.2,
     adjust_window_size_when_changing_font_size = false,
 
@@ -24,16 +24,15 @@ return {
     window_decorations = "RESIZE",
 
     -- window and color
-    -- color_scheme = 'fleet dark',
     color_scheme = 'Everforest Dark (Medium)',
-    -- window_background_opacity = 0.92,
+    -- color_scheme = 'Everforest Light (Medium)',
     
     window_frame = {
         font = wezterm.font_with_fallback({
             'Agave Nerd Font Mono',
             { family = 'Symbols Nerd Font Mono', scale = 0.7 },
         }),
-        font_size = 16,
+        font_size = 18,
     },
 
     keys = {

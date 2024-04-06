@@ -1,5 +1,5 @@
-# theme = 'fleet_dark'
 theme = 'everforest_dark'
+# theme = 'everforest_light'
 
 [editor]
 mouse = false
