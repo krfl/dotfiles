@@ -20,6 +20,87 @@ function fish_greeting
     # echo ""
 end
 
+# print calendar events using icalbuddy and excluding a calendar I don't want to see
+function __calendar -d 'prints events from the apple calendar using icalbuddy'
+    command icalBuddy -f -ec "" -eed -eep "notes,attendees" eventsToday
+end
+
+# print tasks from reminders using icalbuddy
+function __reminders -d 'prints reminders from apple reminders using icalbuddy'
+    command icalBuddy -f -sc -ss "" -npn -nc -iep "title,datetime" -ps "| : |" -po "datetime,title" -tf "" -df "%RD" -eed tasksDueBefore:today+1
+end
+
+# generate unixtime
+function unixtime
+    command date +%s $argv
+end
+
+function ls
+    command eza --sort=type $argv
+end
+
+function ll
+    command eza --sort=type --long --git --no-permissions --no-user --no-time $argv
+end
+
+function tree
+    command eza --tree $argv
+end
+
+# feeds history into fzf for filtering
+function fzf_history
+    history | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 | read foo
+    if [ $foo ]
+        commandline -r ''
+        commandline -f repaint
+        commandline $foo
+    else
+        commandline ''
+        commandline -f repaint
+    end
+end
+
+# feeds zoxide directories into fzf for filtering 
+function fzf_zoxide
+    # zoxide query -ls | awk '{print $2}' | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 | read foo
+    zoxide query -la | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 | read foo
+    if [ $foo ]
+        cd $foo
+        commandline -f repaint
+    else
+        commandline ''
+        commandline -f repaint
+    end
+end
+
+# htop alias
+# tree view and sorted by cpu usage
+function htop --wraps htop --description 'alias htop=htop --tree --sort-key PERCENT_CPU'
+    command htop --tree --sort-key PERCENT_CPU $argv
+end
+
+
+# markdown brain
+# lets me easily find the markdown document I'm looking for through peco's filtering. 
+function mdb
+    fd . "$(pwd)" -E Library --extension md | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 | read foo
+    if [ $foo ]
+        command hx $foo
+    else
+        commandline ''
+    end
+end
+
+# markdown preview
+function mdprev
+    if [ $argv ]
+        ls *.md | entr -c glow $argv
+    else
+        ls *.md | entr -c glow (ls *.md | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1)
+    end
+end
+
+# remove those pesky .DS_Store files
 function clean-ds
     if [ $argv ]
         command find $argv -name '.DS_Store' -exec rm -i {} \;
