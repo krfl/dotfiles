@@ -10,9 +10,9 @@ auto-pairs = true
 color-modes = true
 cursorline = true
 true-color = true
-# rulers = [ 80 ]
+# rulers = [80, 120]
 bufferline = 'multiple'
-jump-label-alphabet = "hjkluioabcdefgmnpqrstvwxyz"
+jump-label-alphabet = "hjklabcdefgimnopqrstuvwxyz"
 
 [editor.cursor-shape]
 insert = 'bar'
