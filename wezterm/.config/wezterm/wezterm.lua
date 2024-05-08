@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 
+
 -- config
 return {
     -- shell
@@ -11,28 +12,29 @@ return {
         { family = 'Symbols Nerd Font Mono', scale = 0.7 },
     }),
 
-    font_size = 18,
-    command_palette_font_size = 22,
-    char_select_font_size = 22,
-    line_height = 1.2,
+    font_size = 17,
+    command_palette_font_size = 21,
+    char_select_font_size = 21,
+    line_height = 1.4,
     adjust_window_size_when_changing_font_size = false,
 
     -- misc
     hide_tab_bar_if_only_one_tab = true,
     use_fancy_tab_bar = true,
     window_close_confirmation = 'NeverPrompt',
-    window_decorations = "RESIZE",
+    window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+    -- window_decorations = "RESIZE",
 
     -- window and color
-    color_scheme = 'Everforest Dark (Medium)',
-    -- color_scheme = 'Everforest Light (Medium)',
+    color_scheme = 'rasmus',
+    -- color_scheme = 'flatwhite',
     
     window_frame = {
         font = wezterm.font_with_fallback({
             'Agave Nerd Font Mono',
             { family = 'Symbols Nerd Font Mono', scale = 0.7 },
         }),
-        font_size = 18,
+        font_size = 17,
     },
 
     keys = {

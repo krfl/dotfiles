@@ -50,7 +50,8 @@ end
 # feeds history into fzf for filtering
 function fzf_history
     set -l currbuff (commandline)
-    history | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 --query $currbuff | read foo
+    history | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --border=sharp --height=45% --info=inline --layout=reverse --exit-0 --select-1 --query $currbuff | read foo
+
     if [ $foo ]
         commandline -r ''
         commandline -f repaint
@@ -65,7 +66,7 @@ end
 function fzf_zoxide
     set -l currbuff (commandline)
     # zoxide query -ls | awk '{print $2}' | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 | read foo
-    zoxide query -la | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 --query $currbuff | read foo
+    zoxide query -la | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --border=sharp --height=45% --info=inline --layout=reverse --exit-0 --select-1 --query $currbuff | read foo
     if [ $foo ]
         cd $foo
         commandline -f repaint

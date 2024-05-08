@@ -1,5 +1,5 @@
-theme = 'everforest_dark'
-# theme = 'everforest_light'
+theme = 'rasmus'
+# theme = 'flatwhite'
 
 [editor]
 mouse = false
