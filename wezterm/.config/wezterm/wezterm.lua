@@ -23,6 +23,7 @@ return {
     use_fancy_tab_bar = true,
     window_close_confirmation = 'NeverPrompt',
     window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+    -- window_background_opacity = 0.85,
     -- window_decorations = "RESIZE",
 
     -- window and color

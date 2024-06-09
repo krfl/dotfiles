@@ -62,10 +62,37 @@ function fzf_history
     end
 end
 
+function fzy_history
+    set -l currbuff (commandline)
+    history | fzy --query=$currbuff | read foo
+
+    if [ $foo ]
+        commandline -r ''
+        commandline -f repaint
+        commandline $foo
+    else
+        commandline ''
+        commandline -f repaint
+    end
+end
+
 # feeds zoxide directories into fzf for filtering 
 function fzf_zoxide
     set -l currbuff (commandline)
     zoxide query -la | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right --tabstop=1 --border=sharp --height=45% --info=inline --layout=reverse --exit-0 --select-1 --query $currbuff | read foo
+    if [ $foo ]
+        cd $foo
+        commandline -f repaint
+    else
+        commandline ''
+        commandline -f repaint
+    end
+end
+
+# feeds zoxide directories into fzy for filtering 
+function fzy_zoxide
+    set -l currbuff (commandline)
+    zoxide query -la | fzy --query=$currbuff | read foo
     if [ $foo ]
         cd $foo
         commandline -f repaint
@@ -119,8 +146,8 @@ function bat
     command bat -p $argv
 end
 
-bind \co fzf_zoxide
-bind \cr fzf_history
+bind \co fzy_zoxide
+bind \cr fzy_history
 
 # # Auto envs
 # function autovenv --on-variable PWD

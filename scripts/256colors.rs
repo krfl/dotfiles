@@ -10,7 +10,7 @@ fn main() {
                 + &code.to_string()
                 + "m "
                 + &format!("{: >3}", code).to_string()
-                + " ";
+                + " \u{001b}[0m";
             io::stdout().write(&fullstr.as_bytes());
         }
         println!("");
