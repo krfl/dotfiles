@@ -21,7 +21,8 @@ brights = [
 ]
 
 # background = '#1a1a19'
-background = '#000000'
+# background = '#000000'
+background = '#0d0d0d'
 foreground = '#d1d1d1'
 
 compose_cursor = '#b6b6b5'

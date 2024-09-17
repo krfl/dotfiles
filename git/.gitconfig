@@ -25,6 +25,6 @@
   # s = status -s
   # sw = switch
   # la = "!git config -l | grep alias | cut -c 7-"
-  changes = -c pager.show=false show --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -q @@{1}..@@{0}
+  changes = -c pager.show=false show --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -q @@{1}..@@{0} --reverse
   riff = "!git diff | riff"
   pac = "!git pull --autostash;echo "";git changes"

@@ -9,14 +9,20 @@ return {
     -- font and typeface
     font = wezterm.font_with_fallback({
         'Agave Nerd Font Mono',
+        -- 'JetBrainsMono Nerd Font',
         { family = 'Symbols Nerd Font Mono', scale = 0.7 },
     }),
 
-    font_size = 17,
+    font_size = 18,
     command_palette_font_size = 21,
     char_select_font_size = 21,
     line_height = 1.4,
     adjust_window_size_when_changing_font_size = false,
+    -- font_size = 16,
+    -- command_palette_font_size = 18,
+    -- char_select_font_size = 18,
+    -- line_height = 1.2,
+    -- adjust_window_size_when_changing_font_size = false,
 
     -- misc
     hide_tab_bar_if_only_one_tab = true,
@@ -27,15 +33,17 @@ return {
     -- window_decorations = "RESIZE",
 
     -- window and color
+    -- color_scheme = 'fleet dark',
     color_scheme = 'rasmus',
     -- color_scheme = 'flatwhite',
     
     window_frame = {
         font = wezterm.font_with_fallback({
             'Agave Nerd Font Mono',
+            -- 'JetBrainsMono Nerd Font',
             { family = 'Symbols Nerd Font Mono', scale = 0.7 },
         }),
-        font_size = 17,
+        font_size = 18,
     },
 
     keys = {

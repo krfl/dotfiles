@@ -1,5 +1,4 @@
 theme = 'rasmus'
-# theme = 'flatwhite'
 
 [editor]
 mouse = false

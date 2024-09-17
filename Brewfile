@@ -8,7 +8,7 @@ brew 'fd'
 brew 'ffmpeg'
 brew 'fish'
 brew 'fzf'
-brew 'fzy'
+brew 'fzy' # fzf alternative
 brew 'git'
 brew 'gitoxide'
 brew 'glow'
