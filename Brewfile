@@ -16,6 +16,7 @@ brew 'htop'
 brew 'ical-buddy'
 brew 'imagemagick'
 brew 'jq'
+brew 'jtbl'
 brew 'mas'
 brew 'mpv'
 brew 'ouch'
@@ -52,6 +53,5 @@ cask 'xmind'
 # app store
 mas 'Color Picker', id: 1545870783
 mas 'Hidden Bar', id: 1452453066
-mas 'Today', id: 6443714928
 mas 'Velja', id: 1607635845
 mas 'Xcode', id: 497799835

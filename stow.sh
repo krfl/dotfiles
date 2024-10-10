@@ -9,3 +9,5 @@ stow starship -t ~
 stow wezterm -t ~
 stow zed -t ~
 stow zsh -t ~
+
+echo "Done!"

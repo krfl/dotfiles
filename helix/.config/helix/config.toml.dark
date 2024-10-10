@@ -1,5 +1,4 @@
-# theme = 'rasmus'
-theme = 'flatwhite'
+theme = 'rasmus'
 
 [editor]
 mouse = false
@@ -39,8 +38,6 @@ esc = ['collapse_selection', 'keep_primary_selection']
 
 [keys.normal.space]
 l = ":toggle lsp.display-inlay-hints"
-t = ':theme flatwhite'
-C-t = ':theme rasmus'
 
 [keys.insert]
 esc = [':format', 'normal_mode']
