@@ -1,29 +1,28 @@
 local wezterm = require 'wezterm'
 
-function scheme_for_appearance(appearance)
-  if appearance:find('Dark') then
-    return 'rasmus'
-  else
-    return 'flatwhite'
-  end
-end
+-- -- auto dark/light theme
+-- function scheme_for_appearance(appearance)
+--   if appearance:find('Dark') then
+--     return 'rasmus'
+--   else
+--     return 'flatwhite'
+--   end
+-- end
 
-wezterm.on('window-config-reloaded', function(window, pane)
-  local overrides = window:get_config_overrides() or {}
-  local appearance = window:get_appearance()
-  local scheme = scheme_for_appearance(appearance)
-  if overrides.color_scheme ~= scheme then
-    overrides.color_scheme = scheme
-    window:set_config_overrides(overrides)
-  end
-end)
+-- wezterm.on('window-config-reloaded', function(window, pane)
+--   local overrides = window:get_config_overrides() or {}
+--   local appearance = window:get_appearance()
+--   local scheme = scheme_for_appearance(appearance)
+--   if overrides.color_scheme ~= scheme then
+--     overrides.color_scheme = scheme
+--     window:set_config_overrides(overrides)
+--   end
+-- end)
 
 -- config
 return {
     -- color
-    -- color_scheme = 'rasmus',
-    -- color_scheme = 'flatwhite',
-
+    color_scheme = 'rasmus',
 
     -- shell
     default_prog = { '/opt/homebrew/bin/fish' },
@@ -31,21 +30,15 @@ return {
     -- font and typeface
     font = wezterm.font_with_fallback({
         'Agave Nerd Font Mono',
-        -- 'JetBrainsMono Nerd Font',
         { family = 'Symbols Nerd Font Mono', scale = 0.7 },
     }),
 
     font_size = 18,
-    command_palette_font_size = 21,
-    char_select_font_size = 21,
+    command_palette_font_size = 20,
+    char_select_font_size = 20,
     line_height = 1.4,
     adjust_window_size_when_changing_font_size = false,
-    -- font_size = 16,
-    -- command_palette_font_size = 18,
-    -- char_select_font_size = 18,
-    -- line_height = 1.2,
-    -- adjust_window_size_when_changing_font_size = false,
-
+    
    -- misc
     hide_tab_bar_if_only_one_tab = true,
     use_fancy_tab_bar = true,
@@ -59,7 +52,6 @@ return {
     window_frame = {
         font = wezterm.font_with_fallback({
             'Agave Nerd Font Mono',
-            -- 'JetBrainsMono Nerd Font',
             { family = 'Symbols Nerd Font Mono', scale = 0.7 },
         }),
         font_size = 18,

@@ -172,9 +172,6 @@ export CLICOLOR=1
 # Editor
 export EDITOR="hx"
 
-# Fuck
-thefuck --alias | source
-
 # Zoxide
 zoxide init fish | source
 

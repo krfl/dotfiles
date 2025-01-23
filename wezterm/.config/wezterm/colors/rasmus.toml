@@ -20,9 +20,9 @@ brights = [
   '#eaeaea',
 ]
 
-# background = '#000000'
+background = '#000000'
 # background = '#0d0d0d'
-background = '#1a1a19'
+# background = '#1a1a19'
 foreground = '#d1d1d1'
 
 compose_cursor = '#b6b6b5'

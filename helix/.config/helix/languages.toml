@@ -11,6 +11,15 @@ checkOnSave = { command = "clippy" }
 cargo = { allFeatures = true }
 procMacro = { enable = true }
 
+# Maestro
+[[language]]
+name = "yaml"
+auto-format = false
+indent = { tab-width = 4, unit = " " }
+
+[[language-server.vscode-json-language-server.config.json.schemas]]
+fileMatch = ["*flow.yaml"]
+url = "https://json.schemastore.org/tsconfig.json"
 
 # Markdown
 [[language]]
@@ -27,11 +36,11 @@ command = "marksman"
 args = ["server"]
 
 [language.auto-pairs]
+"'" = "'"
 '(' = ')'
 '{' = '}'
 '[' = ']'
 '"' = '"'
-
 # Yaml
 [[language]]
 name = "yaml"
