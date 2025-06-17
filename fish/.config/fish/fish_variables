@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dfg\x3a\x23d1d1d1\x2cbg\x3a\x231a1a19\x2chl\x3a\x23ffc591\x20\x2d\x2dcolor\x3dfg\x2b\x3a\x23d1d1d1\x2cbg\x2b\x3a\x23222221\x2chl\x2b\x3a\x23ffdeaa\x20\x2d\x2dcolor\x3dinfo\x3a\x237bb099\x2cprompt\x3a\x2361957f\x2cpointer\x3a\x23d1d1d1\x20\x2d\x2dcolor\x3dmarker\x3a\x23de9bc8\x2cspinner\x3a\x23ff968c\x2cheader\x3a\x2387afaf
-SETUVAR __fish_initialized:3400
+SETUVAR --export FZF_DEFAULT_OPTS:\x20\x2d\x2dcolor\x3dfg\x3a\x23b9a992\x2cbg\x3a\x23f7f3ee\x2chl\x3a\x23605a52\x20\x2d\x2dcolor\x3dfg\x2b\x3a\x23605a52\x2cbg\x2b\x3a\x23f7e0c3\x2chl\x2b\x3a\x23605a52\x20\x2d\x2dcolor\x3dinfo\x3a\x23f2a60d\x2cprompt\x3a\x23ff1414\x2cpointer\x3a\x2352aeff\x20\x2d\x2dcolor\x3dmarker\x3a\x23f2a60d\x2cspinner\x3a\x2352aeff\x2cheader\x3a\x236a4cff
+SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
@@ -19,7 +19,7 @@ SETUVAR fish_color_operator:brcyan
 SETUVAR fish_color_param:cyan
 SETUVAR fish_color_quote:yellow
 SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen

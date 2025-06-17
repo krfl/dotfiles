@@ -21,12 +21,17 @@ indent = { tab-width = 4, unit = " " }
 fileMatch = ["*flow.yaml"]
 url = "https://json.schemastore.org/tsconfig.json"
 
+# PKB
+[language-server.iwe]
+command = "iwes"
+
 # Markdown
 [[language]]
 name = "markdown"
-language-servers = ["github-lsp"]
+# language-servers = ["iwe", "github-lsp"]
+language-servers = ["iwe"]
 auto-format = false
-formatter = { command = "prettier", args = ["--parser", "markdown"] }
+# formatter = { command = "prettier", args = ["--parser", "markdown"] }
 
 [language-server.github-lsp]
 command = "github-lsp"

@@ -108,7 +108,6 @@ function htop --wraps htop --description 'alias htop=htop --tree --sort-key PERC
     command htop --tree --sort-key PERCENT_CPU $argv
 end
 
-
 # markdown brain
 # lets me easily find the markdown document I'm looking for through peco's filtering. 
 function mdb
@@ -124,9 +123,9 @@ end
 # markdown preview
 function mdprev
     if [ $argv ]
-        ls *.md | entr -c glow $argv
+        ls *.md | entr -c glow -p $argv
     else
-        ls *.md | entr -c glow (ls *.md | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1)
+        ls *.md | entr -c glow -p (ls *.md | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1)
     end
 end
 
@@ -177,3 +176,5 @@ zoxide init fish | source
 
 # Pew pew!
 starship init fish | source
+
+eval (opam env --switch=default)

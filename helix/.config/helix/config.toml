@@ -1,4 +1,6 @@
-theme = 'rasmus_dark'
+# theme = 'modus_operandi_tinted_transparent'
+theme = 'flatwhite'
+# theme = 'rasmus_transparent'
 
 [editor]
 mouse = false
@@ -30,10 +32,10 @@ hidden = false
 
 [keys.normal]
 esc = ['collapse_selection', 'keep_primary_selection']
-'C-h' = 'jump_view_left'
-'C-l' = 'jump_view_right'
-'D' = 'kill_to_line_end'
-'A-D' = 'kill_to_line_start'
+C-h = 'jump_view_left'
+C-l = 'jump_view_right'
+D = 'kill_to_line_end'
+A-D = 'kill_to_line_start'
 # y = { y = ['extend_to_line_bounds', 'yank'] }
 
 C-g = [
@@ -46,13 +48,13 @@ C-g = [
 
 [keys.normal.space]
 l = ':toggle lsp.display-inlay-hints'
-t = ':theme flatwhite'
-C-t = ':theme rasmus'
+t = ':theme rasmus_transparent'
+
+[keys.normal.space.space]
+b = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name}"
 
 [keys.insert]
-esc = [':format', 'normal_mode']
-'C-c' = 'normal_mode'
+esc = ['collapse_selection', 'normal_mode']
+C-c = ['collapse_selection', 'normal_mode']
 C-h = ['move_char_left']
 C-l = ['move_char_right']
-
-[keys.select]
