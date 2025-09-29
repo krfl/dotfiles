@@ -20,7 +20,8 @@ brights = [
   '#eaeaea',
 ]
 
-background = '#161617'
+# background = '#161617'
+background = '#000000'
 foreground = '#c9c7cd'
 # background = '#1a1a19'
 # foreground = '#d1d1d1'
