@@ -1,6 +1,7 @@
-# theme = 'modus_operandi_tinted_transparent'
-theme = 'flatwhite'
-# theme = 'rasmus_transparent'
+[theme]
+dark = 'rasmus_transparent'
+light = 'flatwhite'
+# fallback = "flatwhite"
 
 [editor]
 mouse = false
@@ -28,7 +29,10 @@ git-ignore = true
 hidden = false
 
 [editor.indent-guides]
-# render = true
+render = true
+
+[editor.soft-wrap]
+enable = true
 
 [keys.normal]
 esc = ['collapse_selection', 'keep_primary_selection']
