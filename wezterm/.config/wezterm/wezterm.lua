@@ -3,7 +3,6 @@ local wezterm = require 'wezterm'
 -- auto dark/light theme
 function scheme_for_appearance(appearance)
   if appearance:find('Dark') then
-    -- return 'monokai_pro_spectrum'
     return 'rasmus'
   else
     return 'flatwhite'
@@ -32,12 +31,20 @@ return {
     -- font and typeface
     font = wezterm.font_with_fallback({
         { family = 'JetBrains Mono', weight = 'Medium' },
+        -- { family = 'Agave Nerd Font', weight = 'Medium' },
         { family = 'Nerd Font Symbols', scale = 0.7 },
     }),
 
-    font_size = 14,
+    -- jetbrains mono
+    font_size = 16,
     command_palette_font_size = 20,
     char_select_font_size = 20,
+   
+    -- agave
+    -- font_size = 18,
+    -- command_palette_font_size = 22,
+    -- char_select_font_size = 22,
+
     line_height = 1.2,
     adjust_window_size_when_changing_font_size = false,
     -- font_size = 20,
@@ -47,13 +54,13 @@ return {
     
    -- misc
     hide_tab_bar_if_only_one_tab = true,
-    use_fancy_tab_bar = false,
+    use_fancy_tab_bar = true,
     window_close_confirmation = 'NeverPrompt',
     window_decorations = "INTEGRATED_BUTTONS|RESIZE",
     -- window_background_opacity = 0.95,
     -- window_decorations = "RESIZE",
     initial_rows = 36,
-    initial_cols = 124,
+    initial_cols = 112,
 
     window_padding = {
       left = 60,
@@ -65,13 +72,14 @@ return {
     window_frame = {
         font = wezterm.font_with_fallback({
             { family = 'JetBrains Mono', weight = 'Medium' },
+            -- { family = 'Agave Nerd Font', weight = 'Medium' },
             { family = 'Nerd Font Symbols', scale = 0.7 },
         }),
-        -- font = wezterm.font_with_fallback({
-        --     'JetBrainsMono Nerd Font Mono',
-        --     { family = 'Symbols Nerd Font Mono', scale = 0.7 },
-        -- }),
-        font_size = 16,
+        -- agave
+        -- font_size = 16,
+
+        -- jetbrains mono
+        font_size = 14,
     },
     
     keys = {
