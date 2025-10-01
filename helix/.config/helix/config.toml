@@ -1,7 +1,6 @@
 [theme]
-dark = 'rasmus_transparent'
-light = 'flatwhite'
-# fallback = "flatwhite"
+light= 'flatwhite'
+dark = 'rose_pine_moon'
 
 [editor]
 mouse = false
@@ -52,7 +51,6 @@ C-g = [
 
 [keys.normal.space]
 l = ':toggle lsp.display-inlay-hints'
-t = ':theme rasmus_transparent'
 
 [keys.normal.space.space]
 b = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name}"
