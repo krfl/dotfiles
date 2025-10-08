@@ -149,7 +149,7 @@ end
 bind \co fzy_zoxide
 bind \cr fzy_history
 
-# # Auto envs
+# # Auto envs - SECURITY RISK
 # function autovenv --on-variable PWD
 #     if test -d $PWD/.venv
 #         source .venv/bin/activate.fish &

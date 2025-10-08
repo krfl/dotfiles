@@ -7,9 +7,9 @@ local fsize = 14
 
 -- adapt to os theme
 if appearance.is_dark() then
-    config.color_scheme = 'rose-pine-moon'
+  config.color_scheme = 'rose-pine-moon'
 else
-    config.color_scheme = 'flatwhite'
+  config.color_scheme = 'flatwhite'
 end
 
 -- window
@@ -21,9 +21,16 @@ config.window_decorations = "RESIZE"
 -- config.initial_rows = 36
 -- config.initial_cols = 112
 
+config.window_padding = {
+  left = 25,
+  right = 25,
+  top = 25,
+  bottom = 25,
+}
+
 config.window_frame = {
-    font = wezterm.font(ffam),
-    font_size = fsize,
+  font = wezterm.font(ffam),
+  font_size = fsize,
 }
 
 -- font and typeface
@@ -39,26 +46,26 @@ config.default_prog = { '/opt/homebrew/bin/fish' }
 
 -- keybinds
 config.keys = {
-    { key = 'd', mods = 'CMD',       action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-    { key = 'd', mods = 'CMD|SHIFT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
-    { key = 'w', mods = 'CMD',       action = wezterm.action.CloseCurrentPane { confirm = true } },
-    { key = 'r', mods = 'CMD',       action = wezterm.action.RotatePanes 'Clockwise' },
-    { key = 'j', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Next' },
-    { key = 'k', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Prev' },
-    { key = 'r', mods = 'CMD|SHIFT', action = wezterm.action.ActivateKeyTable { name = 'resize_pane', one_shot = false } },
-    { key = 'k', mods = 'CTRL',      action = wezterm.action.ScrollByLine(-1) },
-    { key = 'j', mods = 'CTRL',      action = wezterm.action.ScrollByLine(1) },
+  { key = 'd', mods = 'CMD',       action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+  { key = 'd', mods = 'CMD|SHIFT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+  { key = 'w', mods = 'CMD',       action = wezterm.action.CloseCurrentPane { confirm = true } },
+  { key = 'r', mods = 'CMD',       action = wezterm.action.RotatePanes 'Clockwise' },
+  { key = 'j', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Next' },
+  { key = 'k', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Prev' },
+  { key = 'r', mods = 'CMD|SHIFT', action = wezterm.action.ActivateKeyTable { name = 'resize_pane', one_shot = false } },
+  { key = 'k', mods = 'CTRL',      action = wezterm.action.ScrollByLine(-1) },
+  { key = 'j', mods = 'CTRL',      action = wezterm.action.ScrollByLine(1) },
 }
 
 config.key_tables = {
-    resize_pane = {
-        { key = 'h',      action = wezterm.action.AdjustPaneSize { 'Left', 1 } },
-        { key = 'j',      action = wezterm.action.AdjustPaneSize { 'Down', 1 } },
-        { key = 'k',      action = wezterm.action.AdjustPaneSize { 'Up', 1 } },
-        { key = 'l',      action = wezterm.action.AdjustPaneSize { 'Right', 1 } },
-        { key = 'Escape', action = 'PopKeyTable' },
-        { key = 'Enter',  action = 'PopKeyTable' },
-    }
+  resize_pane = {
+    { key = 'h',      action = wezterm.action.AdjustPaneSize { 'Left', 1 } },
+    { key = 'j',      action = wezterm.action.AdjustPaneSize { 'Down', 1 } },
+    { key = 'k',      action = wezterm.action.AdjustPaneSize { 'Up', 1 } },
+    { key = 'l',      action = wezterm.action.AdjustPaneSize { 'Right', 1 } },
+    { key = 'Escape', action = 'PopKeyTable' },
+    { key = 'Enter',  action = 'PopKeyTable' },
+  }
 }
 
 -- extras 
