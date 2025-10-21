@@ -3,7 +3,7 @@ local appearance = require 'appearance'
 
 local config = wezterm.config_builder()
 local ffam = { family = 'JetBrains Mono', weight = 'Medium'}
-local fsize = 14
+local fsize = 15
 
 -- adapt to os theme
 if appearance.is_dark() then
@@ -13,13 +13,8 @@ else
 end
 
 -- window
--- config.window_background_opacity = 0.9
--- config.macos_window_background_blur = 30
--- config.use_fancy_tab_bar = false
 config.window_close_confirmation = 'NeverPrompt'
 config.window_decorations = "RESIZE"
--- config.initial_rows = 36
--- config.initial_cols = 112
 
 config.window_padding = {
   left = 25,
@@ -30,15 +25,15 @@ config.window_padding = {
 
 config.window_frame = {
   font = wezterm.font(ffam),
-  font_size = fsize,
+  font_size = fsize -2,
 }
 
 -- font and typeface
 config.font = wezterm.font(ffam)
 config.font_size = fsize
-config.command_palette_font_size = 20
-config.char_select_font_size = 20
-config.line_height = 1.2
+config.command_palette_font_size = fsize+2
+config.char_select_font_size = fsize+2
+config.line_height = 1.1
 config.adjust_window_size_when_changing_font_size = false
 
 -- shell
