@@ -1,6 +1,7 @@
 [theme]
-light= 'flatwhite'
+light = 'flatwhite'
 dark = 'rose_pine_moon'
+fallback = 'flatwhite'
 
 [editor]
 mouse = false
