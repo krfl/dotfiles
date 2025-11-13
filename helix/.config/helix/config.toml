@@ -1,7 +1,4 @@
-[theme]
-light = 'flatwhite'
-dark = 'rose_pine_moon'
-fallback = 'flatwhite'
+theme = 'vesper'
 
 [editor]
 mouse = false
@@ -54,7 +51,7 @@ C-g = [
 l = ':toggle lsp.display-inlay-hints'
 
 [keys.normal.space.space]
-b = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name}"
+b = ':sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name}'
 
 [keys.insert]
 esc = ['collapse_selection', 'normal_mode']

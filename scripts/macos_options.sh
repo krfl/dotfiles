@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# colors
 RED="\033[0;31m"
 PUR="\033[0;35m"
 YLW="\033[1;33m"
@@ -30,7 +31,7 @@ defaults write com.apple.dock "mineffect" -string "scale"
 defaults write com.apple.dock "tilesize" -int "64"
 
 # open app indicators
-defaults write com.apple.com show-process-indicators -bool true
+defaults write com.apple.dock show-process-indicators -bool true
 
 # restart dock
 killall Dock

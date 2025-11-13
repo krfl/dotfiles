@@ -7,7 +7,7 @@ local fsize = 15
 
 -- adapt to os theme
 if appearance.is_dark() then
-  config.color_scheme = 'rose-pine-moon'
+  config.color_scheme = 'vesper2'
 else
   config.color_scheme = 'flatwhite'
 end
@@ -16,12 +16,12 @@ end
 config.window_close_confirmation = 'NeverPrompt'
 config.window_decorations = "RESIZE"
 
-config.window_padding = {
-  left = 25,
-  right = 25,
-  top = 25,
-  bottom = 25,
-}
+-- config.window_padding = {
+--   left = 0,
+--   right = 0,
+--   top = 0,
+--   bottom = 0,
+-- }
 
 config.window_frame = {
   font = wezterm.font(ffam),
@@ -64,8 +64,6 @@ config.key_tables = {
 }
 
 -- extras 
-local wezterm = require 'wezterm'
-
 local function segments_for_right_status(window)
   -- battery
   local bat = ''

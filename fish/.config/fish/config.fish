@@ -163,10 +163,10 @@ bind \cr fzy_history
 # end
 
 # Env
-export LC_CTYPE="en_US.UTF-8"
-export PYTHONDONTWRITEBYTECODE=1
-export LS_COLORS="Gxfxcxdxbxegedabagacad"
-export CLICOLOR=1
+# export LC_CTYPE="en_US.UTF-8"
+# export PYTHONDONTWRITEBYTECODE=1
+# export LS_COLORS="Gxfxcxdxbxegedabagacad"
+# export CLICOLOR=1
 
 # Editor
 export EDITOR="hx"
@@ -176,5 +176,3 @@ zoxide init fish | source
 
 # Pew pew!
 starship init fish | source
-
-eval (opam env --switch=default)
