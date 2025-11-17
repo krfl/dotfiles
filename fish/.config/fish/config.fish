@@ -35,6 +35,7 @@ function unixtime
     command date +%s $argv
 end
 
+# replace common l* commands with eza
 function ls
     command eza --sort=type $argv
 end
@@ -47,21 +48,6 @@ function tree
     command eza --tree $argv
 end
 
-# feeds history into fzf for filtering
-function fzf_history
-    set -l currbuff (commandline)
-    history | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right --tabstop=1 --border=sharp --height=45% --info=inline --layout=reverse --exit-0 --select-1 --query $currbuff | read foo
-
-    if [ $foo ]
-        commandline -r ''
-        commandline -f repaint
-        commandline $foo
-    else
-        commandline ''
-        commandline -f repaint
-    end
-end
-
 function fzy_history
     set -l currbuff (commandline)
     history | fzy --query=$currbuff | read foo
@@ -70,19 +56,6 @@ function fzy_history
         commandline -r ''
         commandline -f repaint
         commandline $foo
-    else
-        commandline ''
-        commandline -f repaint
-    end
-end
-
-# feeds zoxide directories into fzf for filtering 
-function fzf_zoxide
-    set -l currbuff (commandline)
-    zoxide query -la | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right --tabstop=1 --border=sharp --height=45% --info=inline --layout=reverse --exit-0 --select-1 --query $currbuff | read foo
-    if [ $foo ]
-        cd $foo
-        commandline -f repaint
     else
         commandline ''
         commandline -f repaint
@@ -102,16 +75,8 @@ function fzy_zoxide
     end
 end
 
-# htop alias
-# tree view and sorted by cpu usage
-function htop --wraps htop --description 'alias htop=htop --tree --sort-key PERCENT_CPU'
-    command htop --tree --sort-key PERCENT_CPU $argv
-end
-
 # markdown brain
-# lets me easily find the markdown document I'm looking for through peco's filtering. 
 function mdb
-    # fd . "$(pwd)" -E Library --extension md | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1 | read foo
     fd . "$(pwd)" -E Library --extension md | fzy | read foo
     if [ $foo ]
         command hx $foo
@@ -121,7 +86,7 @@ function mdb
 end
 
 # markdown preview
-function mdprev
+function mdpreview
     if [ $argv ]
         ls *.md | entr -c glow -p $argv
     else
@@ -130,7 +95,7 @@ function mdprev
 end
 
 # remove those pesky .DS_Store files
-function clean-ds
+function cleands
     if [ $argv ]
         command find $argv -name '.DS_Store' -exec rm -i {} \;
     else
@@ -161,12 +126,6 @@ bind \cr fzy_history
 #         source $PWD/.env
 #     end
 # end
-
-# Env
-# export LC_CTYPE="en_US.UTF-8"
-# export PYTHONDONTWRITEBYTECODE=1
-# export LS_COLORS="Gxfxcxdxbxegedabagacad"
-# export CLICOLOR=1
 
 # Editor
 export EDITOR="hx"

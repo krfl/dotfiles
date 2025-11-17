@@ -31,10 +31,14 @@ brew 'rust-analyzer'
 brew 'taplo'
 
 # casks
+cask 'claude'
+cask 'claude-code'
 cask 'discord'
 cask 'font-agave-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
+cask 'hey-desktop'
 cask 'rectangle'
+cask ''
 cask 'wezterm'
 
 # app store
