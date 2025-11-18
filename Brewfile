@@ -18,10 +18,6 @@ brew 'stow'
 brew 'tealdeer' # tldr
 brew 'zoxide'
 
-# ai
-brew 'gollama'
-brew 'ollama'
-
 # dev tools
 brew 'rustup-init'
 
@@ -36,13 +32,17 @@ cask 'claude-code'
 cask 'discord'
 cask 'font-agave-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
+cask 'google-chrome'
 cask 'hey-desktop'
+cask 'orbstack'
 cask 'rectangle'
-cask ''
+cask 'visual-studio-code'
 cask 'wezterm'
+cask 'zed'
 
 # app store
 mas 'Color Picker', id: 1545870783
 mas 'Hidden Bar', id: 1452453066
 # mas 'Velja', id: 1607635845
+mas 'Wipr', id: 1662217862
 # mas 'Xcode', id: 497799835
