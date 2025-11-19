@@ -6,8 +6,10 @@ local ffam = { family = 'JetBrains Mono', weight = 'Medium'}
 local fsize = 15
 
 -- adapt to os theme
+config.color_scheme_dirs = { '~/.config/wezterm/colors' }
 if appearance.is_dark() then
-  config.color_scheme = 'vesper2'
+  -- config.color_scheme = 'vesper2'
+  config.color_scheme = 'serene-night'
 else
   config.color_scheme = 'flatwhite'
 end

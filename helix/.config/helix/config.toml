@@ -1,4 +1,5 @@
-theme = 'vesper'
+# theme = 'vesper'
+theme = 'serene-night'
 
 [editor]
 mouse = false

@@ -1,0 +1,38 @@
+# Serene Night - Eye-friendly dark theme for Wezterm
+# Reduces blue light and eye strain with warm earth tones
+# Based on optometry research for computer vision syndrome
+
+[colors]
+ansi = [
+  '#1e1d1a',  # Black - warm charcoal
+  '#ca8264',  # Red - orange-biased coral
+  '#8fae7a',  # Green - soft sage
+  '#d4a574',  # Yellow - warm sand
+  '#9aaa82',  # Blue - warm sage (low blue content)
+  '#b8956d',  # Magenta - muted tan
+  '#a89984',  # Cyan - warm stone
+  '#c8baa8',  # White - light beige
+]
+brights = [
+  '#3d3a33',  # Bright black - warm gray
+  '#ca8264',  # Bright red - coral
+  '#9fa883',  # Bright green - olive
+  '#d4a574',  # Bright yellow - sand
+  '#9aaa82',  # Bright blue - sage
+  '#ba9c7e',  # Bright magenta - warm brown
+  '#a89984',  # Bright cyan - stone
+  '#d4cfc4',  # Bright white - soft cream
+]
+background = '#1e1d1a'
+foreground = '#d4cfc4'
+cursor_bg = '#d4cfc4'
+cursor_fg = '#1e1d1a'
+cursor_border = '#d4cfc4'
+selection_fg = '#d4cfc4'
+selection_bg = '#2d2b26'
+split = '#3d3a33'
+
+[colors.indexed]
+
+[metadata]
+name = 'serene-night'

@@ -1,0 +1,38 @@
+# Deep Space - An intergalactically friendly color scheme
+# Original vim theme by Brandon Siders
+# Converted to wezterm format
+
+[colors]
+ansi = [
+  '#1b202a',
+  '#b15e7c',
+  '#709d6c',
+  '#b5a262',
+  '#608cc3',
+  '#8f72bf',
+  '#56adb7',
+  '#323c4d',
+]
+brights = [
+  '#232936',
+  '#b3785d',
+  '#709d6c',
+  '#d5b875',
+  '#608cc3',
+  '#c47ebd',
+  '#51617d',
+  '#9aa7bd',
+]
+background = '#1b202a'
+foreground = '#9aa7bd'
+cursor_fg = '#232936'
+cursor_bg = '#9aa7bd'
+cursor_border = '#9aa7bd'
+selection_fg = '#9aa7bd'
+selection_bg = '#323c4d'
+split = '#51617d'
+
+[colors.indexed]
+
+[metadata]
+name = 'deep-space'

@@ -1,0 +1,38 @@
+# Serene Day - Eye-friendly light theme for Wezterm
+# Reduces glare and eye strain with warm earth tones
+# Based on optometry research for computer vision syndrome
+
+[colors]
+ansi = [
+  '#4a4538',  # Black - dark taupe
+  '#ab5940',  # Red - orange-biased brick
+  '#5a7a4a',  # Green - forest green
+  '#9a6c3a',  # Yellow - warm bronze
+  '#5c7554',  # Blue - deep sage (low blue content)
+  '#8b6f47',  # Magenta - caramel brown
+  '#6d6555',  # Cyan - warm charcoal
+  '#e8e3d8',  # White - soft off-white
+]
+brights = [
+  '#3d3a33',  # Bright black - warm dark gray
+  '#ab5940',  # Bright red - brick
+  '#657047',  # Bright green - deep olive
+  '#9a6c3a',  # Bright yellow - bronze
+  '#5c7554',  # Bright blue - sage
+  '#8b6340',  # Bright magenta - chocolate
+  '#857d6d',  # Bright cyan - medium gray
+  '#f5f2ed',  # Bright white - warm off-white
+]
+background = '#f5f2ed'
+foreground = '#3d3a33'
+cursor_bg = '#3d3a33'
+cursor_fg = '#f5f2ed'
+cursor_border = '#3d3a33'
+selection_fg = '#3d3a33'
+selection_bg = '#e8e3d8'
+split = '#d4cfc4'
+
+[colors.indexed]
+
+[metadata]
+name = 'serene-day'

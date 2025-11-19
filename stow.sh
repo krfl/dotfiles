@@ -10,7 +10,6 @@ stow fish -t ~
 stow git -t ~
 stow helix -t ~
 stow htop -t ~
-stow opencode -t ~
 stow starship -t ~
 stow wezterm -t ~
 stow zsh -t ~
