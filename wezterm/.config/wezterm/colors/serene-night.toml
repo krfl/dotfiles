@@ -29,7 +29,7 @@ cursor_bg = '#d4cfc4'
 cursor_fg = '#1e1d1a'
 cursor_border = '#d4cfc4'
 selection_fg = '#d4cfc4'
-selection_bg = '#2d2b26'
+selection_bg = '#3d3420'
 split = '#3d3a33'
 
 [colors.indexed]

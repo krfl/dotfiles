@@ -43,6 +43,7 @@ A-D = 'kill_to_line_start'
 
 [keys.normal.space]
 '\' = ':toggle lsp.display-inlay-hints'
+'|' = ':theme serene-day'
 
 [keys.insert]
 esc = ['collapse_selection', 'normal_mode']

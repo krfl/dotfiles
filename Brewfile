@@ -12,11 +12,11 @@ brew 'htop'
 brew 'jq'
 brew 'mas'
 brew 'riff'
-brew 'ripgrep'
+brew 'ripgrep' # rg
 brew 'starship'
 brew 'stow'
 brew 'tealdeer' # tldr
-brew 'zoxide'
+brew 'zoxide' # z
 
 # dev tools
 brew 'rustup-init'
