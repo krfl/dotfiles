@@ -36,7 +36,6 @@ cask 'google-chrome'
 cask 'hey-desktop'
 cask 'orbstack'
 cask 'rectangle'
-cask 'visual-studio-code'
 cask 'wezterm'
 cask 'zed'
 
