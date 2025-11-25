@@ -8,6 +8,7 @@ Brewfile.lockjson
 install.sh
 options.sh
 scripts
+docs
 
 ^/README.*
 ^/LICENSE.*
