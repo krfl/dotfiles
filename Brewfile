@@ -30,8 +30,8 @@ brew 'taplo'
 cask 'claude'
 cask 'claude-code'
 cask 'discord'
-cask 'font-agave-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
+cask 'font-victor-mono-nerd-font'
 cask 'google-chrome'
 cask 'hey-desktop'
 cask 'orbstack'
@@ -40,7 +40,7 @@ cask 'wezterm'
 cask 'zed'
 
 # app store
-mas 'Color Picker', id: 1545870783
+# mas 'Color Picker', id: 1545870783
 mas 'Hidden Bar', id: 1452453066
 # mas 'Velja', id: 1607635845
 mas 'Wipr', id: 1662217862

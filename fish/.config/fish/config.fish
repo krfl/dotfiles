@@ -114,6 +114,14 @@ end
 bind \co fzy_zoxide
 bind \cr fzy_history
 
+function __load_dark_theme
+    command source ~/github.com/serene-theme/themes/ls-colors/serene-night-clarity.sh
+end
+
+function __load_light_theme
+    command source ~/github.com/serene-theme/themes/ls-colors/serene-day-clarity.sh
+end
+
 # # Auto envs - SECURITY RISK
 # function autovenv --on-variable PWD
 #     if test -d $PWD/.venv

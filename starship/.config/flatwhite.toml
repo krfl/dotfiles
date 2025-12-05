@@ -15,11 +15,11 @@ $battery$character
 # symbol = " "
 
 [battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
-unknown_symbol = " "
-empty_symbol = " "
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰁾 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
 format = "[ $symbol$percentage ](fg:#5b5143 bg:#f7e0c3) "
 
 [c]
@@ -30,7 +30,8 @@ format = '[ $symbol($version) ]($style) '
 [character]
 error_symbol = "✕"
 success_symbol = "✓"
-format = '[ $symbol ](fg:#5b5143 bg:#f7e0c3) '
+# format = '[ $symbol ](fg:#5b5143 bg:#f7e0c3) '
+format = '[ $symbol ](fg:#465953 bg:#d2ebe3) '
 
 [conda]
 symbol = " "

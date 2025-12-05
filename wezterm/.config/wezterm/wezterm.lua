@@ -2,8 +2,8 @@ local wezterm = require 'wezterm'
 local appearance = require 'appearance'
 
 local config = wezterm.config_builder()
-local ffam = { family = 'JetBrains Mono', weight = 'Medium'}
-local fsize = 15
+local ffam = { family = 'VictorMono Nerd Font', weight = 'DemiBold'}
+local fsize = 16
 
 -- adapt to os theme
 config.color_scheme_dirs = { '~/.config/wezterm/colors' }
@@ -34,6 +34,7 @@ config.font = wezterm.font(ffam)
 config.font_size = fsize
 config.command_palette_font_size = fsize+2
 config.char_select_font_size = fsize+2
+config.cell_width = 1.1
 config.line_height = 1.1
 config.adjust_window_size_when_changing_font_size = false
 
@@ -298,15 +299,26 @@ wezterm.on('update-status', function(window, _)
 
   for i, seg in ipairs(segments) do
     local is_first = i == 1
+    local is_pomodoro = seg:match('^WORK') or seg:match('^BREAK')
+    local bg_color = gradient[i]
+
+    -- Use theme colors for pomodoro timer background
+    if is_pomodoro then
+      if seg:match('^WORK') then
+        bg_color = color_scheme.ansi[2]  -- red (ansi index 1 = red, but lua is 1-indexed so ansi[2])
+      else
+        bg_color = color_scheme.ansi[3]  -- green (ansi index 2 = green, so ansi[3])
+      end
+    end
 
     if is_first then
       table.insert(elements, { Background = { Color = 'none' } })
     end
-    table.insert(elements, { Foreground = { Color = gradient[i] } })
+    table.insert(elements, { Foreground = { Color = bg_color } })
     table.insert(elements, { Text = SOLID_LEFT_ARROW })
 
     table.insert(elements, { Foreground = { Color = fg } })
-    table.insert(elements, { Background = { Color = gradient[i] } })
+    table.insert(elements, { Background = { Color = bg_color } })
     table.insert(elements, { Text = ' ' .. seg .. ' ' })
   end
 
