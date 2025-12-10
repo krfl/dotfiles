@@ -1,14 +1,11 @@
 {
   // Zed setting
   "terminal": {
-    "font_weight": 402.0
+    "font_weight": 500
   },
   "project_panel": {
-    "file_icons": false,
-    "folder_icons": false,
     "git_status": true,
     "entry_spacing": "comfortable",
-    "hide_gitignore": false,
     "dock": "left"
   },
   "use_system_window_tabs": false,
@@ -32,7 +29,7 @@
   "show_whitespaces": "trailing",
   "always_treat_brackets_as_autoclosed": true,
   "indent_guides": {
-    "background_coloring": "indent_aware",
+    // "background_coloring": "indent_aware",
     "coloring": "indent_aware"
   },
   "toolbar": {
@@ -46,7 +43,6 @@
     "metrics": false
   },
   "helix_mode": true,
-  "vim_mode": false,
   "icon_theme": "Zed (Default)",
   "theme": {
     "mode": "system",
@@ -58,5 +54,7 @@
   "buffer_font_weight": 500.0,
   "buffer_font_size": 16.0,
   "ui_font_family": "VictorMono Nerd Font",
-  "buffer_font_family": "VictorMono Nerd Font"
+  "buffer_font_family": "VictorMono Nerd Font",
+
+  "format_on_save": "off"
 }
