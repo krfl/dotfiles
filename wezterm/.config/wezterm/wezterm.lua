@@ -3,7 +3,7 @@ local appearance = require 'appearance'
 
 local config = wezterm.config_builder()
 local ffam = { family = 'VictorMono Nerd Font', weight = 'DemiBold'}
-local fsize = 16
+local fsize = 14
 
 -- adapt to os theme
 config.color_scheme_dirs = { '~/.config/wezterm/colors' }
@@ -26,7 +26,8 @@ config.window_decorations = "RESIZE"
 
 config.window_frame = {
   font = wezterm.font(ffam),
-  font_size = fsize -2,
+  -- font_size = fsize -2,
+  font_size = fsize,
 }
 
 -- font and typeface

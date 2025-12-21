@@ -20,6 +20,7 @@ brew 'zoxide' # z
 
 # dev tools
 brew 'rustup-init'
+brew 'uv'
 
 # lsp
 brew 'marksman'

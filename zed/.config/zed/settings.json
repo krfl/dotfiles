@@ -43,7 +43,7 @@
     "metrics": false
   },
   "helix_mode": true,
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Material Icon Theme",
   "theme": {
     "mode": "system",
     "light": "Serene Day",

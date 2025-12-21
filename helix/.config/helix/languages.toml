@@ -11,15 +11,34 @@ checkOnSave = { command = "clippy" }
 cargo = { allFeatures = true }
 procMacro = { enable = true }
 
-# Maestro
+# Python 3.x
 [[language]]
-name = "yaml"
-auto-format = false
-indent = { tab-width = 4, unit = " " }
+name = "python"
+auto-format = true
+language-servers = [ "basedpyright", "ruff", "ty" ]
 
-[[language-server.vscode-json-language-server.config.json.schemas]]
-fileMatch = ["*flow.yaml"]
-url = "https://json.schemastore.org/tsconfig.json"
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.ty.config]
+inlayHints.callArgumentNames = false
+experimental.rename = true
+experimental.autoImport = true
+
+# # Maestro
+# [[language]]
+# name = "yaml"
+# auto-format = false
+# indent = { tab-width = 4, unit = " " }
+
+# [[language-server.vscode-json-language-server.config.json.schemas]]
+# fileMatch = ["*flow.yaml"]
+# url = "https://json.schemastore.org/tsconfig.json"
 
 # PKB
 [language-server.iwe]
@@ -28,13 +47,9 @@ command = "iwes"
 # Markdown
 [[language]]
 name = "markdown"
-# language-servers = ["iwe", "github-lsp"]
 language-servers = ["iwe"]
 auto-format = false
 # formatter = { command = "prettier", args = ["--parser", "markdown"] }
-
-[language-server.github-lsp]
-command = "github-lsp"
 
 [language-server.marksman]
 command = "marksman"
@@ -46,6 +61,7 @@ args = ["server"]
 '{' = '}'
 '[' = ']'
 '"' = '"'
+
 # Yaml
 [[language]]
 name = "yaml"
