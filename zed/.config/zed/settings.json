@@ -1,10 +1,16 @@
 {
   // Zed setting
-  "ui_font_size": 14.0,
+  "agent_buffer_font_size": 15.0,
+  "agent_ui_font_size": 15.0,
+  "active_pane_modifiers": {
+    "border_size": 0.0
+  },
+  "ui_font_size": 15.0,
   "terminal": {
-    "font_weight": 500
+    "font_weight": 500.0
   },
   "project_panel": {
+    "indent_size": 20.0,
     "git_status": true,
     "entry_spacing": "comfortable",
     "dock": "left"
@@ -53,7 +59,7 @@
 
   "ui_font_weight": 500.0,
   "buffer_font_weight": 500.0,
-  "buffer_font_size": 14.0,
+  "buffer_font_size": 15.0,
   "ui_font_family": "VictorMono Nerd Font",
   "buffer_font_family": "VictorMono Nerd Font",
 
