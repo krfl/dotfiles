@@ -3,13 +3,9 @@ fish_add_path /opt/homebrew/sbin
 fish_add_path /usr/local/bin
 fish_add_path /usr/sbin
 fish_add_path /sbin
-fish_add_path /Applications/Keybase.app/Contents/SharedSupport/bin
 fish_add_path /Library/Apple/usr/bin
 fish_add_path ~/.cargo/bin
 fish_add_path /opt/homebrew/opt/openjdk/bin
-fish_add_path ~/.maestro/bin
-fish_add_path ~/go/bin
-fish_add_path ~/Library/Application\ Support/JetBrains/Toolbox/scripts
 
 set -x HELIX_RUNTIME ~/github.com/helix/runtime
 set -x XDG_CONFIG_HOME ~/.config
@@ -21,12 +17,12 @@ function fish_greeting
 end
 
 # print calendar events using icalbuddy and excluding a calendar I don't want to see
-function __calendar -d 'prints events from the apple calendar using icalbuddy'
+function agenda -d 'prints events from the apple calendar using icalbuddy'
     command icalBuddy -f -ec "" -eed -eep "notes,attendees" eventsToday
 end
 
 # print tasks from reminders using icalbuddy
-function __reminders -d 'prints reminders from apple reminders using icalbuddy'
+function reminders -d 'prints reminders from apple reminders using icalbuddy'
     command icalBuddy -f -sc -ss "" -npn -nc -iep "title,datetime" -ps "| : |" -po "datetime,title" -tf "" -df "%RD" -eed tasksDueBefore:today+1
 end
 
@@ -35,19 +31,27 @@ function unixtime
     command date +%s $argv
 end
 
-# replace common l* commands with eza
+# eza ls
 function ls
     command eza --sort=type $argv
 end
 
+# eza ls -l
 function ll
     command eza --sort=type --long --git --no-permissions --no-user --no-time $argv
 end
 
+# eza tree
 function tree
     command eza --tree $argv
 end
 
+# fuzzy find process and kill selected
+function fkill
+    command ps -e | fzy | awk '{print $1}' | xargs kill
+end
+
+# fuzzy find history item
 function fzy_history
     set -l currbuff (commandline)
     history | fzy --query=$currbuff | read foo
@@ -62,7 +66,7 @@ function fzy_history
     end
 end
 
-# feeds zoxide directories into fzy for filtering 
+# fuzzy find zoxide directory
 function fzy_zoxide
     set -l currbuff (commandline)
     zoxide query -la | fzy --query=$currbuff | read foo
@@ -75,7 +79,7 @@ function fzy_zoxide
     end
 end
 
-# markdown brain
+# fuzzy find all markdown files recursively from current directory
 function mdb
     fd . "$(pwd)" -E Library --extension md | fzy | read foo
     if [ $foo ]
@@ -85,16 +89,7 @@ function mdb
     end
 end
 
-# markdown preview
-function mdpreview
-    if [ $argv ]
-        ls *.md | entr -c glow -p $argv
-    else
-        ls *.md | entr -c glow -p (ls *.md | fzf --exact --no-sort --bind=ctrl-z:ignore,btab:down,tab:up --cycle --keep-right --tabstop=1 --exit-0 --select-1)
-    end
-end
-
-# remove those pesky .DS_Store files
+# recursively remove those pesky .DS_Store files
 function cleands
     if [ $argv ]
         command find $argv -name '.DS_Store' -exec rm -i {} \;
@@ -103,24 +98,13 @@ function cleands
     end
 end
 
+# print short form date for journaling or documentation
 function day
     command date +"%a %b %d"
 end
 
-function bat
-    command bat -p $argv
-end
-
 bind \co fzy_zoxide
 bind \cr fzy_history
-
-function __load_dark_theme
-    command source ~/github.com/serene-theme/themes/ls-colors/serene-night-clarity.sh
-end
-
-function __load_light_theme
-    command source ~/github.com/serene-theme/themes/ls-colors/serene-day-clarity.sh
-end
 
 # # Auto envs - SECURITY RISK
 # function autovenv --on-variable PWD
@@ -134,6 +118,9 @@ end
 #         source $PWD/.env
 #     end
 # end
+
+# Serene dark fzf
+source ~/github.com/serene-theme/themes/fzf/serene-night.sh
 
 # Editor
 export EDITOR="hx"

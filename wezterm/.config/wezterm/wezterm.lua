@@ -1,76 +1,54 @@
 local wezterm = require 'wezterm'
 local appearance = require 'appearance'
-
 local config = wezterm.config_builder()
 local ffam = { family = 'VictorMono Nerd Font', weight = 'DemiBold'}
 local fsize = 14
 
--- adapt to os theme
-config.color_scheme_dirs = { '~/.config/wezterm/colors' }
-if appearance.is_dark() then
-  config.color_scheme = 'serene-night'
-else
-  config.color_scheme = 'serene-day'
-end
-
--- window
-config.window_close_confirmation = 'NeverPrompt'
-config.window_decorations = "RESIZE"
-
--- config.window_padding = {
---   left = 0,
---   right = 0,
---   top = 0,
---   bottom = 0,
--- }
-
-config.window_frame = {
-  font = wezterm.font(ffam),
-  -- font_size = fsize -2,
-  font_size = fsize,
-}
-
--- font and typeface
+-- Font configuration
 config.font = wezterm.font(ffam)
 config.font_size = fsize
-config.command_palette_font_size = fsize+2
-config.char_select_font_size = fsize+2
+config.command_palette_font_size = fsize + 2
+config.char_select_font_size = fsize + 2
 config.cell_width = 1.1
 config.line_height = 1.1
 config.adjust_window_size_when_changing_font_size = false
 
--- shell
+-- Theme
+config.color_scheme_dirs = { '~/.config/wezterm/colors' }
+config.color_scheme = appearance.is_dark() and 'serene-night' or 'serene-day'
+
+-- Window
+config.window_close_confirmation = 'NeverPrompt'
+config.window_decorations = "RESIZE"
+config.window_frame = { font = wezterm.font(ffam), font_size = fsize }
+-- config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
+
+-- Tabs
+config.use_fancy_tab_bar = false
+config.tab_bar_at_bottom = true
+config.show_new_tab_button_in_tab_bar = false
+config.show_tab_index_in_tab_bar = false
+config.tab_max_width = 32
+config.hide_tab_bar_if_only_one_tab = false
+config.colors = { tab_bar = { background = 'rgba(0,0,0,0)' } }
+
+-- Shell
 config.default_prog = { '/opt/homebrew/bin/fish' }
 
--- Pomodoro Timer Configuration
-local pomodoro = {
-  work_duration = 25 * 60,    -- 25 minutes in seconds
-  break_duration = 5 * 60,     -- 5 minutes in seconds
-  remaining = 0,
-  is_running = false,
-  is_paused = false,
-  is_work = true,
-  last_update = 0,
-}
-
--- Pomodoro User Commands
-wezterm.on('user-var-changed', function(window, pane, name, value)
-  wezterm.log_info('var changed', name, value)
-end)
-
--- keybinds
+-- Keybinds
 config.keys = {
-  { key = 'd', mods = 'CMD',       action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-  { key = 'd', mods = 'CMD|SHIFT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
-  { key = 'w', mods = 'CMD',       action = wezterm.action.CloseCurrentPane { confirm = true } },
-  { key = 'r', mods = 'CMD',       action = wezterm.action.RotatePanes 'Clockwise' },
-  { key = 'j', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Next' },
-  { key = 'k', mods = 'CMD',       action = wezterm.action.ActivatePaneDirection 'Prev' },
-  { key = 'r', mods = 'CMD|SHIFT', action = wezterm.action.ActivateKeyTable { name = 'resize_pane', one_shot = false } },
-  { key = 'k', mods = 'CTRL',      action = wezterm.action.ScrollByLine(-1) },
-  { key = 'j', mods = 'CTRL',      action = wezterm.action.ScrollByLine(1) },
-  -- Pomodoro keybind - activate pomodoro key table
-  { key = 'p', mods = 'CMD|SHIFT|CTRL', action = wezterm.action.ActivateKeyTable { name = 'pomodoro', one_shot = true } },
+  { key = 'd', mods = 'CMD',            action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+  { key = 'd', mods = 'CMD|SHIFT',      action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+  { key = 'w', mods = 'CMD',            action = wezterm.action.CloseCurrentPane { confirm = true } },
+  { key = 'r', mods = 'CMD',            action = wezterm.action.RotatePanes 'Clockwise' },
+  { key = 'j', mods = 'CMD',            action = wezterm.action.ActivatePaneDirection 'Next' },
+  { key = 'k', mods = 'CMD',            action = wezterm.action.ActivatePaneDirection 'Prev' },
+  { key = 'r', mods = 'CMD|SHIFT',      action = wezterm.action.ActivateKeyTable { name = 'resize_pane', one_shot = false } },
+  { key = 'k', mods = 'CTRL',           action = wezterm.action.ScrollByLine(-1) },
+  { key = 'j', mods = 'CTRL',           action = wezterm.action.ScrollByLine(1) },
+  { key = 'h', mods = 'CMD|CTRL',       action = wezterm.action.ActivateTabRelative(-1) },
+  { key = 'l', mods = 'CMD|CTRL',       action = wezterm.action.ActivateTabRelative(1) },
+
 }
 
 config.key_tables = {
@@ -82,248 +60,47 @@ config.key_tables = {
     { key = 'Escape', action = 'PopKeyTable' },
     { key = 'Enter',  action = 'PopKeyTable' },
   },
-  pomodoro = {
-    { key = 's',      action = wezterm.action.EmitEvent 'pomodoro-start' },
-    { key = 'p',      action = wezterm.action.EmitEvent 'pomodoro-pause' },
-    { key = 'x',      action = wezterm.action.EmitEvent 'pomodoro-stop' },
-    { key = 'Escape', action = 'PopKeyTable' },
-    { key = 'Enter',  action = 'PopKeyTable' },
-  }
 }
+-- Tab formatting
+wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_width)
+  local bg = config.resolved_palette and config.resolved_palette.background or '#1e1d1a'
+  local fg = config.resolved_palette and config.resolved_palette.foreground or '#d4cfc4'
+  local green = config.resolved_palette and config.resolved_palette.ansi[3] or '#8fae7a'
 
--- Pomodoro Timer Functions
-local function pomodoro_start()
-  if not pomodoro.is_running then
-    pomodoro.is_running = true
-    pomodoro.is_paused = false
-    pomodoro.is_work = true
-    pomodoro.remaining = pomodoro.work_duration
-    pomodoro.last_update = os.time()
-  end
-end
-
-local function pomodoro_stop()
-  pomodoro.is_running = false
-  pomodoro.is_paused = false
-  pomodoro.remaining = 0
-end
-
-local function pomodoro_pause()
-  if pomodoro.is_running then
-    pomodoro.is_paused = not pomodoro.is_paused
-    if not pomodoro.is_paused then
-      pomodoro.last_update = os.time()
-    end
-  end
-end
-
-local function pomodoro_update()
-  if pomodoro.is_running and not pomodoro.is_paused then
-    local now = os.time()
-    local elapsed = now - pomodoro.last_update
-    pomodoro.last_update = now
-
-    pomodoro.remaining = pomodoro.remaining - elapsed
-
-    if pomodoro.remaining <= 0 then
-      -- Switch between work and break
-      pomodoro.is_work = not pomodoro.is_work
-      if pomodoro.is_work then
-        pomodoro.remaining = pomodoro.work_duration
-      else
-        pomodoro.remaining = pomodoro.break_duration
-      end
-    end
-  end
-end
-
-local function get_pomodoro_status()
-  if not pomodoro.is_running then
-    return ''
+  if not tab.is_active then
+    fg = wezterm.color.parse(fg):darken(0.5)
   end
 
-  pomodoro_update()
+  local title = string.gsub(tab.active_pane.foreground_process_name, '(.*[/\\])(.*)', '%2') or tab.active_pane.title
+  if #title > 12 then title = title:sub(1, 12) .. '…' end
 
-  local minutes = math.floor(pomodoro.remaining / 60)
-  local seconds = pomodoro.remaining % 60
-  local time_str = string.format('%02d:%02d', minutes, seconds)
-  local mode = pomodoro.is_work and 'WORK' or 'BREAK'
+  local spacing = tab.tab_index < #tabs - 1 and '   ' or ''
+  local prefix = tab.is_active and '● ' or ''
 
-  if pomodoro.is_paused then
-    return mode .. ' ' .. time_str .. ' (PAUSED)'
-  else
-    return mode .. ' ' .. time_str
-  end
-end
-
--- Pomodoro Event Handlers
-wezterm.on('pomodoro-start', function(window, pane)
-  pomodoro_start()
-  window:toast_notification('WezTerm', 'Pomodoro started!', nil, 2000)
-end)
-
-wezterm.on('pomodoro-stop', function(window, pane)
-  pomodoro_stop()
-  window:toast_notification('WezTerm', 'Pomodoro stopped!', nil, 2000)
-end)
-
-wezterm.on('pomodoro-pause', function(window, pane)
-  pomodoro_pause()
-  local msg = pomodoro.is_paused and 'Pomodoro paused' or 'Pomodoro resumed'
-  window:toast_notification('WezTerm', msg, nil, 2000)
-end)
-
--- segments
-local function get_cpu_usage()
-  -- Get total CPU usage across all processes
-  local success_cpu, stdout_cpu = wezterm.run_child_process({
-    'sh', '-c',
-    "ps -A -o %cpu | awk '{s+=$1} END {print s}'"
-  })
-
-  -- Get number of CPU cores
-  local success_cores, stdout_cores = wezterm.run_child_process({
-    'sysctl', '-n', 'hw.ncpu'
-  })
-
-  if success_cpu and success_cores then
-    local cpu_total = tonumber(stdout_cpu)
-    local cores = tonumber(stdout_cores)
-    if cpu_total and cores and cores > 0 then
-      local cpu_avg = cpu_total / cores
-      return string.format('CPU %.0f%%', cpu_avg)
-    end
-  end
-  return 'CPU --'
-end
-
-local function get_memory_usage()
-  -- Get used memory via vm_stat
-  local success, stdout = wezterm.run_child_process({
-    'sh', '-c',
-    "vm_stat | awk '/Pages active/ {active=$3} /Pages wired/ {wired=$4} END {gsub(/\\./, \"\", active); gsub(/\\./, \"\", wired); print (active+wired)*4096/1024/1024}'"
-  })
-
-  -- Get total system memory
-  local success_total, stdout_total = wezterm.run_child_process({
-    'sysctl', '-n', 'hw.memsize'
-  })
-
-  if success and success_total then
-    local mem_used_mb = tonumber(stdout)
-    local mem_total_bytes = tonumber(stdout_total)
-    if mem_used_mb and mem_total_bytes then
-      local mem_total_mb = mem_total_bytes / 1024 / 1024
-      local mem_percent = (mem_used_mb / mem_total_mb) * 100
-      return string.format('MEM %.0f%%', mem_percent)
-    end
-  end
-  return 'MEM --'
-end
-
-local function get_temperature()
-  -- Try to get CPU temperature using powermetrics
-  local success, stdout, stderr = wezterm.run_child_process({
-    'sh', '-c',
-    "sudo powermetrics --samplers smc -i1 -n1 2>/dev/null | grep -i 'CPU die temperature' | awk '{print $4}' | cut -d'.' -f1"
-  })
-  if success and stdout and stdout ~= '' then
-    local temp = stdout:gsub('%s+$', '')
-    if temp ~= '' then
-      return temp .. '°C'
-    end
-  end
-  return ''
-end
-
-local function segments_for_right_status(window)
-  -- battery
-  local bat = ''
-  for _, b in ipairs(wezterm.battery_info()) do
-    bat = string.format('BAT %.0f%%', b.state_of_charge * 100)
-  end
-
-  local segments = {
-    get_cpu_usage(),
-    get_memory_usage(),
-    bat,
-    wezterm.strftime('%a %b %-d %H:%M'),
+  return {
+    { Background = { Color = bg } },
+    { Foreground = { Color = green } },
+    { Text = prefix },
+    { Foreground = { Color = fg } },
+    { Text = title .. ' ' .. spacing },
   }
+end)
 
-  -- Add temperature if available (requires sudo, might not work)
-  local temp = get_temperature()
-  if temp ~= '' then
-    table.insert(segments, 4, temp)
+-- Center tabs
+wezterm.on('update-status', function(window, pane)
+  local tabs = window:mux_window():tabs()
+  local mid_width = 0
+
+  for idx, tab in ipairs(tabs) do
+    local title = string.gsub(tab:active_pane():get_foreground_process_name() or '', '(.*[/\\])(.*)', '%2') or tab:active_pane():get_title()
+    if #title > 12 then title = title:sub(1, 12) .. '…' end
+
+    mid_width = mid_width + math.floor(math.log(idx, 10)) + 1 + 2 + #title + 1
   end
 
-  -- Add pomodoro timer if running
-  local pomo = get_pomodoro_status()
-  if pomo ~= '' then
-    table.insert(segments, 1, pomo)
-  end
-
-  return segments
-end
-
-wezterm.on('update-status', function(window, _)
-  local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
-  local segments = segments_for_right_status(window)
-
-  -- Add key table indicator if active
-  local key_table = window:active_key_table()
-  if key_table then
-    if key_table == 'pomodoro' then
-      table.insert(segments, 1, 'POMODORO: s=start p=pause x=stop esc=exit')
-    end
-  end
-
-  local color_scheme = window:effective_config().resolved_palette
-  local bg = wezterm.color.parse(color_scheme.background)
-  local fg = color_scheme.foreground
-
-  local gradient_to, gradient_from = bg
-  if appearance.is_dark() then
-    gradient_from = gradient_to:lighten(0.2)
-  else
-    gradient_from = gradient_to:darken(0.2)
-  end
-
-  local gradient = wezterm.color.gradient(
-    {
-      orientation = 'Horizontal',
-      colors = { gradient_from, gradient_to },
-    },
-    #segments -- only gives us as many colors as we have segments.
-  )
-
-  local elements = {}
-
-  for i, seg in ipairs(segments) do
-    local is_first = i == 1
-    local is_pomodoro = seg:match('^WORK') or seg:match('^BREAK')
-    local bg_color = gradient[i]
-
-    -- Use theme colors for pomodoro timer background
-    if is_pomodoro then
-      if seg:match('^WORK') then
-        bg_color = color_scheme.ansi[2]  -- red (ansi index 1 = red, but lua is 1-indexed so ansi[2])
-      else
-        bg_color = color_scheme.ansi[3]  -- green (ansi index 2 = green, so ansi[3])
-      end
-    end
-
-    if is_first then
-      table.insert(elements, { Background = { Color = 'none' } })
-    end
-    table.insert(elements, { Foreground = { Color = bg_color } })
-    table.insert(elements, { Text = SOLID_LEFT_ARROW })
-
-    table.insert(elements, { Foreground = { Color = fg } })
-    table.insert(elements, { Background = { Color = bg_color } })
-    table.insert(elements, { Text = ' ' .. seg .. ' ' })
-  end
-
-  window:set_right_status(wezterm.format(elements))
+  local tab_width = window:active_tab():get_size().cols
+  window:set_left_status(wezterm.pad_left(' ', tab_width / 2 - mid_width / 2))
+  window:set_right_status('')
 end)
 
 return config

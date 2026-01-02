@@ -3,3 +3,6 @@ Brewfile.lock.json
 /helix/.config/helix/runtime/*
 package-lock.json
 fish/.config/fish/fish_variables
+*.backup
+*_backup.*
+zed/.config/zed/prompts/

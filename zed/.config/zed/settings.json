@@ -1,5 +1,6 @@
 {
   // Zed setting
+  "ui_font_size": 14.0,
   "terminal": {
     "font_weight": 500
   },
@@ -10,7 +11,7 @@
   },
   "use_system_window_tabs": false,
   "preview_tabs": {
-    "enable_preview_from_code_navigation": true,
+    "enable_keep_preview_on_code_navigation": true,
     "enable_preview_from_file_finder": true
   },
   "tabs": {
@@ -42,7 +43,7 @@
     "diagnostics": false,
     "metrics": false
   },
-  "helix_mode": true,
+  "helix_mode": false,
   "icon_theme": "Material Icon Theme",
   "theme": {
     "mode": "system",
@@ -52,7 +53,7 @@
 
   "ui_font_weight": 500.0,
   "buffer_font_weight": 500.0,
-  "buffer_font_size": 16.0,
+  "buffer_font_size": 14.0,
   "ui_font_family": "VictorMono Nerd Font",
   "buffer_font_family": "VictorMono Nerd Font",
 
