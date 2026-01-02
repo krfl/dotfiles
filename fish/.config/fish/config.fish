@@ -12,7 +12,7 @@ set -x XDG_CONFIG_HOME ~/.config
 
 # Greeting
 function fish_greeting
-    # __calendar
+    # agenda
     # echo ""
 end
 
