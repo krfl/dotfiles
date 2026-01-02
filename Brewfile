@@ -2,44 +2,41 @@
 cask_args appdir: '/Applications'
 
 # formulae
-brew 'apktool'
-brew 'dive'
-brew 'duf'
-brew 'eza'
-brew 'fish'
-brew 'fzy'
-brew 'git'
-brew 'gitleaks'
-brew 'ical-buddy'
-brew 'jq'
-brew 'mas'
-brew 'riff'
-brew 'ripgrep' # rg
-brew 'ripsecrets'
-brew 'starship'
-brew 'stow'
-brew 'tealdeer' # tldr
-brew 'zoxide' # z
-
-# dev tools
-brew 'rustup-init'
-brew 'uv'
-
-# lsp
-brew 'marksman'
-brew 'rust-analyzer'
-brew 'taplo'
+brew 'apktool' # android apk tool
+brew 'cariddi' # web crawler and endpoint finder
+brew 'duf' # disk usage utility
+brew 'eza' # modern ls replacement
+brew 'fish' # friendly shell
+brew 'fzy' # fuzzy finder
+brew 'gh' # github cli
+brew 'git' # version control
+brew 'gitleaks' # secret scanner
+brew 'ical-buddy' # apple calendar and reminders
+brew 'jq' # json processor
+brew 'marksman' # markdown lsp
+brew 'mas' # app store cli
+brew 'riff' # diff tool
+brew 'ripgrep' # fast grep alternative
+brew 'ripsecrets' # secret scanner
+brew 'rust-analyzer' # rust lsp
+brew 'rustup-init' # rust toolchain installer
+brew 'starship' # shell prompt
+brew 'stow' # dotfile manager
+brew 'taplo' # toml toolkit
+brew 'tealdeer' # tldr pages
+brew 'uv' # python package installer
+brew 'zoxide' # smart cd
 
 # casks
-cask 'claude'
-cask 'claude-code'
-cask 'discord'
-cask 'font-jetbrains-mono-nerd-font'
-cask 'font-victor-mono-nerd-font'
-cask 'orbstack'
-cask 'rectangle'
-cask 'wezterm'
-cask 'zed'
+cask 'claude' # ai assistant
+cask 'claude-code' # ai coding assistant
+cask 'discord' # chat platform
+cask 'font-jetbrains-mono-nerd-font' # coding font
+cask 'font-victor-mono-nerd-font' # coding font
+cask 'orbstack' # docker alternative
+cask 'rectangle' # window manager
+cask 'wezterm' # terminal emulator
+cask 'zed' # code editor
 
 # app store
 mas 'Hidden Bar', id: 1452453066
