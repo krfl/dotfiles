@@ -2,15 +2,20 @@
 cask_args appdir: '/Applications'
 
 # formulae
+brew 'apktool'
+brew 'dive'
 brew 'duf'
 brew 'eza'
 brew 'fish'
-brew 'fzy' # fzf alternative
+brew 'fzy'
 brew 'git'
+brew 'gitleaks'
+brew 'ical-buddy'
 brew 'jq'
 brew 'mas'
 brew 'riff'
 brew 'ripgrep' # rg
+brew 'ripsecrets'
 brew 'starship'
 brew 'stow'
 brew 'tealdeer' # tldr

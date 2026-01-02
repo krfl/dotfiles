@@ -5,7 +5,6 @@ fish_add_path /usr/sbin
 fish_add_path /sbin
 fish_add_path /Library/Apple/usr/bin
 fish_add_path ~/.cargo/bin
-fish_add_path /opt/homebrew/opt/openjdk/bin
 
 set -x HELIX_RUNTIME ~/github.com/helix/runtime
 set -x XDG_CONFIG_HOME ~/.config
@@ -16,20 +15,13 @@ function fish_greeting
     # echo ""
 end
 
-# print calendar events using icalbuddy and excluding a calendar I don't want to see
-function agenda -d 'prints events from the apple calendar using icalbuddy'
-    command icalBuddy -f -ec "" -eed -eep "notes,attendees" eventsToday
-end
-
-# print tasks from reminders using icalbuddy
-function reminders -d 'prints reminders from apple reminders using icalbuddy'
-    command icalBuddy -f -sc -ss "" -npn -nc -iep "title,datetime" -ps "| : |" -po "datetime,title" -tf "" -df "%RD" -eed tasksDueBefore:today+1
-end
-
-# generate unixtime
-function unixtime
-    command date +%s $argv
-end
+# Abbreviations
+abbr --add bup "brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor;mas outdated;mas upgrade"
+abbr --add agenda "icalBuddy -f -ec "" -eed -eep "notes,attendees" eventsToday"
+abbr --add reminders "icalBuddy -f -sc -ss '' -npn -nc -iep 'title,datetime' -ps ' | : | ' -po 'datetime,title' -tf '' -df '%RD' -eed tasksDueBefore:today+1"
+abbr --add unixtime "date +%s $argv"
+abbr --add fkill "ps -e | fzy | awk '{print $1}' | xargs kill"
+abbr --add day "date +'%a %b %d'"
 
 # eza ls
 function ls
@@ -44,11 +36,6 @@ end
 # eza tree
 function tree
     command eza --tree $argv
-end
-
-# fuzzy find process and kill selected
-function fkill
-    command ps -e | fzy | awk '{print $1}' | xargs kill
 end
 
 # fuzzy find history item
@@ -98,11 +85,6 @@ function cleands
     end
 end
 
-# print short form date for journaling or documentation
-function day
-    command date +"%a %b %d"
-end
-
 bind \co fzy_zoxide
 bind \cr fzy_history
 
@@ -118,9 +100,6 @@ bind \cr fzy_history
 #         source $PWD/.env
 #     end
 # end
-
-# Serene dark fzf
-source ~/github.com/serene-theme/themes/fzf/serene-night.sh
 
 # Editor
 export EDITOR="hx"
