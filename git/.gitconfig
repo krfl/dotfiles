@@ -1,11 +1,21 @@
 [includeIf "gitdir:~/github.com/"]
-  path = ~/github.com/.gitconfig
+	path = ~/github.com/.gitconfig
 
 [includeIf "gitdir:~/gitlab.com/"]
-  path = ~/gitlab.com/.gitconfig
+	path = ~/gitlab.com/.gitconfig
+
+[diff]
+	algorithm = histogram
 
 [alias]
-  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  changes = -c pager.show=false show --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -q @@{1}..@@{0} --reverse
-  riff = "!git diff | riff"
-  pac = "!git pull --autostash;echo "";git changes"
+	compactlog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	verboselog = log --cc --stat -p --color-moved
+	changes = -c pager.show=false show --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -q @@{1}..@@{0} --reverse
+  	pac = "!git pull --autostash;echo "";git changes"
+
+[color "diff"]
+    meta = yellow italic
+    context = white
+
+[init]
+	defaultBranch = main

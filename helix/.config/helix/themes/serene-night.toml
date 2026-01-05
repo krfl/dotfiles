@@ -1,0 +1,193 @@
+# Serene Night - Eye-friendly dark theme for Helix
+# Reduces blue light and eye strain with warm earth tones
+# Based on optometry research for computer vision syndrome
+
+# Syntax Highlighting
+"attribute" = "sand"
+"type" = "tan"
+"type.builtin" = "tan"
+"type.parameter" = "tan"
+"type.enum.variant" = "stone"
+"constructor" = "sand"
+"constant" = "brown"
+"constant.builtin" = "terracotta"
+"constant.builtin.boolean" = "terracotta"
+"constant.character" = "sage"
+"constant.character.escape" = "stone"
+"constant.numeric" = "terracotta"
+"string" = "sage"
+"string.regexp" = "stone"
+"string.special" = "stone"
+"comment" = { fg = "comment", modifiers = ["italic"] }
+"comment.line" = { fg = "comment", modifiers = ["italic"] }
+"comment.block" = { fg = "comment", modifiers = ["italic"] }
+"variable" = "beige"
+"variable.builtin" = "olive"
+"variable.parameter" = "beige"
+"variable.other.member" = "beige"
+"label" = "olive"
+"punctuation" = "foreground"
+"punctuation.delimiter" = "foreground"
+"punctuation.bracket" = "foreground"
+"punctuation.special" = "stone"
+"keyword" = "olive"
+"keyword.control" = "olive"
+"keyword.control.conditional" = "olive"
+"keyword.control.repeat" = "olive"
+"keyword.control.import" = "stone"
+"keyword.control.return" = "olive"
+"keyword.control.exception" = "olive"
+"keyword.operator" = "stone"
+"keyword.directive" = "olive"
+"keyword.function" = "olive"
+"keyword.storage" = "olive"
+"keyword.storage.type" = "tan"
+"keyword.storage.modifier" = "olive"
+"operator" = "stone"
+"function" = "sand"
+"function.builtin" = "sand"
+"function.method" = "sand"
+"function.macro" = "olive"
+"function.special" = "stone"
+"tag" = "olive"
+"namespace" = "tan"
+"special" = "stone"
+
+# Markup
+"markup.heading" = "sand"
+"markup.heading.marker" = "comment"
+"markup.heading.1" = { fg = "sand", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "sand", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "sand", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "sand", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "sand", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "sand", modifiers = ["bold"] }
+"markup.list" = "stone"
+"markup.list.unnumbered" = "stone"
+"markup.list.numbered" = "stone"
+"markup.bold" = { fg = "tan", modifiers = ["bold"] }
+"markup.italic" = { fg = "tan", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "olive", modifiers = ["underlined"] }
+"markup.link.label" = "stone"
+"markup.link.text" = "olive"
+"markup.quote" = "comment"
+"markup.raw" = "sage"
+"markup.raw.inline" = "sage"
+"markup.raw.block" = "sage"
+
+# Diff
+"diff.plus" = "sage"
+"diff.plus.gutter" = "sage"
+"diff.minus" = "error"
+"diff.minus.gutter" = "error"
+"diff.delta" = "sand"
+"diff.delta.moved" = "olive"
+
+# UI
+"ui.background" = { bg = "background" }
+"ui.background.separator" = "border"
+"ui.cursor" = { fg = "background", bg = "foreground" }
+"ui.cursor.normal" = { fg = "background", bg = "foreground" }
+"ui.cursor.insert" = { fg = "background", bg = "sage" }
+"ui.cursor.select" = { fg = "background", bg = "olive" }
+"ui.cursor.match" = { fg = "background", bg = "sand", modifiers = ["bold"] }
+"ui.cursor.primary" = { fg = "background", bg = "foreground" }
+"ui.cursor.primary.normal" = { fg = "background", bg = "foreground" }
+"ui.cursor.primary.insert" = { fg = "background", bg = "sage" }
+"ui.cursor.primary.select" = { fg = "background", bg = "olive" }
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.cursorline.secondary" = { bg = "cursorline" }
+"ui.cursorcolumn.primary" = { bg = "cursorline" }
+"ui.cursorcolumn.secondary" = { bg = "cursorline" }
+"ui.linenr" = "line_number"
+"ui.linenr.selected" = { fg = "line_number_active", bg = "cursorline" }
+"ui.statusline" = { fg = "status_fg", bg = "status_bg" }
+"ui.statusline.inactive" = { fg = "comment", bg = "border" }
+"ui.statusline.normal" = { fg = "status_fg", bg = "status_bg" }
+"ui.statusline.insert" = { fg = "background", bg = "sage" }
+"ui.statusline.select" = { fg = "background", bg = "olive" }
+"ui.statusline.separator" = "border"
+"ui.popup" = { fg = "foreground", bg = "border" }
+"ui.popup.info" = { fg = "foreground", bg = "border" }
+"ui.window" = { fg = "border", bg = "background" }
+"ui.help" = { fg = "foreground", bg = "border" }
+"ui.text" = "foreground"
+"ui.text.focus" = { fg = "background", bg = "olive" }
+"ui.text.inactive" = "comment"
+"ui.text.info" = "foreground"
+"ui.virtual" = "comment"
+"ui.virtual.ruler" = { bg = "border" }
+"ui.virtual.whitespace" = "comment"
+"ui.virtual.indent-guide" = "line_number"
+"ui.virtual.inlay-hint" = { fg = "comment", bg = "cursorline" }
+"ui.virtual.inlay-hint.parameter" = { fg = "comment", bg = "cursorline" }
+"ui.virtual.inlay-hint.type" = { fg = "comment", bg = "cursorline" }
+"ui.virtual.wrap" = "comment"
+"ui.virtual.jump-label" = { fg = "background", bg = "sand", modifiers = ["bold"] }
+"ui.menu" = { fg = "foreground", bg = "border" }
+"ui.menu.selected" = { fg = "background", bg = "olive" }
+"ui.menu.scroll" = { fg = "comment", bg = "foreground" }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "selection" }
+"ui.highlight" = { bg = "selection" }
+"ui.highlight.frameline" = { bg = "selection" }
+"ui.debug.breakpoint" = { fg = "error", bg = "background" }
+"ui.debug.active" = { fg = "sand", bg = "background" }
+"ui.gutter" = { bg = "background" }
+"ui.gutter.selected" = { bg = "cursorline" }
+"ui.picker.header" = { fg = "olive", modifiers = ["bold"] }
+"ui.picker.header.column" = "foreground"
+"ui.picker.header.column.active" = { fg = "olive", modifiers = ["bold"] }
+
+# Diagnostics
+"warning" = { fg = "warning", modifiers = ["bold"] }
+"error" = { fg = "error", modifiers = ["bold"] }
+"info" = { fg = "info", modifiers = ["bold"] }
+"hint" = { fg = "hint", modifiers = ["bold"] }
+"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic.hint" = { underline = { color = "hint", style = "curl" } }
+"diagnostic.info" = { underline = { color = "info", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Special markup
+"markup.normal.completion" = { fg = "foreground", bg = "border" }
+"markup.normal.hover" = { fg = "foreground", bg = "border" }
+"markup.heading.completion" = { fg = "sand", modifiers = ["bold"] }
+"markup.heading.hover" = { fg = "sand", modifiers = ["bold"] }
+"markup.raw.inline.completion" = { fg = "sage" }
+"markup.raw.inline.hover" = { fg = "sage" }
+
+[palette]
+# Base colors
+background = "#1e1d1a"
+foreground = "#d4cfc4"
+selection = "#3d3420"        # Warm amber-brown (improved visibility)
+cursorline = "#2a2826"       # Subtle current line highlight
+border = "#3d3a33"
+
+# UI colors
+line_number = "#5a5549"
+line_number_active = "#7a7565"
+status_bg = "#2a2826"
+status_fg = "#b8ab95"
+
+# Syntax colors - rich earth tones
+comment = "#857a6d"
+sage = "#8fae7a"
+olive = "#9fa883"
+sand = "#d4a574"
+tan = "#b8956d"
+stone = "#a89984"
+beige = "#c8baa8"
+brown = "#857a6d"
+terracotta = "#c99976"
+
+# Special colors (expert-refined)
+error = "#d86853"
+warning = "#e8b55d"
+info = "#7b9e8c"
+hint = "#8d8575"

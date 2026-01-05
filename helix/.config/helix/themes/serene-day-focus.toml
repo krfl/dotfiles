@@ -1,0 +1,200 @@
+# Serene Day Focus - Eye-friendly light theme with high contrast and prominent backgrounds
+# Enhanced visual distinction for focused coding sessions
+# Based on optometry research for computer vision syndrome
+
+# Syntax Highlighting
+"attribute" = { fg = "clay", bg = "constant_bg" }
+"type" = "foreground"
+"type.builtin" = "foreground"
+"type.parameter" = "foreground"
+"type.enum.variant" = "foreground"
+"constructor" = "foreground"
+"constant" = { fg = "clay", bg = "constant_bg" }
+"constant.builtin" = { fg = "clay", bg = "constant_bg" }
+"constant.builtin.boolean" = { fg = "clay", bg = "constant_bg" }
+"constant.character" = { fg = "forest", bg = "string_bg" }
+"constant.character.escape" = "foreground"
+"constant.numeric" = { fg = "clay", bg = "constant_bg" }
+"string" = { fg = "forest", bg = "string_bg" }
+"string.regexp" = "foreground"
+"string.special" = "foreground"
+"comment" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
+"comment.line" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
+"comment.block" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
+"variable" = "foreground"
+"variable.builtin" = "foreground"
+"variable.parameter" = { fg = "clay", bg = "constant_bg" }
+"variable.other.member" = "foreground"
+"label" = { modifiers = ["bold"] }
+"punctuation" = "foreground"
+"punctuation.delimiter" = "foreground"
+"punctuation.bracket" = { modifiers = ["bold"] }
+"punctuation.special" = "foreground"
+"keyword" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.conditional" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.repeat" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.import" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.return" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.exception" = { fg = "olive", bg = "keyword_bg" }
+"keyword.operator" = "foreground"
+"keyword.directive" = { fg = "olive", bg = "keyword_bg" }
+"keyword.function" = { fg = "olive", bg = "keyword_bg" }
+"keyword.storage" = { fg = "olive", bg = "keyword_bg" }
+"keyword.storage.type" = { fg = "olive", bg = "keyword_bg" }
+"keyword.storage.modifier" = { fg = "olive", bg = "keyword_bg" }
+"operator" = "foreground"
+"function" = { fg = "foreground", modifiers = ["bold"] }
+"function.builtin" = { fg = "foreground", modifiers = ["bold"] }
+"function.method" = { fg = "foreground", modifiers = ["bold"] }
+"function.macro" = { fg = "olive", bg = "keyword_bg" }
+"function.special" = "foreground"
+"tag" = { fg = "olive", bg = "keyword_bg" }
+"namespace" = { fg = "bronze", bg = "namespace_bg" }
+"special" = { fg = "clay", bg = "constant_bg" }
+
+# Markup
+"markup.heading" = { fg = "olive", bg = "keyword_bg", modifiers = ["bold"] }
+"markup.heading.marker" = "comment"
+"markup.heading.1" = { fg = "olive", bg = "keyword_bg", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "olive", bg = "keyword_bg", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "olive", bg = "keyword_bg", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "olive", bg = "keyword_bg", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "olive", bg = "keyword_bg", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "olive", bg = "keyword_bg", modifiers = ["bold"] }
+"markup.list" = { fg = "olive", bg = "keyword_bg" }
+"markup.list.unnumbered" = { fg = "olive", bg = "keyword_bg" }
+"markup.list.numbered" = { fg = "olive", bg = "keyword_bg" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "bronze", bg = "namespace_bg", modifiers = ["underlined"] }
+"markup.link.label" = { fg = "bronze", bg = "namespace_bg" }
+"markup.link.text" = { fg = "bronze", bg = "namespace_bg" }
+"markup.quote" = { fg = "bronze", bg = "namespace_bg" }
+"markup.raw" = { fg = "clay", bg = "constant_bg" }
+"markup.raw.inline" = { fg = "clay", bg = "constant_bg" }
+"markup.raw.block" = { fg = "clay", bg = "constant_bg" }
+
+# Diff
+"diff.plus" = "forest"
+"diff.plus.gutter" = "forest"
+"diff.minus" = "error"
+"diff.minus.gutter" = "error"
+"diff.delta" = "bronze"
+"diff.delta.moved" = "olive"
+
+# UI
+"ui.background" = { bg = "background" }
+"ui.background.separator" = "border"
+"ui.cursor" = { fg = "background", bg = "foreground" }
+"ui.cursor.normal" = { fg = "background", bg = "foreground" }
+"ui.cursor.insert" = { fg = "background", bg = "forest" }
+"ui.cursor.select" = { fg = "background", bg = "olive" }
+"ui.cursor.match" = { fg = "background", bg = "bronze", modifiers = ["bold"] }
+"ui.cursor.primary" = { fg = "background", bg = "foreground" }
+"ui.cursor.primary.normal" = { fg = "background", bg = "foreground" }
+"ui.cursor.primary.insert" = { fg = "background", bg = "forest" }
+"ui.cursor.primary.select" = { fg = "background", bg = "olive" }
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.cursorline.secondary" = { bg = "cursorline" }
+"ui.cursorcolumn.primary" = { bg = "cursorline" }
+"ui.cursorcolumn.secondary" = { bg = "cursorline" }
+"ui.linenr" = "line_number"
+"ui.linenr.selected" = { fg = "line_number_active", bg = "cursorline" }
+"ui.statusline" = { fg = "status_fg", bg = "status_bg" }
+"ui.statusline.inactive" = { fg = "comment", bg = "border" }
+"ui.statusline.normal" = { fg = "status_fg", bg = "status_bg" }
+"ui.statusline.insert" = { fg = "background", bg = "forest" }
+"ui.statusline.select" = { fg = "background", bg = "olive" }
+"ui.statusline.separator" = "border"
+"ui.popup" = { fg = "foreground", bg = "border" }
+"ui.popup.info" = { fg = "foreground", bg = "border" }
+"ui.window" = { fg = "border", bg = "background" }
+"ui.help" = { fg = "foreground", bg = "border" }
+"ui.text" = "foreground"
+"ui.text.focus" = { fg = "background", bg = "olive" }
+"ui.text.inactive" = "comment"
+"ui.text.info" = "foreground"
+"ui.virtual" = "comment"
+"ui.virtual.ruler" = { bg = "border" }
+"ui.virtual.whitespace" = "comment"
+"ui.virtual.indent-guide" = "line_number"
+"ui.virtual.inlay-hint" = { fg = "comment", bg = "cursorline" }
+"ui.virtual.inlay-hint.parameter" = { fg = "comment", bg = "cursorline" }
+"ui.virtual.inlay-hint.type" = { fg = "comment", bg = "cursorline" }
+"ui.virtual.wrap" = "comment"
+"ui.virtual.jump-label" = { fg = "background", bg = "bronze", modifiers = ["bold"] }
+"ui.menu" = { fg = "foreground", bg = "border" }
+"ui.menu.selected" = { fg = "background", bg = "olive" }
+"ui.menu.scroll" = { fg = "comment", bg = "foreground" }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "selection" }
+"ui.highlight" = { bg = "selection" }
+"ui.highlight.frameline" = { bg = "selection" }
+"ui.debug.breakpoint" = { fg = "error", bg = "background" }
+"ui.debug.active" = { fg = "bronze", bg = "background" }
+"ui.gutter" = { bg = "background" }
+"ui.gutter.selected" = { bg = "cursorline" }
+"ui.picker.header" = { fg = "olive", modifiers = ["bold"] }
+"ui.picker.header.column" = "foreground"
+"ui.picker.header.column.active" = { fg = "olive", modifiers = ["bold"] }
+
+# Diagnostics
+"warning" = { fg = "warning", bg = "warning_bg", modifiers = ["bold"] }
+"error" = { fg = "error", bg = "error_bg", modifiers = ["bold"] }
+"info" = { fg = "info", bg = "info_bg", modifiers = ["bold"] }
+"hint" = { fg = "hint", bg = "hint_bg", modifiers = ["bold"] }
+"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic.hint" = { underline = { color = "hint", style = "curl" } }
+"diagnostic.info" = { underline = { color = "info", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Special markup
+"markup.normal.completion" = { fg = "foreground", bg = "status_bg" }
+"markup.normal.hover" = { fg = "foreground", bg = "status_bg" }
+"markup.heading.completion" = { fg = "olive", modifiers = ["bold"] }
+"markup.heading.hover" = { fg = "olive", modifiers = ["bold"] }
+"markup.raw.inline.completion" = { fg = "clay" }
+"markup.raw.inline.hover" = { fg = "clay" }
+
+[palette]
+# Base colors
+background = "#f5f2ed"
+foreground = "#3d3a33"
+selection = "#e3d5b8"        # Warm sand (improved visibility)
+cursorline = "#ebe6db"       # Subtle current line highlight
+border = "#d4cfc4"
+
+# UI colors
+line_number = "#b5ad9a"
+line_number_active = "#7a7260"
+status_bg = "#ebe6db"
+status_fg = "#5a5549"
+
+# Syntax colors - minimalist palette
+comment = "#857d6d"
+forest = "#5a7a4a"           # For strings
+olive = "#657047"            # For keywords
+bronze = "#9a6c3a"           # For namespaces and links
+clay = "#a5563f"             # For constants
+
+# Syntax background colors - selective emphasis
+string_bg = "#e8ede0"        # Light sage green for strings
+keyword_bg = "#edecd4"       # Light olive/yellow-green for keywords
+comment_bg = "#ebe8e0"       # Warm gray for comments
+constant_bg = "#f7ead8"      # Light warm peach for constants/parameters
+namespace_bg = "#e4e8ed"     # Light blue-gray for namespaces and links
+error_bg = "#f7ebe6"         # Warm peachy-beige for error diagnostics
+warning_bg = "#f5ead8"       # Warm sandy-beige for warning diagnostics
+info_bg = "#e6ede3"          # Subtle green tint for info diagnostics
+hint_bg = "#ede9e0"          # Subtle gray-brown for hint diagnostics
+
+# Special colors (expert-refined)
+error = "#c93d28"
+warning = "#c68a2e"
+info = "#4a7a68"
+hint = "#8a826f"

@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local appearance = require 'appearance'
 local config = wezterm.config_builder()
-local ffam = { family = 'VictorMono Nerd Font', weight = 'DemiBold'}
+local ffam = { family = 'VictorMono NF Medium', weight = 'DemiBold'}
 local fsize = 14
 
 -- Font configuration

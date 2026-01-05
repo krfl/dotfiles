@@ -18,11 +18,11 @@ This will:
 
 ## What's Configured
 
-- **Shell**: Fish (with custom functions), Zsh
-- **Terminal**: WezTerm (custom Lua config with [serene themes](https://github.com/krfl/serene-theme/))
-- **Editors**: Helix, Zed, OpenCode
-- **Tools**: Git, Bat, Starship, Htop
-- **Themes**: System-aware dark/light mode switching
+- **Shell**: Fish (with custom functions)
+- **Terminal**: WezTerm
+- **Editors**: Helix, Zed
+- **Tools**: Ripgrep, Eza, Zoxide, Starship, and more
+- **Themes**: System-aware dark/light mode switching of [serene themes](https://github.com/krfl/serene-theme/)
 
 ## Updating
 
@@ -47,24 +47,7 @@ mv ~/.config/myapp/config.yaml ~/.dotfiles/myapp/.config/myapp/
 
 That's it! Stow automatically discovers new packages.
 
-## Structure
-
-```
-dotfiles/
-├── install.sh              # One-command setup
-├── stow.sh                 # Symlink manager
-├── Brewfile                # All packages
-├── fish/                   # Shell config + functions
-├── git/                    # Git config
-├── helix/                  # Editor config
-├── starship/               # Prompt config
-├── wezterm/                # Terminal config + themes
-├── zed/                    # Editor config
-└── ...
-```
-
 ## Notes
 
 - All scripts are idempotent (safe to re-run)
 - `.stow-local-ignore` excludes non-config files from symlinking
-- Fish functions documented in `fish/.config/fish/functions/README.md`
