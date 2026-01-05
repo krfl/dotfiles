@@ -15,7 +15,7 @@
 
 [color "diff"]
     meta = yellow italic
-    context = white
+    # context = white
 
 [init]
 	defaultBranch = main
