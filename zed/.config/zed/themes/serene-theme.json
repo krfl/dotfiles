@@ -230,13 +230,13 @@
             "color": "#9fa883"
           },
           "punctuation": {
-            "color": "#d4cfc4"
+            "color": "#9a8f81"
           },
           "punctuation.bracket": {
-            "color": "#d4cfc4"
+            "color": "#9a8f81"
           },
           "punctuation.delimiter": {
-            "color": "#d4cfc4"
+            "color": "#9a8f81"
           },
           "punctuation.special": {
             "color": "#a89984"
@@ -508,13 +508,13 @@
             "color": "#657047"
           },
           "punctuation": {
-            "color": "#3d3a33"
+            "color": "#6a6350"
           },
           "punctuation.bracket": {
-            "color": "#3d3a33"
+            "color": "#6a6350"
           },
           "punctuation.delimiter": {
-            "color": "#3d3a33"
+            "color": "#6a6350"
           },
           "punctuation.special": {
             "color": "#6d6555"

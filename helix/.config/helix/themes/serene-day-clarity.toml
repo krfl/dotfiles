@@ -26,9 +26,9 @@
 "variable.parameter" = { fg = "taupe", bg = "param_bg" }
 "variable.other.member" = "taupe"
 "label" = { fg = "olive", bg = "keyword_bg" }
-"punctuation" = "foreground"
-"punctuation.delimiter" = "foreground"
-"punctuation.bracket" = "foreground"
+"punctuation" = "taupe"
+"punctuation.delimiter" = "taupe"
+"punctuation.bracket" = "taupe"
 "punctuation.special" = "charcoal"
 "keyword" = { fg = "olive", bg = "keyword_bg" }
 "keyword.control" = { fg = "olive", bg = "keyword_bg" }
