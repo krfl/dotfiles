@@ -7,9 +7,9 @@
 "type" = "caramel"
 "type.builtin" = "caramel"
 "type.parameter" = "caramel"
-"type.enum.variant" = "charcoal"
+"type.enum.variant" = "terracotta_red"
 "constructor" = "bronze"
-"constant" = "chocolate"
+"constant" = "clay"
 "constant.builtin" = "clay"
 "constant.builtin.boolean" = "clay"
 "constant.character" = "forest"
@@ -35,8 +35,8 @@
 "keyword.control.conditional" = "olive"
 "keyword.control.repeat" = "olive"
 "keyword.control.import" = "charcoal"
-"keyword.control.return" = "olive"
-"keyword.control.exception" = "olive"
+"keyword.control.return" = "terracotta_red"
+"keyword.control.exception" = "terracotta_red"
 "keyword.operator" = "charcoal"
 "keyword.directive" = "olive"
 "keyword.function" = "olive"
@@ -50,7 +50,7 @@
 "function.macro" = "olive"
 "function.special" = "charcoal"
 "tag" = "olive"
-"namespace" = "caramel"
+"namespace" = "terracotta_red"
 "special" = "charcoal"
 
 # Markup
@@ -79,7 +79,7 @@
 # Diff
 "diff.plus" = "forest"
 "diff.plus.gutter" = "forest"
-"diff.minus" = "error"
+"diff.minus" = "terracotta_red"
 "diff.minus.gutter" = "error"
 "diff.delta" = "bronze"
 "diff.delta.moved" = "olive"
@@ -151,7 +151,7 @@
 "diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
 "diagnostic.error" = { underline = { color = "error", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
-"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"diagnostic.deprecated" = { fg = "terracotta_red", modifiers = ["crossed_out"] }
 
 # Special markup
 "markup.normal.completion" = { fg = "foreground", bg = "status_bg" }
@@ -181,13 +181,14 @@ forest = "#5a7a4a"
 olive = "#657047"
 bronze = "#9a6c3a"
 caramel = "#8b6f47"
-charcoal = "#6d6555"
-taupe = "#4a4538"
+charcoal = "#5a5240"
+taupe = "#6a6350"
 chocolate = "#8b6340"
 clay = "#a5563f"
+terracotta_red = "#8b4a38"
 
 # Special colors (expert-refined)
-error = "#c93d28"
+error = "#8b4a38"
 warning = "#c68a2e"
 info = "#4a7a68"
 hint = "#8a826f"

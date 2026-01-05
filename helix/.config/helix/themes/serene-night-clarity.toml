@@ -7,9 +7,9 @@
 "type" = { fg = "tan", bg = "tan_bg" }
 "type.builtin" = { fg = "tan", bg = "tan_bg" }
 "type.parameter" = { fg = "tan", bg = "tan_bg" }
-"type.enum.variant" = "stone"
+"type.enum.variant" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "constructor" = { fg = "sand", bg = "sand_bg" }
-"constant" = { fg = "brown", bg = "sand_bg" }
+"constant" = { fg = "terracotta", bg = "sand_bg" }
 "constant.builtin" = { fg = "terracotta", bg = "sand_bg" }
 "constant.builtin.boolean" = { fg = "terracotta", bg = "sand_bg" }
 "constant.character" = { fg = "sage", bg = "string_bg" }
@@ -35,8 +35,8 @@
 "keyword.control.conditional" = { fg = "olive", bg = "keyword_bg" }
 "keyword.control.repeat" = { fg = "olive", bg = "keyword_bg" }
 "keyword.control.import" = "stone"
-"keyword.control.return" = { fg = "olive", bg = "keyword_bg" }
-"keyword.control.exception" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.return" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
+"keyword.control.exception" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "keyword.operator" = "stone"
 "keyword.directive" = { fg = "olive", bg = "keyword_bg" }
 "keyword.function" = { fg = "olive", bg = "keyword_bg" }
@@ -50,7 +50,7 @@
 "function.macro" = { fg = "olive", bg = "keyword_bg" }
 "function.special" = "stone"
 "tag" = { fg = "olive", bg = "keyword_bg" }
-"namespace" = { fg = "tan", bg = "namespace_bg" }
+"namespace" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "special" = "stone"
 
 # Markup
@@ -79,7 +79,7 @@
 # Diff
 "diff.plus" = "sage"
 "diff.plus.gutter" = "sage"
-"diff.minus" = "error"
+"diff.minus" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "diff.minus.gutter" = "error"
 "diff.delta" = "sand"
 "diff.delta.moved" = "olive"
@@ -151,7 +151,7 @@
 "diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
 "diagnostic.error" = { underline = { color = "error", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
-"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"diagnostic.deprecated" = { fg = "terracotta_red", modifiers = ["crossed_out"] }
 
 # Special markup
 "markup.normal.completion" = { fg = "foreground", bg = "border" }
@@ -178,13 +178,14 @@ status_fg = "#b8ab95"
 # Syntax colors - rich earth tones
 comment = "#857a6d"
 sage = "#8fae7a"
-olive = "#9fa883"
+olive = "#a8a378"
 sand = "#d4a574"
 tan = "#b8956d"
-stone = "#a89984"
+stone = "#b5a899"
 beige = "#c8baa8"
-brown = "#857a6d"
+brown = "#ba9c7e"
 terracotta = "#c99976"
+terracotta_red = "#b87860"
 
 # Syntax background colors - subtle lighter tints for dark mode
 string_bg = "#242520"        # Slightly lighter with green tint for strings
@@ -198,9 +199,10 @@ error_bg = "#2a211e"         # Subtle reddish-brown for error diagnostics
 warning_bg = "#2a251e"       # Subtle sandy-brown for warning diagnostics
 info_bg = "#22251f"          # Subtle green tint for info diagnostics
 hint_bg = "#25241f"          # Subtle gray-brown for hint diagnostics
+terracotta_red_bg = "#2a231e" # Subtle warm reddish-brown for terracotta-red elements
 
 # Special colors (expert-refined)
-error = "#d86853"
+error = "#b87860"
 warning = "#e8b55d"
 info = "#7b9e8c"
 hint = "#8d8575"

@@ -7,12 +7,12 @@
 "type" = "tan"
 "type.builtin" = "tan"
 "type.parameter" = "tan"
-"type.enum.variant" = "stone"
+"type.enum.variant" = "terracotta_red"
 "constructor" = "sand"
-"constant" = "brown"
+"constant" = "terracotta"
 "constant.builtin" = "terracotta"
 "constant.builtin.boolean" = "terracotta"
-"constant.character" = "sage"
+"constant.character" = "terracotta"
 "constant.character.escape" = "stone"
 "constant.numeric" = "terracotta"
 "string" = "sage"
@@ -35,8 +35,8 @@
 "keyword.control.conditional" = "olive"
 "keyword.control.repeat" = "olive"
 "keyword.control.import" = "stone"
-"keyword.control.return" = "olive"
-"keyword.control.exception" = "olive"
+"keyword.control.return" = "terracotta_red"
+"keyword.control.exception" = "terracotta_red"
 "keyword.operator" = "stone"
 "keyword.directive" = "olive"
 "keyword.function" = "olive"
@@ -50,7 +50,7 @@
 "function.macro" = "olive"
 "function.special" = "stone"
 "tag" = "olive"
-"namespace" = "tan"
+"namespace" = "terracotta_red"
 "special" = "stone"
 
 # Markup
@@ -79,7 +79,7 @@
 # Diff
 "diff.plus" = "sage"
 "diff.plus.gutter" = "sage"
-"diff.minus" = "error"
+"diff.minus" = "terracotta_red"
 "diff.minus.gutter" = "error"
 "diff.delta" = "sand"
 "diff.delta.moved" = "olive"
@@ -151,7 +151,7 @@
 "diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
 "diagnostic.error" = { underline = { color = "error", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
-"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"diagnostic.deprecated" = { fg = "terracotta_red", modifiers = ["crossed_out"] }
 
 # Special markup
 "markup.normal.completion" = { fg = "foreground", bg = "border" }
@@ -178,16 +178,17 @@ status_fg = "#b8ab95"
 # Syntax colors - rich earth tones
 comment = "#857a6d"
 sage = "#8fae7a"
-olive = "#9fa883"
+olive = "#a8a378"
 sand = "#d4a574"
 tan = "#b8956d"
-stone = "#a89984"
+stone = "#b5a899"
 beige = "#c8baa8"
-brown = "#857a6d"
+brown = "#ba9c7e"
 terracotta = "#c99976"
+terracotta_red = "#b87860"
 
 # Special colors (expert-refined)
-error = "#d86853"
+error = "#b87860"
 warning = "#e8b55d"
 info = "#7b9e8c"
 hint = "#8d8575"

@@ -7,9 +7,9 @@
 "type" = { fg = "caramel", bg = "caramel_bg" }
 "type.builtin" = { fg = "caramel", bg = "caramel_bg" }
 "type.parameter" = { fg = "caramel", bg = "caramel_bg" }
-"type.enum.variant" = "charcoal"
+"type.enum.variant" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "constructor" = { fg = "bronze", bg = "bronze_bg" }
-"constant" = { fg = "chocolate", bg = "bronze_bg" }
+"constant" = { fg = "clay", bg = "bronze_bg" }
 "constant.builtin" = { fg = "clay", bg = "bronze_bg" }
 "constant.builtin.boolean" = { fg = "clay", bg = "bronze_bg" }
 "constant.character" = { fg = "forest", bg = "string_bg" }
@@ -35,8 +35,8 @@
 "keyword.control.conditional" = { fg = "olive", bg = "keyword_bg" }
 "keyword.control.repeat" = { fg = "olive", bg = "keyword_bg" }
 "keyword.control.import" = "charcoal"
-"keyword.control.return" = { fg = "olive", bg = "keyword_bg" }
-"keyword.control.exception" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.return" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
+"keyword.control.exception" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "keyword.operator" = "charcoal"
 "keyword.directive" = { fg = "olive", bg = "keyword_bg" }
 "keyword.function" = { fg = "olive", bg = "keyword_bg" }
@@ -50,7 +50,7 @@
 "function.macro" = { fg = "olive", bg = "keyword_bg" }
 "function.special" = "charcoal"
 "tag" = { fg = "olive", bg = "keyword_bg" }
-"namespace" = { fg = "caramel", bg = "namespace_bg" }
+"namespace" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "special" = "charcoal"
 
 # Markup
@@ -79,7 +79,7 @@
 # Diff
 "diff.plus" = "forest"
 "diff.plus.gutter" = "forest"
-"diff.minus" = "error"
+"diff.minus" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "diff.minus.gutter" = "error"
 "diff.delta" = "bronze"
 "diff.delta.moved" = "olive"
@@ -151,7 +151,7 @@
 "diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
 "diagnostic.error" = { underline = { color = "error", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
-"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"diagnostic.deprecated" = { fg = "terracotta_red", modifiers = ["crossed_out"] }
 
 # Special markup
 "markup.normal.completion" = { fg = "foreground", bg = "status_bg" }
@@ -181,10 +181,11 @@ forest = "#5a7a4a"
 olive = "#657047"
 bronze = "#9a6c3a"
 caramel = "#8b6f47"
-charcoal = "#6d6555"
-taupe = "#4a4538"
+charcoal = "#5a5240"
+taupe = "#6a6350"
 chocolate = "#8b6340"
 clay = "#a5563f"
+terracotta_red = "#8b4a38"
 
 # Syntax background colors - subtle warm tints for clarity
 string_bg = "#e8ede0"        # Light sage green for strings
@@ -198,9 +199,10 @@ error_bg = "#f7ebe6"         # Warm peachy-beige for error diagnostics
 warning_bg = "#f5ead8"       # Warm sandy-beige for warning diagnostics
 info_bg = "#e6ede3"          # Subtle green tint for info diagnostics
 hint_bg = "#ede9e0"          # Subtle gray-brown for hint diagnostics
+terracotta_red_bg = "#f5e8de" # Warm peachy-beige for terracotta-red elements
 
 # Special colors (expert-refined)
-error = "#c93d28"
+error = "#8b4a38"
 warning = "#c68a2e"
 info = "#4a7a68"
 hint = "#8a826f"
