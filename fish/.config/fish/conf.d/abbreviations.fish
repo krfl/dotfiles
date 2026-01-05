@@ -1,4 +1,4 @@
-abbr --add bup "brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor;mas outdated;mas upgrade"
+abbr --add bru "brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor;mas outdated;mas upgrade"
 abbr --add agenda "icalBuddy -f -ec \"\" -eed -eep \"notes,attendees\" eventsToday"
 abbr --add reminders "icalBuddy -f -sc -ss '' -npn -nc -iep 'title,datetime' -ps ' | : | ' -po 'datetime,title' -tf '' -df '%RD' -eed tasksDueBefore:today+1"
 abbr --add unixtime "date +%s"
