@@ -1,4 +1,4 @@
-theme = 'serene-night'
+theme = 'serene-night-clarity'
 
 [editor]
 mouse = false
@@ -9,7 +9,7 @@ auto-pairs = true
 color-modes = true
 cursorline = true
 true-color = true
-rulers = [80]
+rulers = []
 bufferline = 'multiple'
 jump-label-alphabet = 'hjklabcdefgimnopqrstuvwxyz'
 

@@ -37,6 +37,7 @@ cask 'claude-code' # ai coding assistant
 cask 'discord' # chat platform
 cask 'font-jetbrains-mono-nerd-font' # coding font
 cask 'font-victor-mono-nerd-font' # coding font
+cask 'obsidian' # second brain
 cask 'orbstack' # docker alternative
 cask 'rectangle' # window manager
 cask 'wezterm' # terminal emulator

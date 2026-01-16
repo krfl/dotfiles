@@ -23,6 +23,11 @@ config.window_decorations = "RESIZE"
 config.window_frame = { font = wezterm.font(ffam), font_size = fsize }
 -- config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
 
+-- config.inactive_pane_hsb = {
+--   saturation = 1,
+--   brightness = 1,
+-- }
+
 -- Tabs
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
