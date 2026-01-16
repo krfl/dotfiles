@@ -18,12 +18,12 @@
 "string" = { fg = "sage", bg = "string_bg" }
 "string.regexp" = "stone"
 "string.special" = "stone"
-"comment" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
-"comment.line" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
-"comment.block" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
+"comment" = { fg = "comment", modifiers = ["italic"] }
+"comment.line" = { fg = "comment", modifiers = ["italic"] }
+"comment.block" = { fg = "comment", modifiers = ["italic"] }
 "variable" = "beige"
 "variable.builtin" = { fg = "olive", bg = "keyword_bg" }
-"variable.parameter" = { fg = "beige", bg = "param_bg" }
+"variable.parameter" = "beige"
 "variable.other.member" = "beige"
 "label" = { fg = "olive", bg = "keyword_bg" }
 "punctuation" = "muted_punctuation"
@@ -71,7 +71,7 @@
 "markup.link.url" = { fg = "olive", bg = "keyword_bg", modifiers = ["underlined"] }
 "markup.link.label" = { fg = "stone", bg = "keyword_bg" }
 "markup.link.text" = { fg = "olive", bg = "keyword_bg" }
-"markup.quote" = { fg = "comment", bg = "comment_bg" }
+"markup.quote" = { fg = "comment", modifiers = ["italic"] }
 "markup.raw" = { fg = "sage", bg = "string_bg" }
 "markup.raw.inline" = { fg = "sage", bg = "string_bg" }
 "markup.raw.block" = { fg = "sage", bg = "string_bg" }

@@ -18,12 +18,12 @@
 "string" = { fg = "forest", bg = "string_bg" }
 "string.regexp" = "charcoal"
 "string.special" = "charcoal"
-"comment" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
-"comment.line" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
-"comment.block" = { fg = "comment", bg = "comment_bg", modifiers = ["italic"] }
+"comment" = { fg = "comment", modifiers = ["italic"] }
+"comment.line" = { fg = "comment", modifiers = ["italic"] }
+"comment.block" = { fg = "comment", modifiers = ["italic"] }
 "variable" = "taupe"
 "variable.builtin" = { fg = "olive", bg = "keyword_bg" }
-"variable.parameter" = { fg = "taupe", bg = "param_bg" }
+"variable.parameter" = "taupe"
 "variable.other.member" = "taupe"
 "label" = { fg = "olive", bg = "keyword_bg" }
 "punctuation" = "taupe"
@@ -71,7 +71,7 @@
 "markup.link.url" = { fg = "olive", bg = "keyword_bg", modifiers = ["underlined"] }
 "markup.link.label" = { fg = "charcoal", bg = "keyword_bg" }
 "markup.link.text" = { fg = "olive", bg = "keyword_bg" }
-"markup.quote" = { fg = "comment", bg = "comment_bg" }
+"markup.quote" = { fg = "comment", modifiers = ["italic"] }
 "markup.raw" = { fg = "forest", bg = "string_bg" }
 "markup.raw.inline" = { fg = "forest", bg = "string_bg" }
 "markup.raw.block" = { fg = "forest", bg = "string_bg" }
