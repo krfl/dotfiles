@@ -29,7 +29,7 @@ fi
 
 # 2. Install packages
 echo -e "\n${YELLOW}→ Installing packages...${RESET}"
-brew bundle --no-lock --file="$DOTFILES_DIR/Brewfile"
+brew bundle --file="$DOTFILES_DIR/Brewfile"
 
 # 3. Symlink dotfiles
 echo -e "\n${YELLOW}→ Symlinking dotfiles...${RESET}"
