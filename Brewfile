@@ -15,6 +15,7 @@ brew 'git' # version control
 brew 'gitleaks' # secret scanner
 brew 'ical-buddy' # apple calendar and reminders
 brew 'jq' # json processor
+brew 'just' # command runner
 brew 'marksman' # markdown lsp
 brew 'mas' # app store cli
 brew 'python3' # python 3
@@ -40,6 +41,7 @@ cask 'font-victor-mono-nerd-font' # coding font
 cask 'obsidian' # second brain
 cask 'orbstack' # docker alternative
 cask 'rectangle' # window manager
+cask 'vivaldi' # browser
 cask 'wezterm' # terminal emulator
 cask 'zed' # code editor
 

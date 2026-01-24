@@ -15,7 +15,8 @@ procMacro = { enable = true }
 [[language]]
 name = "python"
 auto-format = true
-language-servers = [ "basedpyright", "ruff", "ty" ]
+# language-servers = ["basedpyright","ruff", "ty"]
+language-servers = ["ruff", "ty"]
 
 [language-server.ruff]
 command = "ruff"
