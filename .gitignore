@@ -7,3 +7,4 @@ fish/.config/fish/fish_variables
 *_backup.*
 zed/.config/zed/prompts/
 zed/.config/zed/conversations/
+.claude/
