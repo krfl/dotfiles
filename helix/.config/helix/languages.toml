@@ -1,3 +1,24 @@
+# Markdown
+[[language]]
+name = "markdown"
+language-servers = ["literate-lsp", "marksman"]
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+[language-server.literate-lsp]
+command = "literate-lsp"
+
+[langugage-server.marksman]
+command = "marksman"
+args = ["server"]
+
+# Auto pairs
+[language.auto-pairs]
+"'" = "'"
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+
 # Rust
 [[language]]
 name = "rust"
@@ -6,17 +27,15 @@ auto-format = false
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
-[language-server.rust-analyzer.config]
-checkOnSave = { command = "clippy" }
-cargo = { allFeatures = true }
-procMacro = { enable = true }
-
-# Python 3.x
+# Python
 [[language]]
 name = "python"
-auto-format = true
-# language-servers = ["basedpyright","ruff", "ty"]
-language-servers = ["ruff", "ty"]
+auto-format = false
+language-servers = ["basedpyright", "ruff", "ty"]
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
 
 [language-server.ruff]
 command = "ruff"
@@ -27,44 +46,6 @@ command = "ty"
 args = ["server"]
 
 [language-server.ty.config]
-inlayHints.callArgumentNames = false
+inlayHints.callArgumentNames = true
 experimental.rename = true
 experimental.autoImport = true
-
-# # Maestro
-# [[language]]
-# name = "yaml"
-# auto-format = false
-# indent = { tab-width = 4, unit = " " }
-
-# [[language-server.vscode-json-language-server.config.json.schemas]]
-# fileMatch = ["*flow.yaml"]
-# url = "https://json.schemastore.org/tsconfig.json"
-
-# PKB
-[language-server.iwe]
-command = "iwes"
-
-# Markdown
-[[language]]
-name = "markdown"
-language-servers = ["iwe"]
-auto-format = false
-# formatter = { command = "prettier", args = ["--parser", "markdown"] }
-
-[language-server.marksman]
-command = "marksman"
-args = ["server"]
-
-[language.auto-pairs]
-"'" = "'"
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-
-# Yaml
-[[language]]
-name = "yaml"
-auto-format = true
-formatter = { command = "prettier", args = ["--parser", "yaml"] }

@@ -18,11 +18,11 @@ brew 'jq' # json processor
 brew 'just' # command runner
 brew 'marksman' # markdown lsp
 brew 'mas' # app store cli
+brew 'prettier' # code formatting
 brew 'python3' # python 3
 brew 'riff' # diff tool
 brew 'ripgrep' # fast grep alternative
 brew 'ripsecrets' # secret scanner
-brew 'rust-analyzer' # rust lsp
 brew 'rustup-init' # rust toolchain installer
 brew 'starship' # shell prompt
 brew 'stow' # dotfile manager
@@ -38,8 +38,10 @@ cask 'claude-code' # ai coding assistant
 cask 'discord' # chat platform
 cask 'font-jetbrains-mono-nerd-font' # coding font
 cask 'font-victor-mono-nerd-font' # coding font
+cask 'hey-desktop' # opinionated email
 cask 'obsidian' # second brain
 cask 'orbstack' # docker alternative
+cask 'raycast' # better spotlight
 cask 'rectangle' # window manager
 cask 'vivaldi' # browser
 cask 'wezterm' # terminal emulator

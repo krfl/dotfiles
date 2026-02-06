@@ -2,14 +2,14 @@ local wezterm = require 'wezterm'
 local appearance = require 'appearance'
 local config = wezterm.config_builder()
 local ffam = { family = 'VictorMono Nerd Font Mono', weight = 'Bold'}
-local fsize = 14
+local fsize = 16
 
 -- Font configuration
 config.font = wezterm.font(ffam)
 config.font_size = fsize
 config.command_palette_font_size = fsize + 2
 config.char_select_font_size = fsize + 2
-config.cell_width = 1.1
+config.cell_width = 1.05
 config.line_height = 1.1
 config.adjust_window_size_when_changing_font_size = false
 
