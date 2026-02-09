@@ -21,7 +21,7 @@ config.color_scheme = appearance.smart_colorscheme()
 config.window_close_confirmation = 'NeverPrompt'
 config.window_decorations = "RESIZE"
 config.window_frame = { font = wezterm.font(ffam), font_size = fsize }
--- config.window_padding = { left = 10, right = 10, top = 10, bottom = 10 }
+config.window_padding = { left = 20, right = 20, top = 20, bottom = 20 }
 
 -- config.inactive_pane_hsb = {
 --   saturation = 1,

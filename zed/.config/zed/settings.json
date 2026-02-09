@@ -1,12 +1,12 @@
 {
   // Zed setting
   "buffer_font_weight": 550.0,
-  "agent_buffer_font_size": 15.0,
-  "agent_ui_font_size": 15.0,
+  "agent_buffer_font_size": 16.0,
+  "agent_ui_font_size": 16.0,
   "active_pane_modifiers": {
     "border_size": 0.0
   },
-  "ui_font_size": 15.0,
+  "ui_font_size": 16.0,
   "terminal": {
     "font_weight": 500.0
   },
@@ -59,7 +59,7 @@
   },
 
   "ui_font_weight": 550.0,
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 16.0,
   "ui_font_family": "VictorMono Nerd Font",
   "buffer_font_family": "VictorMono Nerd Font Mono",
 

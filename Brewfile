@@ -50,5 +50,5 @@ cask 'zed' # code editor
 # app store
 mas 'Hidden Bar', id: 1452453066
 # mas 'Velja', id: 1607635845
-# mas 'Wipr', id: 1662217862
+mas 'Wipr 2', id: 1662217862
 # mas 'Xcode', id: 497799835
