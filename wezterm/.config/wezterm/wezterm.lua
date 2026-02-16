@@ -1,19 +1,20 @@
 local wezterm = require 'wezterm'
 local appearance = require 'appearance'
 local config = wezterm.config_builder()
-local ffam = { family = 'JetBrainsMono Nerd Font', weight = 'Regular'}
+local ff = 'Liga SFMono Nerd Font'
+local ffam = { family = ff, weight = 'Regular'}
 local fsize = 16
 
 -- Font configuration
 config.font = wezterm.font(ffam)
 config.font_rules = {
-  { intensity = 'Bold', font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Black' }), },
-  { intensity = 'Bold', italic = true, font = wezterm.font('JetBrainsMono Nerd Font', { weight = 'Black', italic = true }) }, }
+  { intensity = 'Bold', font = wezterm.font(ff, { weight = 'Bold' }), },
+  { intensity = 'Bold', italic = true, font = wezterm.font(ff, { weight = 'Bold', italic = true }) }, }
 config.font_size = fsize
 config.command_palette_font_size = fsize + 2
 config.char_select_font_size = fsize + 2
-config.cell_width = 1.0
-config.line_height = 1.1
+config.cell_width = 0.9
+config.line_height = 1.3
 config.adjust_window_size_when_changing_font_size = false
 
 -- Theme
