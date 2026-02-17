@@ -21,11 +21,11 @@ kando add "Set up CI pipeline" -t ci,infra -a jonas -p high
 kando add "Create project README" -t docs -a maria -p normal
 
 # Move cards to their columns
-kando move 008 in-progress
-kando move 009 in-progress
-kando move 010 in-progress
-kando move 011 done
-kando move 012 done
+kando move 8 in-progress
+kando move 9 in-progress
+kando move 10 in-progress
+kando move 11 done
+kando move 12 done
 
 # Set a WIP limit on In Progress
 kando config wip in-progress 4
