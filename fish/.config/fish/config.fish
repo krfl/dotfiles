@@ -10,6 +10,8 @@ fish_add_path ~/.cargo/bin
 # Environment variables, abbreviations, and keybindings are loaded from conf.d/
 # Functions are lazy-loaded from functions/
 
+eval "$(ssh-agent -c)"
+
 # Initialize external tools
 zoxide init fish | source
 starship init fish | source
