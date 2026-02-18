@@ -36,8 +36,7 @@ brew 'zoxide' # smart cd
 cask 'claude' # ai assistant
 cask 'claude-code' # ai coding assistant
 cask 'discord' # chat platform
-cask 'font-jetbrains-mono-nerd-font' # coding font
-cask 'font-victor-mono-nerd-font' # coding font
+cask 'font-sf-mono-nerd-font-ligaturized' # terminal font
 cask 'hey-desktop' # opinionated email
 cask 'obsidian' # second brain
 cask 'orbstack' # docker alternative
