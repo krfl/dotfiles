@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local appearance = require 'appearance'
 local config = wezterm.config_builder()
 local ff = 'Liga SFMono Nerd Font'
-local ffam = { family = ff, weight = 'Regular'}
+local ffam = { family = ff, weight = 'Medium'}
 local fsize = 16
 
 -- Font configuration
