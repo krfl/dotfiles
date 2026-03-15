@@ -19,7 +19,6 @@ brew 'just' # command runner
 brew 'marksman' # markdown lsp
 brew 'mas' # app store cli
 brew 'prettier' # code formatting
-brew 'python3' # python 3
 brew 'riff' # diff tool
 brew 'ripgrep' # fast grep alternative
 brew 'ripsecrets' # secret scanner
@@ -44,6 +43,7 @@ cask 'raycast' # better spotlight
 cask 'rectangle' # window manager
 cask 'vivaldi' # browser
 cask 'wezterm' # terminal emulator
+cask 'yaak' # http client
 cask 'zed' # code editor
 
 # app store

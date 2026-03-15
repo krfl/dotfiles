@@ -14,7 +14,7 @@ ansi = [
   '#e8e3d8',  # White - soft off-white
 ]
 brights = [
-  '#3d3a33',  # Bright black - warm dark gray
+  '#35322a',  # Bright black - warm dark gray
   '#8b4a38',  # Bright red - terracotta red
   '#657047',  # Bright green - deep olive
   '#9a6c3a',  # Bright yellow - bronze

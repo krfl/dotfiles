@@ -1,15 +1,16 @@
 {
   // Zed setting
-  "buffer_font_weight": 550.0,
-  "agent_buffer_font_size": 16.0,
-  "agent_ui_font_size": 16.0,
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "agent_buffer_font_size": 14.0,
+  "agent_ui_font_size": 14.0,
   "active_pane_modifiers": {
     "border_size": 0.0
   },
-  "ui_font_size": 16.0,
-  "terminal": {
-    "font_weight": 500.0
-  },
+  "ui_font_size": 14.0,
   "project_panel": {
     "indent_size": 20.0,
     "git_status": true,
@@ -37,7 +38,6 @@
   "show_whitespaces": "trailing",
   "always_treat_brackets_as_autoclosed": true,
   "indent_guides": {
-    // "background_coloring": "indent_aware",
     "coloring": "indent_aware"
   },
   "toolbar": {
@@ -51,17 +51,20 @@
     "metrics": false
   },
   "helix_mode": false,
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "theme": {
     "mode": "system",
     "light": "Serene Day",
     "dark": "Serene Night"
   },
 
-  "ui_font_weight": 550.0,
-  "buffer_font_size": 16.0,
-  "ui_font_family": "VictorMono Nerd Font",
-  "buffer_font_family": "VictorMono Nerd Font Mono",
+  "buffer_font_size": 14.0,
+  "ui_font_family": "SauceCodePro Nerd Font",
+  "buffer_font_family": "SauceCodePro Nerd Font",
 
   "experimental.theme_overrides": {
     "syntax": {

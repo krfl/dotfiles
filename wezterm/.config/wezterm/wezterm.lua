@@ -1,9 +1,9 @@
 local wezterm = require 'wezterm'
 local appearance = require 'appearance'
 local config = wezterm.config_builder()
-local ff = 'Liga SFMono Nerd Font'
+local ff = 'SauceCodePro Nerd Font'
 local ffam = { family = ff, weight = 'Medium'}
-local fsize = 16
+local fsize = 12
 
 -- Font configuration
 config.font = wezterm.font(ffam)
@@ -38,7 +38,7 @@ config.tab_bar_at_bottom = true
 config.show_new_tab_button_in_tab_bar = false
 config.show_tab_index_in_tab_bar = false
 config.tab_max_width = 32
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.colors = { tab_bar = { background = 'rgba(0,0,0,0)' } }
 
 -- Shell
@@ -57,7 +57,14 @@ config.keys = {
   { key = 'j', mods = 'CTRL',           action = wezterm.action.ScrollByLine(1) },
   { key = 'h', mods = 'CMD|CTRL',       action = wezterm.action.ActivateTabRelative(-1) },
   { key = 'l', mods = 'CMD|CTRL',       action = wezterm.action.ActivateTabRelative(1) },
-
+  { key = 'e', mods = 'CMD',            action = wezterm.action.PromptInputLine {
+    description = 'Enter new name for tab',
+    action = wezterm.action_callback(function(window, pane, line)
+      if line then
+        window:active_tab():set_title(line)
+      end
+    end),
+  }},
 }
 
 config.key_tables = {
@@ -80,7 +87,8 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_wid
     fg = wezterm.color.parse(fg):darken(0.5)
   end
 
-  local title = string.gsub(tab.active_pane.foreground_process_name, '(.*[/\\])(.*)', '%2') or tab.active_pane.title
+  local title = tab.tab_title and #tab.tab_title > 0 and tab.tab_title
+    or string.gsub(tab.active_pane.foreground_process_name, '(.*[/\\])(.*)', '%2') or tab.active_pane.title
   if #title > 12 then title = title:sub(1, 12) .. '…' end
 
   local spacing = tab.tab_index < #tabs - 1 and '   ' or ''
@@ -101,7 +109,9 @@ wezterm.on('update-status', function(window, pane)
   local mid_width = 0
 
   for idx, tab in ipairs(tabs) do
-    local title = string.gsub(tab:active_pane():get_foreground_process_name() or '', '(.*[/\\])(.*)', '%2') or tab:active_pane():get_title()
+    local tab_title = tab:get_title()
+    local title = tab_title and #tab_title > 0 and tab_title
+      or string.gsub(tab:active_pane():get_foreground_process_name() or '', '(.*[/\\])(.*)', '%2') or tab:active_pane():get_title()
     if #title > 12 then title = title:sub(1, 12) .. '…' end
 
     mid_width = mid_width + math.floor(math.log(idx, 10)) + 1 + 2 + #title + 1
