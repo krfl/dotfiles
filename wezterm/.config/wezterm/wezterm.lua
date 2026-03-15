@@ -137,7 +137,7 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, cfg, hover, max_width)
     icon_fg = green
     name_fg = fg
   elseif hover then
-    tab_bg = hover_bg
+    tab_bg = bg
     icon_fg = palette.ansi and palette.ansi[6] or '#b8956d'
     name_fg = is_dark
       and wezterm.color.parse(fg):darken(0.3)
