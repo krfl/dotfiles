@@ -20,6 +20,9 @@ config.adjust_window_size_when_changing_font_size = false
 -- Theme
 config.color_scheme_dirs = { '~/.config/wezterm/colors' }
 config.color_scheme = appearance.smart_colorscheme()
+-- config.color_scheme = "Rosé Pine Moon (Gogh)"
+-- config.color_scheme = "Rosé Pine Dawn (Gogh)"
+-- config.color_scheme = "Google Light (Gogh)"
 
 -- Window
 config.window_close_confirmation = 'NeverPrompt'

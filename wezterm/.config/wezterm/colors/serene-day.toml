@@ -11,16 +11,16 @@ ansi = [
   '#5c7554',  # Blue - deep sage (low blue content)
   '#8b6f47',  # Magenta - caramel brown
   '#6d6555',  # Cyan - warm charcoal
-  '#e8e3d8',  # White - soft off-white
+  '#7b7568',  # White - warm mid-gray
 ]
 brights = [
-  '#35322a',  # Bright black - warm dark gray
+  '#35322a',  # Bright black - deep warm brown
   '#8b4a38',  # Bright red - terracotta red
   '#657047',  # Bright green - deep olive
   '#9a6c3a',  # Bright yellow - bronze
   '#5c7554',  # Bright blue - sage
   '#8b6340',  # Bright magenta - chocolate
-  '#857d6d',  # Bright cyan - medium gray
+  '#a89984',  # Bright cyan - stone
   '#f5f2ed',  # Bright white - warm off-white
 ]
 background = '#f5f2ed'

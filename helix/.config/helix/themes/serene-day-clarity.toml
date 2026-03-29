@@ -176,7 +176,7 @@ status_bg = "#ebe6db"
 status_fg = "#5a5549"
 
 # Syntax colors - rich earth tones
-comment = "#857d6d"
+comment = "#857c6d"
 forest = "#5a7a4a"
 olive = "#657047"
 bronze = "#9a6c3a"

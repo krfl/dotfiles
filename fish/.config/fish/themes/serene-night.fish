@@ -14,7 +14,7 @@ set -g fish_color_redirection d4a574             # Redirections - warm sand
 set -g fish_color_end b8956d                     # End keyword - muted tan
 set -g fish_color_error b87860                   # Errors - terracotta red
 set -g fish_color_param d4cfc4                   # Parameters - soft cream
-set -g fish_color_comment a89984                 # Comments - warm stone
+set -g fish_color_comment 857c6d                 # Comments - warm gray
 set -g fish_color_selection --background=3d3420 # Selection - dark olive background
 set -g fish_color_operator d4a574               # Operators - warm sand
 set -g fish_color_escape d4a574                  # Escape sequences - warm sand

@@ -4,10 +4,7 @@
 
 [colors]
 ansi = [
-  # '#635e55',  # Black - warm charcoal
-  '#585a50',  # Black - olive gray
-  # '#5e5653',  # Black - rose gray
-  # '#575654',  # Black - near neutral
+  '#585a50',  # Black - warm olive-gray
   '#b87860',  # Red - terracotta red
   '#8fae7a',  # Green - soft sage
   '#d4a574',  # Yellow - warm sand
@@ -17,10 +14,7 @@ ansi = [
   '#c8baa8',  # White - light beige
 ]
 brights = [
-  # '#857d6f',  # Bright black - warm gray
-  '#7a7c6e',  # Bright black - olive gray
-  # '#807571',  # Bright black - rose gray
-  # '#7b7976',  # Bright black - near neutral
+  '#7a7c6e',  # Bright black - warm olive-gray
   '#b87860',  # Bright red - terracotta red
   '#9fa883',  # Bright green - olive
   '#d4a574',  # Bright yellow - sand
