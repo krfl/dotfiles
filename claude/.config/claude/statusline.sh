@@ -6,7 +6,7 @@
 input=$(cat)
 
 # Extract a JSON value by key (handles strings and numbers)
-jval() { echo "$input" | grep -o "\"$1\":[^,}]*" | sed "s/\"$1\"://;s/\"//g"; }
+jval() { echo "$input" | grep -o "\"$1\":[^,}]*" | head -1 | sed "s/\"$1\"://;s/\"//g"; }
 
 total_input=$(jval total_input_tokens)
 total_output=$(jval total_output_tokens)
@@ -16,8 +16,9 @@ total_duration=$(jval total_duration_ms)
 cwd=$(jval cwd)
 model=$(echo "$input" | grep -o '"display_name":"[^"]*"' | head -1 | sed 's/"display_name":"//;s/"//')
 
-# Default used_pct so all branches converge
+# Default used_pct so all branches converge (handle null JSON values and unset)
 used_pct=${used_pct:-0}
+[ "$used_pct" = "null" ] && used_pct=0
 used_int=${used_pct%.*}
 
 # Progress bar (width 10)
@@ -58,7 +59,7 @@ formatted_duration=$(printf '%dm%02ds' "$duration_m" "$duration_s_rem")
 git_branch=$(git -C "${cwd:-.}" rev-parse --abbrev-ref HEAD 2>/dev/null)
 branch_display="${git_branch:+ ($git_branch)}"
 
-printf "CTX %s %s%% | Tokens: %s | Cost: %s | Model: %s | %s\n%s%s" \
+printf "CTX %s %s%% | Tokens: %s | Cost: %s | Model: %s | %s | %s%s" \
     "${context_bar}" "${used_int}" "${formatted_tokens}" "${formatted_cost}" \
     "${model:-unknown}" "${formatted_duration}" \
     "${formatted_cwd}" "${branch_display}"
