@@ -23,7 +23,7 @@ window-decoration = true
 confirm-close-surface = false
 
 # Tabs / titlebar
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 
 # Shell
 command = /opt/homebrew/bin/fish
