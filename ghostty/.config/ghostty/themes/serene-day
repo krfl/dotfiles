@@ -1,0 +1,26 @@
+# Serene Day - Eye-friendly light theme
+# Reduces glare and eye strain with warm earth tones
+
+background = f5f2ed
+foreground = 3d3a33
+cursor-color = 3d3a33
+cursor-text = f5f2ed
+selection-background = e3d5b8
+selection-foreground = 3d3a33
+
+palette = 0=#4a4538
+palette = 1=#8b4a38
+palette = 2=#5a7a4a
+palette = 3=#9a6c3a
+palette = 4=#5c7554
+palette = 5=#8b6f47
+palette = 6=#6d6555
+palette = 7=#7b7568
+palette = 8=#35322a
+palette = 9=#8b4a38
+palette = 10=#657047
+palette = 11=#9a6c3a
+palette = 12=#5c7554
+palette = 13=#8b6340
+palette = 14=#a89984
+palette = 15=#f5f2ed

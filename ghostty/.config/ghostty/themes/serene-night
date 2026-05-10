@@ -1,0 +1,26 @@
+# Serene Night - Eye-friendly dark theme
+# Reduces blue light and eye strain with warm earth tones
+
+background = 1e1d1a
+foreground = d4cfc4
+cursor-color = d4cfc4
+cursor-text = 1e1d1a
+selection-background = 3d3420
+selection-foreground = d4cfc4
+
+palette = 0=#585a50
+palette = 1=#b87860
+palette = 2=#8fae7a
+palette = 3=#d4a574
+palette = 4=#9aaa82
+palette = 5=#b8956d
+palette = 6=#a89984
+palette = 7=#c8baa8
+palette = 8=#7a7c6e
+palette = 9=#b87860
+palette = 10=#9fa883
+palette = 11=#d4a574
+palette = 12=#9aaa82
+palette = 13=#ba9c7e
+palette = 14=#a89984
+palette = 15=#d4cfc4

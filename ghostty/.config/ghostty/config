@@ -1,0 +1,73 @@
+# ghostty config - Ported from wezterm/kitty configuration
+
+# Font
+font-family = "SauceCodePro Nerd Font"
+font-style = "Regular"
+font-style-bold = "SemiBold"
+font-style-italic = "Italic"
+font-style-bold-italic = "SemiBold Italic"
+font-size = 12
+adjust-cell-height = 30%
+adjust-cell-width = -10%
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# Window
+window-padding-x = 20
+window-padding-y = 20
+window-padding-balance = true
+window-decoration = true
+confirm-close-surface = false
+
+# Tabs / titlebar
+macos-titlebar-style = hidden
+
+# Shell
+command = /opt/homebrew/bin/fish
+shell-integration = fish
+
+# Scrollback
+scrollback-limit = 10000
+
+# macOS
+macos-option-as-alt = true
+
+# Theme: auto-switches based on macOS appearance
+theme = light:serene-day,dark:serene-night
+
+# Keybindings
+
+# Splits
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+w=close_surface
+
+# Pane navigation
+keybind = cmd+j=goto_split:next
+keybind = cmd+k=goto_split:previous
+
+# Pane resize (chord: cmd+shift+r then h/j/k/l)
+keybind = cmd+shift+r>h=resize_split:left,10
+keybind = cmd+shift+r>j=resize_split:down,10
+keybind = cmd+shift+r>k=resize_split:up,10
+keybind = cmd+shift+r>l=resize_split:right,10
+
+# Scroll
+keybind = ctrl+k=scroll_page_lines:-1
+keybind = ctrl+j=scroll_page_lines:1
+
+# Tab navigation
+keybind = cmd+ctrl+h=previous_tab
+keybind = cmd+ctrl+l=next_tab
+
+# Rename tab
+keybind = cmd+e=prompt_surface_title
+
+# Font size (step by 2)
+keybind = cmd+plus=increase_font_size:2
+keybind = cmd+equal=increase_font_size:2
+keybind = cmd+minus=decrease_font_size:2
+keybind = cmd+zero=reset_font_size
