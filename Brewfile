@@ -22,7 +22,7 @@ brew 'prettier' # code formatting
 brew 'riff' # diff tool
 brew 'ripgrep' # fast grep alternative
 brew 'ripsecrets' # secret scanner
-brew 'rustup-init' # rust toolchain installer
+brew 'rustup' # rust toolchain installer
 brew 'starship' # shell prompt
 brew 'stow' # dotfile manager
 brew 'taplo' # toml toolkit
