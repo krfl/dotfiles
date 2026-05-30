@@ -1,4 +1,4 @@
-theme = 'serene-day-clarity'
+theme = { dark = "serene-night-clarity", light = "serene-day-clarity" }
 
 [editor]
 mouse = false
