@@ -33,7 +33,7 @@ shell-integration = fish
 scrollback-limit = 10000
 
 # macOS
-macos-option-as-alt = true
+macos-option-as-alt = left
 
 # Theme: auto-switches based on macOS appearance
 theme = light:serene-day,dark:serene-night
