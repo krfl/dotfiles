@@ -10,6 +10,10 @@ font-size = 12
 adjust-cell-height = 30%
 adjust-cell-width = -10%
 
+# Display-specific rendering overrides (swap via `ghostty-toggle-rendering`).
+# Optional — Ghostty ignores if the file doesn't exist yet.
+config-file = ?rendering.conf
+
 # Cursor
 cursor-style = block
 cursor-style-blink = false
@@ -40,9 +44,11 @@ theme = light:serene-day,dark:serene-night
 
 # Keybindings
 
-# Splits
+# Splits (auto-equalize after creation)
 keybind = cmd+d=new_split:right
+keybind = chain=equalize_splits
 keybind = cmd+shift+d=new_split:down
+keybind = chain=equalize_splits
 keybind = cmd+w=close_surface
 
 # Pane navigation
@@ -54,6 +60,9 @@ keybind = cmd+shift+r>h=resize_split:left,10
 keybind = cmd+shift+r>j=resize_split:down,10
 keybind = cmd+shift+r>k=resize_split:up,10
 keybind = cmd+shift+r>l=resize_split:right,10
+
+# Equalize all splits (manual; cmd+w can't chain this because the originating surface is gone)
+keybind = cmd+ctrl+equal=equalize_splits
 
 # Scroll
 keybind = ctrl+k=scroll_page_lines:-1
