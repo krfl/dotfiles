@@ -5,7 +5,7 @@
 [colors]
 ansi = [
   '#585a50',  # Black - warm olive-gray
-  '#b87860',  # Red - terracotta red
+  '#bc816b',  # Red - terracotta red
   '#8fae7a',  # Green - soft sage
   '#d4a574',  # Yellow - warm sand
   '#9aaa82',  # Blue - warm sage (low blue content)
@@ -15,7 +15,7 @@ ansi = [
 ]
 brights = [
   '#7a7c6e',  # Bright black - warm olive-gray
-  '#b87860',  # Bright red - terracotta red
+  '#bc816b',  # Bright red - terracotta red
   '#9fa883',  # Bright green - olive
   '#d4a574',  # Bright yellow - sand
   '#9aaa82',  # Bright blue - sage

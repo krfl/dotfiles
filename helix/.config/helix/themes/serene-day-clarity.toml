@@ -176,15 +176,15 @@ status_bg = "#ebe6db"
 status_fg = "#5a5549"
 
 # Syntax colors - rich earth tones
-comment = "#857c6d"
-forest = "#5a7a4a"
-olive = "#657047"
-bronze = "#9a6c3a"
-caramel = "#8b6f47"
+comment = "#6e665a"
+forest = "#536f44"
+olive = "#606b44"
+bronze = "#875f33"
+caramel = "#7c6340"
 charcoal = "#5a5240"
 taupe = "#6a6350"
 chocolate = "#8b6340"
-clay = "#a5563f"
+clay = "#9e523c"
 terracotta_red = "#8b4a38"
 
 # Syntax background colors - subtle warm tints for clarity

@@ -176,7 +176,7 @@ status_bg = "#2a2826"
 status_fg = "#b8ab95"
 
 # Syntax colors - rich earth tones
-comment = "#857c6d"
+comment = "#968e7f"
 muted_punctuation = "#9a8f81"
 sage = "#8fae7a"
 olive = "#a8a378"
@@ -186,7 +186,7 @@ stone = "#b5a899"
 beige = "#c8baa8"
 brown = "#ba9c7e"
 terracotta = "#c99976"
-terracotta_red = "#b87860"
+terracotta_red = "#bc816b"
 
 # Syntax background colors - subtle lighter tints for dark mode
 string_bg = "#242520"        # Slightly lighter with green tint for strings
@@ -203,7 +203,7 @@ hint_bg = "#25241f"          # Subtle gray-brown for hint diagnostics
 terracotta_red_bg = "#2a231e" # Subtle warm reddish-brown for terracotta-red elements
 
 # Special colors (expert-refined)
-error = "#b87860"
+error = "#bc816b"
 warning = "#e8b55d"
 info = "#7b9e8c"
 hint = "#8d8575"
