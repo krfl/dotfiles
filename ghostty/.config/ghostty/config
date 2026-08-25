@@ -6,7 +6,7 @@ font-style = "Regular"
 font-style-bold = "SemiBold"
 font-style-italic = "Italic"
 font-style-bold-italic = "SemiBold Italic"
-font-size = 12
+font-size = 14
 adjust-cell-height = 30%
 adjust-cell-width = -10%
 
@@ -62,7 +62,7 @@ keybind = cmd+shift+r>k=resize_split:up,10
 keybind = cmd+shift+r>l=resize_split:right,10
 
 # Equalize all splits (manual; cmd+w can't chain this because the originating surface is gone)
-keybind = cmd+ctrl+equal=equalize_splits
+keybind = all:cmd+ctrl+equal=equalize_splits
 
 # Scroll
 keybind = ctrl+k=scroll_page_lines:-1
@@ -75,8 +75,8 @@ keybind = cmd+ctrl+l=next_tab
 # Rename tab
 keybind = cmd+e=prompt_surface_title
 
-# Font size (step by 2)
-keybind = cmd+plus=increase_font_size:2
-keybind = cmd+equal=increase_font_size:2
-keybind = cmd+minus=decrease_font_size:2
-keybind = cmd+zero=reset_font_size
+# Font size (step by 2, applies to all surfaces)
+keybind = all:cmd+plus=increase_font_size:2
+keybind = all:cmd+equal=increase_font_size:2
+keybind = all:cmd+minus=decrease_font_size:2
+keybind = all:cmd+zero=reset_font_size

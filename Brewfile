@@ -32,6 +32,7 @@ brew 'yq' # yaml processor
 brew 'zoxide' # smart cd
 
 # casks
+cask 'brave-browser' # browser
 cask 'claude' # ai assistant
 cask 'claude-code' # ai coding assistant
 cask 'discord' # chat platform
@@ -41,7 +42,6 @@ cask 'obsidian' # second brain
 cask 'orbstack' # docker alternative
 cask 'raycast' # better spotlight
 cask 'rectangle' # window manager
-cask 'vivaldi' # browser
 cask 'wezterm' # terminal emulator
 cask 'yaak' # http client
 cask 'zed' # code editor
@@ -49,5 +49,5 @@ cask 'zed' # code editor
 # app store
 mas 'Hidden Bar', id: 1452453066
 # mas 'Velja', id: 1607635845
-mas 'Wipr 2', id: 1662217862
+# mas 'Wipr 2', id: 1662217862
 # mas 'Xcode', id: 497799835

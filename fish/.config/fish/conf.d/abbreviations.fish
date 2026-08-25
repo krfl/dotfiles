@@ -7,3 +7,4 @@ abbr --add day "date +'%a %b %d'"
 abbr --add nuke "rg --files --hidden -g '.DS_Store' --no-messages --null | xargs --no-run-if-empty -0 rm -v"
 abbr --add nuke_dry "rg --files --hidden -g '.DS_Store' --no-messages | cat"
 abbr --add tree "eza --tree --level=5 --all"
+abbr --add d dotty
