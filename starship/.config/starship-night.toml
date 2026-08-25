@@ -1,0 +1,191 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](os_bg)\
+$os\
+[](bg:dir_bg fg:os_bg)\
+$directory\
+[](fg:dir_bg bg:git_bg)\
+$git_branch\
+$git_status\
+([](fg:git_bg bg:lang_bg)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$bun\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python)\
+([](fg:lang_bg bg:docker_bg)\
+$docker_context\
+$conda\
+$pixi)\
+[](fg:docker_bg bg:time_bg)\
+$time\
+[](fg:time_bg)\
+$line_break$character"""
+
+palette = 'serene_night_clarity'
+
+# Serene Night Clarity — dark-mode powerline palette
+# Bright segment backgrounds with dark text, fading into mid-neutrals.
+[palettes.serene_night_clarity]
+# Each segment uses a clarity pair: saturated fg on its matching subtle shadow bg.
+os_fg     = '#d4cfc4'  # parchment
+os_bg     = '#252422'  # stone-shadow
+dir_fg    = '#e8b55d'  # golden
+dir_bg    = '#2a251e'  # amber-shadow
+git_fg    = '#7b9e8c'  # sage-teal
+git_bg    = '#22251f'  # fern-shadow
+lang_fg   = '#a8a378'  # golden-moss
+lang_bg   = '#26261e'  # olive-shadow
+docker_fg = '#8d8575'  # dusk-stone
+docker_bg = '#25241f'  # dusk-shadow
+time_fg   = '#c99976'  # copper
+time_bg   = '#2a211e'  # rust-shadow
+# Prompt characters (rendered on the terminal background)
+prompt_ok  = '#8fae7a' # meadow-sage
+prompt_err = '#b87860' # sunset-clay
+prompt_vim = '#b8956d' # warm-tan
+prompt_vis = '#e8b55d' # golden
+
+[os]
+disabled = false
+style = "bg:os_bg fg:os_fg"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[directory]
+style = "fg:dir_fg bg:dir_bg"
+format = "[ › $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:git_bg"
+format = '[[ $symbol $branch ](fg:git_fg bg:git_bg)]($style)'
+
+[git_status]
+style = "bg:git_bg"
+format = '[[($all_status$ahead_behind )](fg:git_fg bg:git_bg)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[c]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[php]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[java]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[python]
+symbol = ""
+style = "bg:lang_bg"
+format = '[[ $symbol( $version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:docker_bg"
+format = '[[ $symbol( $context) ](fg:docker_fg bg:docker_bg)]($style)'
+
+[conda]
+style = "bg:docker_bg"
+format = '[[ $symbol( $environment) ](fg:docker_fg bg:docker_bg)]($style)'
+
+[pixi]
+style = "bg:docker_bg"
+format = '[[ $symbol( $version)( $environment) ](fg:docker_fg bg:docker_bg)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:time_bg"
+format = '[[  $time ](fg:time_fg bg:time_bg)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:prompt_ok)'
+error_symbol = '[❯](bold fg:prompt_err)'
+vimcmd_symbol = '[❮](bold fg:prompt_ok)'
+vimcmd_replace_one_symbol = '[❮](bold fg:prompt_vim)'
+vimcmd_replace_symbol = '[❮](bold fg:prompt_vim)'
+vimcmd_visual_symbol = '[❮](bold fg:prompt_vis)'
