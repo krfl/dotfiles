@@ -8,6 +8,7 @@ fish_add_path /Library/Apple/usr/bin
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.dotnet/tools
 fish_add_path $HOME/go/bin
+fish_add_path ~/.local/bin
 
 # Environment variables, abbreviations, and keybindings are loaded from conf.d/
 # Functions are lazy-loaded from functions/

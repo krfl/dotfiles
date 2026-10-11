@@ -2,7 +2,7 @@ abbr --add bru "brew update;brew upgrade;brew cleanup;brew autoremove;brew docto
 abbr --add agenda "icalBuddy -f -ec \"\" -eed -eep \"notes,attendees\" eventsToday"
 abbr --add reminders "icalBuddy -f -sc -ss '' -npn -nc -iep 'title,datetime' -ps ' | : | ' -po 'datetime,title' -tf '' -df '%RD' -eed tasksDueBefore:today+1"
 abbr --add unixtime "date +%s"
-abbr --add fkill "ps -e | fzy | awk '{print \$1}' | xargs kill"
+abbr --add fzykill "ps -ef | fzy | awk '{print \$2}' | xargs -r kill"
 abbr --add day "date +'%a %b %d'"
 abbr --add nuke "rg --files --hidden -g '.DS_Store' --no-messages --null | xargs --no-run-if-empty -0 rm -v"
 abbr --add nuke_dry "rg --files --hidden -g '.DS_Store' --no-messages | cat"
