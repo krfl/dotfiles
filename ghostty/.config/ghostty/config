@@ -40,7 +40,8 @@ scrollback-limit = 10000
 macos-option-as-alt = left
 
 # Theme: auto-switches based on macOS appearance
-theme = light:serene-day,dark:serene-night
+theme = light:serene-meadow-day,dark:serene-meadow-night
+# theme = light:schpoing-light,dark:schpoing-dark
 
 # Keybindings
 

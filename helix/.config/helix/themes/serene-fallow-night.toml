@@ -1,85 +1,85 @@
-# Serene Night - Eye-friendly dark theme for Helix
-# Reduces blue light and eye strain with warm earth tones
+# Serene Fallow Night - Eye-friendly dark theme with enhanced syntax distinction
+# Uses subtle background colors to clearly distinguish syntax elements
 # Based on optometry research for computer vision syndrome
 
 # Syntax Highlighting
-"attribute" = "sand"
-"type" = "tan"
-"type.builtin" = "tan"
-"type.parameter" = "tan"
-"type.enum.variant" = "terracotta_red"
-"constructor" = "sand"
-"constant" = "terracotta"
-"constant.builtin" = "terracotta"
-"constant.builtin.boolean" = "terracotta"
-"constant.character" = "terracotta"
+"attribute" = { fg = "sand", bg = "sand_bg" }
+"type" = { fg = "tan", bg = "tan_bg" }
+"type.builtin" = { fg = "tan", bg = "tan_bg" }
+"type.parameter" = { fg = "tan", bg = "tan_bg" }
+"type.enum.variant" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
+"constructor" = { fg = "sand", bg = "sand_bg" }
+"constant" = { fg = "terracotta", bg = "sand_bg" }
+"constant.builtin" = { fg = "terracotta", bg = "sand_bg" }
+"constant.builtin.boolean" = { fg = "terracotta", bg = "sand_bg" }
+"constant.character" = { fg = "sage", bg = "string_bg" }
 "constant.character.escape" = "stone"
-"constant.numeric" = "terracotta"
-"string" = "sage"
+"constant.numeric" = { fg = "terracotta", bg = "sand_bg" }
+"string" = { fg = "sage", bg = "string_bg" }
 "string.regexp" = "stone"
 "string.special" = "stone"
 "comment" = { fg = "comment", modifiers = ["italic"] }
 "comment.line" = { fg = "comment", modifiers = ["italic"] }
 "comment.block" = { fg = "comment", modifiers = ["italic"] }
 "variable" = "beige"
-"variable.builtin" = "olive"
+"variable.builtin" = { fg = "olive", bg = "keyword_bg" }
 "variable.parameter" = "beige"
 "variable.other.member" = "beige"
-"label" = "olive"
+"label" = { fg = "olive", bg = "keyword_bg" }
 "punctuation" = "muted_punctuation"
 "punctuation.delimiter" = "muted_punctuation"
 "punctuation.bracket" = "muted_punctuation"
 "punctuation.special" = "stone"
-"keyword" = "olive"
-"keyword.control" = "olive"
-"keyword.control.conditional" = "olive"
-"keyword.control.repeat" = "olive"
+"keyword" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.conditional" = { fg = "olive", bg = "keyword_bg" }
+"keyword.control.repeat" = { fg = "olive", bg = "keyword_bg" }
 "keyword.control.import" = "stone"
-"keyword.control.return" = "terracotta_red"
-"keyword.control.exception" = "terracotta_red"
+"keyword.control.return" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
+"keyword.control.exception" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "keyword.operator" = "stone"
-"keyword.directive" = "olive"
-"keyword.function" = "olive"
-"keyword.storage" = "olive"
-"keyword.storage.type" = "tan"
-"keyword.storage.modifier" = "olive"
+"keyword.directive" = { fg = "olive", bg = "keyword_bg" }
+"keyword.function" = { fg = "olive", bg = "keyword_bg" }
+"keyword.storage" = { fg = "olive", bg = "keyword_bg" }
+"keyword.storage.type" = { fg = "tan", bg = "tan_bg" }
+"keyword.storage.modifier" = { fg = "olive", bg = "keyword_bg" }
 "operator" = "stone"
-"function" = "sand"
-"function.builtin" = "sand"
-"function.method" = "sand"
-"function.macro" = "olive"
+"function" = { fg = "sand", bg = "sand_bg" }
+"function.builtin" = { fg = "sand", bg = "sand_bg" }
+"function.method" = { fg = "sand", bg = "sand_bg" }
+"function.macro" = { fg = "olive", bg = "keyword_bg" }
 "function.special" = "stone"
-"tag" = "olive"
-"namespace" = "terracotta_red"
+"tag" = { fg = "olive", bg = "keyword_bg" }
+"namespace" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "special" = "stone"
 
 # Markup
-"markup.heading" = "sand"
+"markup.heading" = { fg = "sand", bg = "sand_bg" }
 "markup.heading.marker" = "comment"
-"markup.heading.1" = { fg = "sand", modifiers = ["bold"] }
-"markup.heading.2" = { fg = "sand", modifiers = ["bold"] }
-"markup.heading.3" = { fg = "sand", modifiers = ["bold"] }
-"markup.heading.4" = { fg = "sand", modifiers = ["bold"] }
-"markup.heading.5" = { fg = "sand", modifiers = ["bold"] }
-"markup.heading.6" = { fg = "sand", modifiers = ["bold"] }
-"markup.list" = "stone"
-"markup.list.unnumbered" = "stone"
-"markup.list.numbered" = "stone"
+"markup.heading.1" = { fg = "sand", bg = "sand_bg", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "sand", bg = "sand_bg", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "sand", bg = "sand_bg", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "sand", bg = "sand_bg", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "sand", bg = "sand_bg", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "sand", bg = "sand_bg", modifiers = ["bold"] }
+"markup.list" = { fg = "stone", bg = "keyword_bg" }
+"markup.list.unnumbered" = { fg = "stone", bg = "keyword_bg" }
+"markup.list.numbered" = { fg = "stone", bg = "keyword_bg" }
 "markup.bold" = { fg = "tan", modifiers = ["bold"] }
 "markup.italic" = { fg = "tan", modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.link.url" = { fg = "olive", modifiers = ["underlined"] }
-"markup.link.label" = "stone"
-"markup.link.text" = "olive"
-"markup.quote" = "comment"
-"markup.raw" = "sage"
-"markup.raw.inline" = "sage"
-"markup.raw.block" = "sage"
+"markup.link.url" = { fg = "olive", bg = "keyword_bg", modifiers = ["underlined"] }
+"markup.link.label" = { fg = "stone", bg = "keyword_bg" }
+"markup.link.text" = { fg = "olive", bg = "keyword_bg" }
+"markup.quote" = { fg = "comment", modifiers = ["italic"] }
+"markup.raw" = { fg = "sage", bg = "string_bg" }
+"markup.raw.inline" = { fg = "sage", bg = "string_bg" }
+"markup.raw.block" = { fg = "sage", bg = "string_bg" }
 
 # Diff
 "diff.plus" = "sage"
 "diff.plus.gutter" = "sage"
-"diff.minus" = "terracotta_red"
+"diff.minus" = { fg = "terracotta_red", bg = "terracotta_red_bg" }
 "diff.minus.gutter" = "error"
 "diff.delta" = "sand"
 "diff.delta.moved" = "olive"
@@ -141,10 +141,10 @@
 "ui.picker.header.column.active" = { fg = "olive", modifiers = ["bold"] }
 
 # Diagnostics
-"warning" = { fg = "warning", modifiers = ["bold"] }
-"error" = { fg = "error", modifiers = ["bold"] }
-"info" = { fg = "info", modifiers = ["bold"] }
-"hint" = { fg = "hint", modifiers = ["bold"] }
+"warning" = { fg = "warning", bg = "warning_bg", modifiers = ["bold"] }
+"error" = { fg = "error", bg = "error_bg", modifiers = ["bold"] }
+"info" = { fg = "info", bg = "info_bg", modifiers = ["bold"] }
+"hint" = { fg = "hint", bg = "hint_bg", modifiers = ["bold"] }
 "diagnostic" = { modifiers = ["underlined"] }
 "diagnostic.hint" = { underline = { color = "hint", style = "curl" } }
 "diagnostic.info" = { underline = { color = "info", style = "curl" } }
@@ -187,6 +187,20 @@ beige = "#c8baa8"
 brown = "#ba9c7e"
 terracotta = "#c99976"
 terracotta_red = "#bc816b"
+
+# Syntax background colors - subtle lighter tints for dark mode
+string_bg = "#242520"        # Slightly lighter with green tint for strings
+keyword_bg = "#26261e"       # Slightly lighter with olive tint for keywords
+comment_bg = "#252422"       # Slightly lighter warm gray for comments
+sand_bg = "#2a251e"          # Slightly lighter warm tone for functions/attributes/constants
+tan_bg = "#26241f"           # Slightly lighter for types
+namespace_bg = "#23242a"     # Slightly lighter with blue tint for namespaces
+param_bg = "#2a2826"         # Very subtle (same as cursorline) for parameters
+error_bg = "#2a211e"         # Subtle reddish-brown for error diagnostics
+warning_bg = "#2a251e"       # Subtle sandy-brown for warning diagnostics
+info_bg = "#22251f"          # Subtle green tint for info diagnostics
+hint_bg = "#25241f"          # Subtle gray-brown for hint diagnostics
+terracotta_red_bg = "#2a231e" # Subtle warm reddish-brown for terracotta-red elements
 
 # Special colors (expert-refined)
 error = "#bc816b"

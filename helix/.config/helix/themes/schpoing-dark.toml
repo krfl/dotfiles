@@ -1,0 +1,204 @@
+# Schpoing Dark - the krfl.dev palette for Helix
+# The site's dark surfaces, lime and purple as the signature pair,
+# blue/orange/yellow/coral in support. Foreground colour only; electric lime
+# and lavender kept verbatim as UI accents.
+
+# Syntax highlighting
+# Foreground colour only. Backgrounds are reserved for the UI: selection,
+# cursor line, status bar, and the electric lime/lavender accents.
+"attribute" = "chartreuse"
+"type" = "yellow"
+"type.builtin" = "yellow"
+"type.parameter" = "yellow"
+"type.enum.variant" = "rust"
+"constructor" = "chartreuse"
+"constant" = "orange"
+"constant.builtin" = "orange"
+"constant.builtin.boolean" = "orange"
+"constant.character" = "blue"
+"constant.character.escape" = "orange"
+"constant.numeric" = "orange"
+"string" = "blue"
+"string.regexp" = "orange"
+"string.special" = "orange"
+"comment" = { fg = "comment", modifiers = ["italic"] }
+"comment.line" = { fg = "comment", modifiers = ["italic"] }
+"comment.block" = { fg = "comment", modifiers = ["italic"] }
+"variable" = "variable"
+"variable.builtin" = "violet"
+"variable.parameter" = "variable"
+"variable.other.member" = "variable"
+"label" = "violet"
+"punctuation" = "punctuation"
+"punctuation.delimiter" = "punctuation"
+"punctuation.bracket" = "punctuation"
+"punctuation.special" = "violet"
+"keyword" = "violet"
+"keyword.control" = "violet"
+"keyword.control.conditional" = "violet"
+"keyword.control.repeat" = "violet"
+"keyword.control.import" = "yellow"
+"keyword.control.return" = "rust"
+"keyword.control.exception" = "rust"
+"keyword.operator" = "punctuation"
+"keyword.directive" = "yellow"
+"keyword.function" = "violet"
+"keyword.storage" = "violet"
+"keyword.storage.type" = "yellow"
+"keyword.storage.modifier" = "violet"
+"operator" = "punctuation"
+"function" = "chartreuse"
+"function.builtin" = "variable"
+"function.method" = "variable"
+"function.macro" = "yellow"
+"function.special" = "yellow"
+"tag" = "violet"
+"namespace" = "yellow"
+"special" = "violet"
+
+# Markup
+"markup.heading" = "chartreuse"
+"markup.heading.marker" = "comment"
+"markup.heading.1" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.list" = "punctuation"
+"markup.list.unnumbered" = "punctuation"
+"markup.list.numbered" = "punctuation"
+"markup.bold" = { fg = "blue", modifiers = ["bold"] }
+"markup.italic" = { fg = "blue", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "violet", modifiers = ["underlined"] }
+"markup.link.label" = "punctuation"
+"markup.link.text" = "violet"
+"markup.quote" = { fg = "comment", modifiers = ["italic"] }
+"markup.raw" = "blue"
+"markup.raw.inline" = "blue"
+"markup.raw.block" = "blue"
+
+# Diff
+"diff.plus" = "chartreuse"
+"diff.plus.gutter" = "chartreuse"
+"diff.minus" = "rust"
+"diff.minus.gutter" = "rust"
+"diff.delta" = "yellow"
+"diff.delta.moved" = "violet"
+
+# UI
+"ui.background" = { bg = "background" }
+"ui.background.separator" = "border"
+"ui.cursor" = { fg = "background", bg = "foreground" }
+"ui.cursor.normal" = { fg = "background", bg = "foreground" }
+"ui.cursor.insert" = { fg = "accent_fg", bg = "lime" }
+"ui.cursor.select" = { fg = "background", bg = "violet" }
+"ui.cursor.match" = { fg = "accent_fg", bg = "lime", modifiers = ["bold"] }
+"ui.cursor.primary" = { fg = "background", bg = "foreground" }
+"ui.cursor.primary.normal" = { fg = "background", bg = "foreground" }
+"ui.cursor.primary.insert" = { fg = "accent_fg", bg = "lime" }
+"ui.cursor.primary.select" = { fg = "background", bg = "violet" }
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.cursorline.secondary" = { bg = "cursorline" }
+"ui.cursorcolumn.primary" = { bg = "cursorline" }
+"ui.cursorcolumn.secondary" = { bg = "cursorline" }
+"ui.linenr" = "line_number"
+"ui.linenr.selected" = { fg = "line_number_active", bg = "cursorline" }
+"ui.statusline" = { fg = "status_fg", bg = "status_bg" }
+"ui.statusline.inactive" = { fg = "status_fg_inactive", bg = "status_bg_inactive" }
+"ui.statusline.normal" = { fg = "accent_fg", bg = "lavender", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "accent_fg", bg = "lime", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "background", bg = "violet", modifiers = ["bold"] }
+"ui.statusline.separator" = "border"
+"ui.popup" = { fg = "foreground", bg = "popup_bg" }
+"ui.popup.info" = { fg = "foreground", bg = "popup_bg" }
+"ui.window" = { fg = "border", bg = "background" }
+"ui.help" = { fg = "foreground", bg = "popup_bg" }
+"ui.text" = "foreground"
+"ui.text.focus" = { fg = "background", bg = "violet" }
+"ui.text.inactive" = "comment"
+"ui.text.info" = "foreground"
+"ui.virtual" = "comment"
+"ui.virtual.ruler" = { bg = "cursorline" }
+"ui.virtual.whitespace" = "line_number"
+"ui.virtual.indent-guide" = "line_number"
+"ui.virtual.inlay-hint" = "comment"
+"ui.virtual.inlay-hint.parameter" = "comment"
+"ui.virtual.inlay-hint.type" = "comment"
+"ui.virtual.wrap" = "comment"
+"ui.virtual.jump-label" = { fg = "accent_fg", bg = "lime", modifiers = ["bold"] }
+"ui.menu" = { fg = "foreground", bg = "popup_bg" }
+"ui.menu.selected" = { fg = "background", bg = "violet" }
+"ui.menu.scroll" = { fg = "comment", bg = "border" }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "selection" }
+"ui.highlight" = { bg = "selection" }
+"ui.highlight.frameline" = { bg = "selection" }
+"ui.debug.breakpoint" = { fg = "error", bg = "background" }
+"ui.debug.active" = { fg = "warning", bg = "background" }
+"ui.gutter" = { bg = "background" }
+"ui.gutter.selected" = { bg = "cursorline" }
+"ui.picker.header" = { fg = "violet", modifiers = ["bold"] }
+"ui.picker.header.column" = "foreground"
+"ui.picker.header.column.active" = { fg = "violet", modifiers = ["bold"] }
+
+# Diagnostics
+"warning" = { fg = "warning", modifiers = ["bold"] }
+"error" = { fg = "error", modifiers = ["bold"] }
+"info" = { fg = "info", modifiers = ["bold"] }
+"hint" = { fg = "hint", modifiers = ["bold"] }
+"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic.hint" = { underline = { color = "hint", style = "curl" } }
+"diagnostic.info" = { underline = { color = "info", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { fg = "rust", modifiers = ["crossed_out"] }
+
+# Completion and hover popups
+"markup.normal.completion" = { fg = "foreground", bg = "popup_bg" }
+"markup.normal.hover" = { fg = "foreground", bg = "popup_bg" }
+"markup.heading.completion" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.heading.hover" = { fg = "chartreuse", modifiers = ["bold"] }
+"markup.raw.inline.completion" = "blue"
+"markup.raw.inline.hover" = "blue"
+
+[palette]
+# Base
+background = "#141619"
+foreground = "#f0f2f4"
+selection = "#4509ad"
+cursorline = "#1a1d20"
+border = "#3a3f47"
+popup_bg = "#2c333d"
+
+# UI
+line_number = "#4d545e"
+line_number_active = "#afb5bf"
+status_bg = "#232931"
+status_fg = "#afb5bf"
+status_bg_inactive = "#1a1d20"
+status_fg_inactive = "#4d545e"
+accent_fg = "#141619"               # text drawn on top of the electric accents
+
+# Syntax foregrounds
+comment = "#828a96"
+variable = "#d7dae1"
+punctuation = "#bbc1c9"
+chartreuse = "#b7ed06"         # signature: functions, headings, additions
+violet = "#b799ff"           # signature: keywords, tags, links
+blue = "#6ba7de"                     # strings, raw markup
+orange = "#e98936"                 # numbers, constants, escapes
+yellow = "#edc64e"                 # types, namespaces, macros
+rust = "#e9857a"                     # return, raise, enum variants, removals
+
+# Electric site accents, only ever used as backgrounds
+lime = "#d5f562"
+lavender = "#dfd6ff"
+
+# Diagnostics
+error = "#e9857a"
+warning = "#edc64e"
+info = "#6ba7de"
+hint = "#afb5bf"

@@ -1,0 +1,27 @@
+# Schpoing Dark - the krfl.dev palette for Ghostty
+# The site's dark surfaces, with electric lime and lavender kept verbatim
+# in the bright green and bright magenta slots.
+
+background = 141619
+foreground = f0f2f4
+cursor-color = d5f562
+cursor-text = 141619
+selection-background = 4509ad
+selection-foreground = f0f2f4
+
+palette = 0=#3a3f47
+palette = 1=#e9857a
+palette = 2=#b7ed06
+palette = 3=#edc64e
+palette = 4=#6ba7de
+palette = 5=#b799ff
+palette = 6=#1db597
+palette = 7=#bbc1c9
+palette = 8=#4d545e
+palette = 9=#f3b0a8
+palette = 10=#d5f562
+palette = 11=#f9dd88
+palette = 12=#9cc4ed
+palette = 13=#dfd6ff
+palette = 14=#1fd9b3
+palette = 15=#f0f2f4

@@ -1,4 +1,5 @@
-theme = { dark = "serene-night-clarity", light = "serene-day-clarity" }
+theme = { dark = "serene-meadow-night", light = "serene-meadow-day" }
+# theme = { dark = "schpoing-dark", light = "schpoing-light" }
 
 [editor]
 mouse = false
@@ -26,6 +27,7 @@ git-ignore = true
 hidden = false
 
 [editor.indent-guides]
+character = "░"
 render = true
 
 [editor.soft-wrap]

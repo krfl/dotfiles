@@ -1,0 +1,26 @@
+# Schpoing Light - the krfl.dev palette for Ghostty
+# Soft cool paper with lime and purple as the signature pair.
+
+background = eef0f3
+foreground = 2c3038
+cursor-color = 844fff
+cursor-text = eef0f3
+selection-background = e5d6ff
+selection-foreground = 2c3038
+
+palette = 0=#3c4149
+palette = 1=#dc182c
+palette = 2=#628000
+palette = 3=#a55d00
+palette = 4=#2d72b6
+palette = 5=#c5318e
+palette = 6=#1f7d6a
+palette = 7=#5b6069
+palette = 8=#757b86
+palette = 9=#ea4353
+palette = 10=#6c8c00
+palette = 11=#c06d00
+palette = 12=#3b85ce
+palette = 13=#844fff
+palette = 14=#24907b
+palette = 15=#2c3038

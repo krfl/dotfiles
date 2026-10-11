@@ -1,0 +1,27 @@
+# Serene Meadow Night - Eye-friendly dark theme for Ghostty
+# Reduces blue light and eye strain with muted colors
+# Based on optometry research for computer vision syndrome
+
+background = 1e1d1a
+foreground = d4cfc4
+cursor-color = d4cfc4
+cursor-text = 1e1d1a
+selection-background = 3d3420
+selection-foreground = d4cfc4
+
+palette = 0=#585a50
+palette = 1=#c9948d
+palette = 2=#8aa983
+palette = 3=#ada172
+palette = 4=#80a4c7
+palette = 5=#bf94b2
+palette = 6=#79aaa7
+palette = 7=#c8baa8
+palette = 8=#7a7c6e
+palette = 9=#d9a39c
+palette = 10=#99b992
+palette = 11=#bdb081
+palette = 12=#8fb3d7
+palette = 13=#cfa3c1
+palette = 14=#88bab7
+palette = 15=#d4cfc4
