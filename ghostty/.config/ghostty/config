@@ -20,14 +20,20 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 
 # Window
-window-padding-x = 20
-window-padding-y = 20
+window-padding-x = 5
+window-padding-y = 5
 window-padding-balance = true
 window-decoration = true
+# background-opacity = 0.85
+# background-blur = true 
+# background-opacity-cells = true
 confirm-close-surface = false
 
 # Tabs / titlebar
-macos-titlebar-style = tabs
+# macos-titlebar-style = transparent
+# macos-titlebar-style = tabs
+# macos-window-buttons = hidden
+macos-titlebar-proxy-icon = hidden
 
 # Shell
 command = /opt/homebrew/bin/fish
@@ -44,6 +50,7 @@ theme = light:serene-meadow-day,dark:serene-meadow-night
 # theme = light:schpoing-light,dark:schpoing-dark
 
 # Keybindings
+keybind = cmd+shift+o=toggle_background_opacity
 
 # Splits (auto-equalize after creation)
 keybind = cmd+d=new_split:right
@@ -72,6 +79,7 @@ keybind = ctrl+j=scroll_page_lines:1
 # Tab navigation
 keybind = cmd+ctrl+h=previous_tab
 keybind = cmd+ctrl+l=next_tab
+keybind = ctrl+shift+t=toggle_tab_overview
 
 # Rename tab
 keybind = cmd+e=prompt_surface_title
