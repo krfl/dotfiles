@@ -84,8 +84,8 @@ keybind = ctrl+shift+t=toggle_tab_overview
 # Rename tab
 keybind = cmd+e=prompt_surface_title
 
-# Font size (step by 2, applies to all surfaces)
-keybind = all:cmd+plus=increase_font_size:2
-keybind = all:cmd+equal=increase_font_size:2
-keybind = all:cmd+minus=decrease_font_size:2
+# Font size (step by 1, applies to all surfaces)
+keybind = all:cmd+plus=increase_font_size:1
+keybind = all:cmd+equal=increase_font_size:1
+keybind = all:cmd+minus=decrease_font_size:1
 keybind = all:cmd+zero=reset_font_size
