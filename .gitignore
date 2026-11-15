@@ -8,3 +8,4 @@ fish/.config/fish/fish_variables
 zed/.config/zed/prompts/
 zed/.config/zed/conversations/
 .claude/
+ghostty/.config/ghostty/titlebar.conf

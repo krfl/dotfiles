@@ -34,6 +34,9 @@ confirm-close-surface = false
 # macos-titlebar-style = tabs
 # macos-window-buttons = hidden
 macos-titlebar-proxy-icon = hidden
+# Titlebar override for screenshots (swap via `ghostty-toggle-titlebar`).
+# Only present while the titlebar is hidden.
+config-file = ?titlebar.conf
 
 # Shell
 command = /opt/homebrew/bin/fish
